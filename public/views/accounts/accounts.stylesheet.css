@@ -1,0 +1,45 @@
+/*
+.header {
+  text-align: center;
+  margin: 20px;
+  color: #fff;
+  font-size: 36px;
+
+  .header__heading {
+    text-transform: uppercase;
+  }
+}
+*/
+.accounts-container {
+  color: #fff; }
+  .accounts-container .account-list {
+    list-style-type: none;
+    color: #fff;
+    padding: 5px; }
+    .accounts-container .account-list .account-list__item {
+      margin-bottom: 10px; }
+    .accounts-container .account-list .account-list__name {
+      display: inline-block;
+      width: 195px; }
+    .accounts-container .account-list .account-list__balance {
+      display: inline-block;
+      width: 140px; }
+    .accounts-container .account-list .account-list__button {
+      margin-left: 50px; }
+
+.configure-form .configure-form__input {
+  color: #222; }
+
+/*
+.continue-container {
+  padding-top: 50px;
+  margin: 0 auto;
+
+  .continue-button {
+    margin: 0 auto;
+    display: block;
+  }
+}
+*/
+
+/*# sourceMappingURL=accounts.stylesheet.css.map */
