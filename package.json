@@ -1,0 +1,25 @@
+{
+  "name": "penny",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ChrisDrobnicky/Penny-Pincher.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ChrisDrobnicky/Penny-Pincher/issues"
+  },
+  "homepage": "https://github.com/ChrisDrobnicky/Penny-Pincher#readme",
+  "devDependencies": {
+    "express": "^4.15.2"
+  },
+  "dependencies": {
+    "express": "^4.15.2"
+  }
+}
