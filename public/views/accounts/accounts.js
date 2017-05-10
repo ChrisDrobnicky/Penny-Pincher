@@ -22,9 +22,8 @@ function addAccountToDom (name, balance){
   accountList.appendChild(newListItem);
 }
 
-function removeAccountFromDom (event){
-  var itemToRemove = event.target.parentNode;
-  itemToRemove.parentNode.removeChild(itemToRemove);
+function removeAccountFromDom (listItem){
+  listItem.parentNode.removeChild(listItem);
 }
 
 function checkInput (accountName, accountBalance){
@@ -44,6 +43,13 @@ function checkInput (accountName, accountBalance){
   }
 }
 
+function clearFormInputs () {
+  var nameInput = document.querySelector('#account-name');
+  var balanceInput = document.querySelector('#account-balance');
+  nameInput.value = '';
+  balanceInput.value = '';
+}
+
 function saveAccount() {
   var accountName = document.querySelector('#account-name').value;
   var accountBalance = document.querySelector('#account-balance').value;
@@ -51,23 +57,36 @@ function saveAccount() {
   if (checkInput(accountName, accountBalance) === true) {
     addAccountToDom(accountName, accountBalance);
     manageLocalStorage.addAccount(accountName, accountBalance);
+    clearFormInputs();
     }
   }
 
-function addListenerToAddButton () {
-  var addButton = document.querySelector('#add-button');
-  addButton.addEventListener('click', saveAccount, false);
-}
-
-function removeAccount (event) {
-  //  event.stopPropagation();
-  if (event.currentTarget !== event.target) return;
-  //if (deleteButton !== event.target) return; //new
-  var listItem = event.target.parentNode;
+function removeAccount () {
+  var $btn = $(this);
+  var listItem = $btn[0].parentNode;
   var accountName = listItem.children[0].textContent;
   var accountBalance = listItem.children[1].textContent;
-  removeAccountFromDom(event);
+  removeAccountFromDom(listItem);
   manageLocalStorage.removeAccount(accountName, accountBalance);
 }
 
-document.onload = addListenerToAddButton();
+function getAccountsFromStorage () {
+  var savedAccounts = localStorage.getItem('accounts');
+  var listOfAccounts;
+  if (savedAccounts) {
+    listOfAccounts = JSON.parse(savedAccounts);
+  }
+  for (var i = 0; i<listOfAccounts.length; i++ ) {
+    var retrievedName = listOfAccounts[i].name;
+    var retrievedBalance = listOfAccounts[i].balance;
+    addAccountToDom(retrievedName, retrievedBalance);
+  }
+}
+
+function onPageLoaded() {
+  var addButton = document.querySelector('#add-button');
+  addButton.addEventListener('click', saveAccount, false);
+  getAccountsFromStorage();
+}
+
+document.onload = onPageLoaded();

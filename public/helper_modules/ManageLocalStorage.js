@@ -1,7 +1,3 @@
-/**
- * Created by coding on 2017-04-15.
- */
-
 var manageLocalStorage = (function() {
 
   function addAccount(name, balance) {
@@ -18,7 +14,6 @@ var manageLocalStorage = (function() {
       var currentAccounts = JSON.parse(savedAccounts);
       var accountsToSave = currentAccounts.filter(function(item) {
         return item.name !== name;
-        //return item !== accountToRemove;
       });
       localStorage.setItem('accounts', JSON.stringify(accountsToSave));
     }
