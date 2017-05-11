@@ -71,16 +71,7 @@ function removeAccount () {
 }
 
 function getAccountsFromStorage () {
-  var savedAccounts = localStorage.getItem('accounts');
-  var listOfAccounts;
-  if (savedAccounts) {
-    listOfAccounts = JSON.parse(savedAccounts);
-  }
-  for (var i = 0; i<listOfAccounts.length; i++ ) {
-    var retrievedName = listOfAccounts[i].name;
-    var retrievedBalance = listOfAccounts[i].balance;
-    addAccountToDom(retrievedName, retrievedBalance);
-  }
+  manageLocalStorage.getAllAccounts();
 }
 
 function onPageLoaded() {

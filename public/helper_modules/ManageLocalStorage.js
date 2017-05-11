@@ -19,6 +19,19 @@ var manageLocalStorage = (function() {
     }
   }
 
+  function getAllAccounts (){
+    var savedAccounts = localStorage.getItem('accounts');
+    var listOfAccounts;
+    if (savedAccounts) {
+      listOfAccounts = JSON.parse(savedAccounts);
+    }
+    for (var i = 0; i < listOfAccounts.length; i++ ) {
+      var retrievedName = listOfAccounts[i].name;
+      var retrievedBalance = listOfAccounts[i].balance;
+      addAccountToDom(retrievedName, retrievedBalance);
+    }
+  }
+
   function addCategory (id, name, isExpense){
     var currentCategories = JSON.parse(localStorage.getItem('categories')) || [];
     var categoryToAdd = { id: id, name: name, isExpense: isExpense };
@@ -28,6 +41,7 @@ var manageLocalStorage = (function() {
 
   return {
     addAccount: addAccount,
-    removeAccount: removeAccount
+    removeAccount: removeAccount,
+    getAllAccounts: getAllAccounts
   }
 })();
