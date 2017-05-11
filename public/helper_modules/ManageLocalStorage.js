@@ -41,8 +41,7 @@ var manageLocalStorage = (function() {
       updateAccountID = existingAccountID + 1;
     } else {
       updateAccountID = 1;
-    }
-    localStorage.setItem('accountID', updateAccountID);
+    } localStorage.setItem('accountID', updateAccountID);
   }
 
   /*function addCategory (id, name, isExpense){
