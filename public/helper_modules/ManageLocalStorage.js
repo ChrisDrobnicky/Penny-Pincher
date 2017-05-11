@@ -24,11 +24,12 @@ var manageLocalStorage = (function() {
     var listOfAccounts;
     if (savedAccounts) {
       listOfAccounts = JSON.parse(savedAccounts);
-    }
-    for (var i = 0; i < listOfAccounts.length; i++ ) {
-      var retrievedName = listOfAccounts[i].name;
-      var retrievedBalance = listOfAccounts[i].balance;
-      addAccountToDom(retrievedName, retrievedBalance);
+      for (var i = 0; i < listOfAccounts.length; i++) {
+        var retrievedName = listOfAccounts[i].name;
+        debugger;
+        var retrievedBalance = listOfAccounts[i].balance;
+        addAccountToDom(retrievedName, retrievedBalance);
+      }
     }
   }
 
