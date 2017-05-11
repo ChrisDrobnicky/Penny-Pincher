@@ -57,6 +57,7 @@ function saveAccount() {
   if (checkInput(accountName, accountBalance) === true) {
     addAccountToDom(accountName, accountBalance);
     manageLocalStorage.addAccount(accountName, accountBalance);
+    manageLocalStorage.generateID();
     clearFormInputs();
     }
   }

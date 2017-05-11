@@ -33,16 +33,29 @@ var manageLocalStorage = (function() {
     }
   }
 
-  function addCategory (id, name, isExpense){
+  function generateID () {
+    var existingAccountID = localStorage.getItem('accountID');
+    var updateAccountID;
+    if (existingAccountID) {
+      existingAccountID = Number(existingAccountID);
+      updateAccountID = existingAccountID + 1;
+    } else {
+      updateAccountID = 1;
+    }
+    localStorage.setItem('accountID', updateAccountID);
+  }
+
+  /*function addCategory (id, name, isExpense){
     var currentCategories = JSON.parse(localStorage.getItem('categories')) || [];
     var categoryToAdd = { id: id, name: name, isExpense: isExpense };
     currentCategories.push(categoryToAdd);
     localStorage.setItem('categories', JSON.stringify(currentCategories));
-  }
+  }*/
 
   return {
     addAccount: addAccount,
     removeAccount: removeAccount,
-    getAllAccounts: getAllAccounts
+    getAllAccounts: getAllAccounts,
+    generateID: generateID
   }
 })();
