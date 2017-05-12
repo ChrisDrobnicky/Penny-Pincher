@@ -1,13 +1,13 @@
 var manageLocalStorage = (function() {
 
-  function addAccount(name, balance) {
+  function addAccount(name, balance, id) {
     var currentAccounts = JSON.parse(localStorage.getItem('accounts')) || [];
-    var accountToAdd = { name: name, balance: balance };
+    var accountToAdd = { name: name, balance: balance, id: id };
     currentAccounts.push(accountToAdd);
     localStorage.setItem('accounts', JSON.stringify(currentAccounts));
   }
 
-  function removeAccount (name, balance) {
+  function removeAccount (name, balance, id) {
     var savedAccounts = localStorage.getItem('accounts');
     //var accountToRemove = {name: name, balance: balance};
     if (savedAccounts !== null) {
@@ -41,7 +41,8 @@ var manageLocalStorage = (function() {
       updateAccountID = existingAccountID + 1;
     } else {
       updateAccountID = 1;
-    } localStorage.setItem('accountID', updateAccountID);
+    }
+    localStorage.setItem('accountID', updateAccountID);
   }
 
   /*function addCategory (id, name, isExpense){

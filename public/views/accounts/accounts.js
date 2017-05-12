@@ -53,15 +53,17 @@ function clearFormInputs () {
 function saveAccount() {
   var accountName = document.querySelector('#account-name').value;
   var accountBalance = document.querySelector('#account-balance').value;
+  var accountID = localStorage.getItem('accountID');
   checkInput(accountName, accountBalance);
   if (checkInput(accountName, accountBalance) === true) {
     addAccountToDom(accountName, accountBalance);
-    manageLocalStorage.addAccount(accountName, accountBalance);
     manageLocalStorage.generateID();
+    manageLocalStorage.addAccount(accountName, accountBalance, accountID);
     clearFormInputs();
     }
   }
 
+/* old:
 function removeAccount () {
   var $btn = $(this);
   var listItem = $btn[0].parentNode;
@@ -69,6 +71,18 @@ function removeAccount () {
   var accountBalance = listItem.children[1].textContent;
   removeAccountFromDom(listItem);
   manageLocalStorage.removeAccount(accountName, accountBalance);
+}
+*/
+
+function removeAccount () {
+  var $btn = $(this);
+  var listItem = $btn[0].parentNode;
+  var accountName = listItem.children[0].textContent;
+  var accountBalance = listItem.children[1].textContent;
+  var accountID = localStorage.getItem('accountID') - 1;
+  debugger;
+  removeAccountFromDom(listItem);
+  manageLocalStorage.removeAccount(accountName, accountBalance, accountID);
 }
 
 function getAccountsFromStorage () {
@@ -79,6 +93,9 @@ function onPageLoaded() {
   var addButton = document.querySelector('#add-button');
   addButton.addEventListener('click', saveAccount, false);
   getAccountsFromStorage();
+  if (localStorage.getItem('accountID')=== null ) {
+    manageLocalStorage.generateID();
+  }
 }
 
 document.onload = onPageLoaded();
