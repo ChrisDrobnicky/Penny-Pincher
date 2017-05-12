@@ -2,38 +2,40 @@ var manageLocalStorage = (function() {
 
   function addAccount(name, balance, id) {
     var currentAccounts = JSON.parse(localStorage.getItem('accounts')) || [];
-    var accountToAdd = { name: name, balance: balance, id: id };
+    var accountToAdd = { name: name, balance: balance, id: id, transactions: [] };
     currentAccounts.push(accountToAdd);
     localStorage.setItem('accounts', JSON.stringify(currentAccounts));
   }
 
-  function removeAccount (name, balance, id) {
+  function removeAccount(id) {
     var savedAccounts = localStorage.getItem('accounts');
-    //var accountToRemove = {name: name, balance: balance};
+    var currentAccounts = JSON.parse(savedAccounts);
     if (savedAccounts !== null) {
-      var currentAccounts = JSON.parse(savedAccounts);
       var accountsToSave = currentAccounts.filter(function(item) {
-        return item.name !== name;
+        return item.id !== id;
       });
+      currentAccounts = accountsToSave;
       localStorage.setItem('accounts', JSON.stringify(accountsToSave));
+    }
+    if (currentAccounts.length === 0) {
+      localStorage.setItem('accountID', 1);
     }
   }
 
-  function getAllAccounts (){
+  function getAllAccounts(){
     var savedAccounts = localStorage.getItem('accounts');
     var listOfAccounts;
     if (savedAccounts) {
       listOfAccounts = JSON.parse(savedAccounts);
       for (var i = 0; i < listOfAccounts.length; i++) {
         var retrievedName = listOfAccounts[i].name;
-        debugger;
         var retrievedBalance = listOfAccounts[i].balance;
         addAccountToDom(retrievedName, retrievedBalance);
       }
     }
   }
 
-  function generateID () {
+  function generateAccountID() {
     var existingAccountID = localStorage.getItem('accountID');
     var updateAccountID;
     if (existingAccountID) {
@@ -43,6 +45,10 @@ var manageLocalStorage = (function() {
       updateAccountID = 1;
     }
     localStorage.setItem('accountID', updateAccountID);
+  }
+
+  function getAccountID() {
+    return localStorage.getItem('accountID');
   }
 
   /*function addCategory (id, name, isExpense){
@@ -56,6 +62,7 @@ var manageLocalStorage = (function() {
     addAccount: addAccount,
     removeAccount: removeAccount,
     getAllAccounts: getAllAccounts,
-    generateID: generateID
+    generateAccountID: generateAccountID,
+    getAccountID: getAccountID
   }
 })();

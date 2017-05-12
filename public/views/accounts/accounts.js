@@ -1,12 +1,13 @@
 function addAccountToDom (name, balance){
   var accountList = document.querySelector('#accountList');
-
+  var accountID = manageLocalStorage.getAccountID();
   var newListItem = document.createElement('li');
   var newAccountName = document.createElement('span');
   var newAccountBalance = document.createElement('span');
   var deleteButton = document.createElement('button');
   var deleteIcon = document.createElement('span');
   newListItem.classList.add('account-list__item');
+  newListItem.setAttribute('id', accountID);
   newAccountName.textContent = name;
   newAccountName.classList.add('account-list__name');
   newAccountBalance.textContent = balance;
@@ -56,33 +57,19 @@ function saveAccount() {
   var accountID = localStorage.getItem('accountID');
   checkInput(accountName, accountBalance);
   if (checkInput(accountName, accountBalance) === true) {
-    addAccountToDom(accountName, accountBalance);
-    manageLocalStorage.generateID();
+    addAccountToDom(accountName, accountBalance, accountID);
+    manageLocalStorage.generateAccountID();
     manageLocalStorage.addAccount(accountName, accountBalance, accountID);
     clearFormInputs();
     }
   }
 
-/* old:
 function removeAccount () {
   var $btn = $(this);
   var listItem = $btn[0].parentNode;
-  var accountName = listItem.children[0].textContent;
-  var accountBalance = listItem.children[1].textContent;
+  var accountID = listItem.id;
   removeAccountFromDom(listItem);
-  manageLocalStorage.removeAccount(accountName, accountBalance);
-}
-*/
-
-function removeAccount () {
-  var $btn = $(this);
-  var listItem = $btn[0].parentNode;
-  var accountName = listItem.children[0].textContent;
-  var accountBalance = listItem.children[1].textContent;
-  var accountID = localStorage.getItem('accountID') - 1;
-  debugger;
-  removeAccountFromDom(listItem);
-  manageLocalStorage.removeAccount(accountName, accountBalance, accountID);
+  manageLocalStorage.removeAccount(accountID);
 }
 
 function getAccountsFromStorage () {
@@ -94,7 +81,7 @@ function onPageLoaded() {
   addButton.addEventListener('click', saveAccount, false);
   getAccountsFromStorage();
   if (localStorage.getItem('accountID')=== null ) {
-    manageLocalStorage.generateID();
+    manageLocalStorage.generateAccountID();
   }
 }
 
