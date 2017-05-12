@@ -6,13 +6,13 @@ function addAccountToDom (name, balance){
   var newAccountBalance = document.createElement('span');
   var deleteButton = document.createElement('button');
   var deleteIcon = document.createElement('span');
-  newListItem.classList.add('account-list__item');
+  newListItem.classList.add('pp-account-list__item');
   newListItem.setAttribute('id', accountID);
   newAccountName.textContent = name;
-  newAccountName.classList.add('account-list__name');
+  newAccountName.classList.add('pp-account-list__name');
   newAccountBalance.textContent = balance;
-  newAccountBalance.classList.add('account-list__balance');
-  deleteButton.classList.add('btn', 'btn-danger', 'btn-remove', 'account-list__button');
+  newAccountBalance.classList.add('pp-account-list__balance');
+  deleteButton.classList.add('btn', 'btn-danger', 'btn-remove', 'pp-account-list__button');
   deleteIcon.classList.add('glyphicon', 'glyphicon-minus');
   deleteButton.addEventListener('click', removeAccount, false);
 

@@ -1,21 +1,21 @@
-.accounts-container {
+.pp-accounts-container {
   color: #fff;
-  .account-list {
+  .pp-account-list {
     list-style-type: none;
     color: #fff;
     padding: 5px;
-    .account-list__item {
+    .pp-account-list__item {
       margin-bottom: 10px;
     }
-    .account-list__name {
+    .pp-account-list__name {
       display: inline-block;
       width: 195px;
     }
-    .account-list__balance {
+    .pp-account-list__balance {
       display: inline-block;
       width: 140px;
     }
-    .account-list__button {
+    .pp-account-list__button {
       margin-left: 50px;
     }
   }
