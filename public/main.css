@@ -1,0 +1,19 @@
+body {
+  background-color: #333; }
+
+.header {
+  text-align: center;
+  margin: 20px;
+  color: #fff;
+  font-size: 36px; }
+  .header .header__heading {
+    text-transform: uppercase; }
+
+.continue-container {
+  padding-top: 50px; }
+  .continue-container .continue-button {
+    margin: 0 auto;
+    display: block;
+    width: 100px; }
+
+/*# sourceMappingURL=main.css.map */
