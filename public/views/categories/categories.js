@@ -60,6 +60,7 @@ function saveExpenseCategory() {
   var expenseCategory = document.querySelector('#expense-category');
   if (checkCategoryInput(expenseCategory.value) === true) {
     addExpenseToDOM(expenseCategory.value);
+    manageLocalStorage.saveCategory(expenseCategory.value, true);
     clearFormInputs(expenseCategory.id);
   }
 }
@@ -68,6 +69,7 @@ function saveIncomeCategory() {
   var incomeCategory = document.querySelector('#income-category');
   if (checkCategoryInput(incomeCategory.value) === true) {
     addIncomeToDOM(incomeCategory.value);
+    manageLocalStorage.saveCategory(incomeCategory.value, false);
     clearFormInputs(incomeCategory.id);
   }
 }
@@ -87,6 +89,9 @@ function onPageLoaded() {
   var addIncomeButton = document.querySelector('#add-incomeButton');
   addExpenseButton.addEventListener('click', saveExpenseCategory, false);
   addIncomeButton.addEventListener('click', saveIncomeCategory, false);
+  if (localStorage.getItem('categoryID')=== null ) {
+    manageLocalStorage.generateCategoryID();
+  }
 }
 
 document.onload = onPageLoaded();

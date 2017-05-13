@@ -51,18 +51,34 @@ var manageLocalStorage = (function() {
     return localStorage.getItem('accountID');
   }
 
-  /*function addCategory (id, name, isExpense){
+  function generateCategoryID() {
+    var existingCategoryID = localStorage.getItem('categoryID');
+    var updateCategoryID;
+    if (existingCategoryID) {
+      existingCategoryID = Number(existingCategoryID);
+      updateCategoryID = existingCategoryID + 1;
+    } else {
+      updateCategoryID = 1;
+    }
+    localStorage.setItem('categoryID', updateCategoryID);
+  }
+
+  function saveCategory(name, isExpense) {
     var currentCategories = JSON.parse(localStorage.getItem('categories')) || [];
-    var categoryToAdd = { id: id, name: name, isExpense: isExpense };
+    var categoryID = localStorage.getItem('categoryID');
+    var categoryToAdd = { name: name, isExpense: isExpense, id: categoryID};
     currentCategories.push(categoryToAdd);
     localStorage.setItem('categories', JSON.stringify(currentCategories));
-  }*/
+    generateCategoryID();
+  }
 
   return {
     addAccount: addAccount,
     removeAccount: removeAccount,
     getAllAccounts: getAllAccounts,
     generateAccountID: generateAccountID,
-    getAccountID: getAccountID
+    getAccountID: getAccountID,
+    generateCategoryID: generateCategoryID,
+    saveCategory: saveCategory
   }
 })();
