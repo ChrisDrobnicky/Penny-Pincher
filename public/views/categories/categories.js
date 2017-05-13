@@ -11,6 +11,7 @@ function addExpenseToDOM(expense) {
   deleteIcon.classList.add('glyphicon', 'glyphicon-minus');
 
   deleteButton.appendChild(deleteIcon);
+  deleteButton.addEventListener('click', removeCategory, false);
   newExpenseCategory.textContent = expense;
   expenseItem.appendChild(newExpenseCategory);
   expenseItem.appendChild(deleteButton);
@@ -30,20 +31,55 @@ function addIncomeToDOM(income) {
   deleteIcon.classList.add('glyphicon', 'glyphicon-minus');
 
   deleteButton.appendChild(deleteIcon);
+  deleteButton.addEventListener('click', removeCategory, false);
   newIncomeCategory.textContent = income;
   incomeItem.appendChild(newIncomeCategory);
   incomeItem.appendChild(deleteButton);
   incomeList.appendChild(incomeItem);
 }
 
+function checkCategoryInput(inputToCheck) {
+  var alertForUser = document.querySelector('#alertForUser');
+  if (inputToCheck.length === 0) {
+    alertForUser.classList.add('alert', 'alert-danger');
+    alertForUser.innerHTML = '<strong>Error:</strong> Please enter category';
+    return false;
+  } else {
+    alertForUser.classList.remove('alert', 'alert-danger');
+    alertForUser.textContent = '';
+    return true;
+  }
+}
+
+function clearFormInputs(elementID) {
+  var inputToClear = document.querySelector('#' + elementID);
+  inputToClear.value = '';
+}
+
 function saveExpenseCategory() {
-  var expenseCategory = document.querySelector('#expense-category').value;
-  addExpenseToDOM(expenseCategory);
+  var expenseCategory = document.querySelector('#expense-category');
+  if (checkCategoryInput(expenseCategory.value) === true) {
+    addExpenseToDOM(expenseCategory.value);
+    clearFormInputs(expenseCategory.id);
+  }
 }
 
 function saveIncomeCategory() {
-  var incomeCategory = document.querySelector('#income-category').value;
-  addIncomeToDOM(incomeCategory);
+  var incomeCategory = document.querySelector('#income-category');
+  if (checkCategoryInput(incomeCategory.value) === true) {
+    addIncomeToDOM(incomeCategory.value);
+    clearFormInputs(incomeCategory.id);
+  }
+}
+
+function removeCategory() {
+  var $btn = $(this);
+  var categoryToRemove = $btn[0].parentNode;
+  removeCategoryFromDOM(categoryToRemove);
+}
+
+function removeCategoryFromDOM(category) {
+  category.parentNode.removeChild(category);
 }
 
 function onPageLoaded() {

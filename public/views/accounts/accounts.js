@@ -27,7 +27,7 @@ function removeAccountFromDom (listItem){
   listItem.parentNode.removeChild(listItem);
 }
 
-function checkInput (accountName, accountBalance){
+function checkInput(accountName, accountBalance){
   var outputDiv = document.querySelector('#outputDiv');
   if (accountName.length === 0 || accountBalance.length === 0) {
     outputDiv.classList.add('alert', 'alert-danger');
@@ -44,7 +44,7 @@ function checkInput (accountName, accountBalance){
   }
 }
 
-function clearFormInputs () {
+function clearFormInputs() {
   var nameInput = document.querySelector('#account-name');
   var balanceInput = document.querySelector('#account-balance');
   nameInput.value = '';
