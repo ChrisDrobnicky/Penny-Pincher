@@ -1,94 +1,94 @@
 function addExpenseToDOM(expense) {
-  var expenseList = document.querySelector('#expenseList');
-  var expenseItem = document.createElement('li');
-  var newExpenseCategory = document.createElement('span');
-  var deleteButton = document.createElement('button');
-  var deleteIcon = document.createElement('span');
+  var $expenseList = $('#expenseList');
+  var $expenseItem = $(document.createElement('li'));
+  var $newExpenseCategory = $(document.createElement('span'));
+  var $deleteButton = $(document.createElement('button'));
+  var $deleteIcon = $(document.createElement('span'));
 
-  expenseItem.classList.add('pp-categories-list__item');
-  deleteButton.classList.add('btn', 'btn-danger', 'btn-remove', 'pp-categories-list__button');
-  newExpenseCategory.classList.add('pp-categories-list__name');
-  deleteIcon.classList.add('glyphicon', 'glyphicon-minus');
+  $expenseItem.addClass('pp-categories-list__item');
+  $deleteButton.addClass('btn btn-danger btn-remove pp-categories-list__button');
+  $newExpenseCategory.addClass('pp-categories-list__name');
+  $deleteIcon.addClass('glyphicon glyphicon-minus');
 
-  deleteButton.appendChild(deleteIcon);
-  deleteButton.addEventListener('click', removeCategory, false);
-  newExpenseCategory.textContent = expense;
-  expenseItem.appendChild(newExpenseCategory);
-  expenseItem.appendChild(deleteButton);
-  expenseList.appendChild(expenseItem);
+  $deleteButton.append($deleteIcon);
+  $deleteButton.click(removeCategory);
+  $newExpenseCategory.text(expense);
+  $expenseItem.append($newExpenseCategory);
+  $expenseItem.append($deleteButton);
+  $expenseList.append($expenseItem);
 }
 
 function addIncomeToDOM(income) {
-  var incomeList = document.querySelector('#incomeList');
-  var incomeItem = document.createElement('li');
-  var newIncomeCategory = document.createElement('span');
-  var deleteButton = document.createElement('button');
-  var deleteIcon = document.createElement('span');
+  var $incomeList = $('#incomeList');
+  var $incomeItem = $(document.createElement('li'));
+  var $newIncomeCategory = $(document.createElement('span'));
+  var $deleteButton = $(document.createElement('button'));
+  var $deleteIcon = $(document.createElement('span'));
 
-  incomeItem.classList.add('pp-categories-list__item');
-  deleteButton.classList.add('btn', 'btn-danger', 'btn-remove', 'pp-categories-list__button');
-  newIncomeCategory.classList.add('pp-categories-list__name');
-  deleteIcon.classList.add('glyphicon', 'glyphicon-minus');
+  $incomeItem.addClass('pp-categories-list__item');
+  $deleteButton.addClass('btn btn-danger btn-remove pp-categories-list__button');
+  $newIncomeCategory.addClass('pp-categories-list__name');
+  $deleteIcon.addClass('glyphicon glyphicon-minus');
 
-  deleteButton.appendChild(deleteIcon);
-  deleteButton.addEventListener('click', removeCategory, false);
-  newIncomeCategory.textContent = income;
-  incomeItem.appendChild(newIncomeCategory);
-  incomeItem.appendChild(deleteButton);
-  incomeList.appendChild(incomeItem);
+  $deleteButton.append($deleteIcon);
+  $deleteButton.click(removeCategory);
+  $newIncomeCategory.text(income);
+  $incomeItem.append($newIncomeCategory);
+  $incomeItem.append($deleteButton);
+  $incomeList.append($incomeItem);
 }
 
 function checkCategoryInput(inputToCheck) {
-  var alertForUser = document.querySelector('#alertForUser');
+  var $alertForUser = $('#alertForUser');
   if (inputToCheck.length === 0) {
-    alertForUser.classList.add('alert', 'alert-danger');
-    alertForUser.innerHTML = '<strong>Error:</strong> Please enter category';
+    $alertForUser.addClass('alert alert-danger');
+    $alertForUser.html('<strong>Error:</strong> Please enter category');
     return false;
   } else {
-    alertForUser.classList.remove('alert', 'alert-danger');
-    alertForUser.textContent = '';
+    $alertForUser.removeClass('alert alert-danger');
+    $alertForUser.text('');
     return true;
   }
 }
 
 function clearFormInputs(elementID) {
-  var inputToClear = document.querySelector('#' + elementID);
-  inputToClear.value = '';
+  var $inputToClear = $('#' + elementID);
+  $inputToClear.val('');
 }
 
 function saveExpenseCategory() {
-  var expenseCategory = document.querySelector('#expense-category');
-  if (checkCategoryInput(expenseCategory.value) === true) {
-    addExpenseToDOM(expenseCategory.value);
-    manageLocalStorage.saveCategory(expenseCategory.value, true);
-    clearFormInputs(expenseCategory.id);
+  var $expenseCategory = $('#expense-category');
+  if (checkCategoryInput($expenseCategory.val()) === true) {
+    addExpenseToDOM($expenseCategory.val());
+    manageLocalStorage.saveCategory($expenseCategory.val(), true);
+    clearFormInputs($expenseCategory.attr('id'));
   }
 }
 
 function saveIncomeCategory() {
-  var incomeCategory = document.querySelector('#income-category');
-  if (checkCategoryInput(incomeCategory.value) === true) {
-    addIncomeToDOM(incomeCategory.value);
-    manageLocalStorage.saveCategory(incomeCategory.value, false);
-    clearFormInputs(incomeCategory.id);
+  var $incomeCategory = $('#income-category');
+  if (checkCategoryInput($incomeCategory.val()) === true) {
+    addIncomeToDOM($incomeCategory.val());
+    manageLocalStorage.saveCategory($incomeCategory.val(), false);
+    clearFormInputs($incomeCategory.attr('id'));
   }
 }
 
 function removeCategory() {
   var $btn = $(this);
-  var categoryToRemove = $btn[0].parentNode;
-  removeCategoryFromDOM(categoryToRemove);
+  var $categoryToRemove = $btn[0].parentNode;
+  removeCategoryFromDOM($categoryToRemove);
 }
 
 function removeCategoryFromDOM(category) {
-  category.parentNode.removeChild(category);
+  $(category).remove();
 }
 
 function onPageLoaded() {
-  var addExpenseButton = document.querySelector('#add-expenseButton');
-  var addIncomeButton = document.querySelector('#add-incomeButton');
-  addExpenseButton.addEventListener('click', saveExpenseCategory, false);
-  addIncomeButton.addEventListener('click', saveIncomeCategory, false);
+  var $addExpenseButton = $('#add-expenseButton');
+  var $addIncomeButton = $('#add-incomeButton');
+  $addExpenseButton.click(saveExpenseCategory);
+  $addIncomeButton.click(saveIncomeCategory);
   if (localStorage.getItem('categoryID')=== null ) {
     manageLocalStorage.generateCategoryID();
   }
