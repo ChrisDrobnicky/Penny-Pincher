@@ -22,14 +22,38 @@
       </header>
       <div class="form-container">
         <div class="row">
-          <form class="configure-form">
-            <div class="col-lg-6 col-md-6 col-sm-3">
-              <h2>Expense</h2>
+          <form class="pp-configure-form">
+            <div class="col-lg-6 col-md-6 col-sm-8">
+              <h3>Expense</h3>
+              <ul class="pp-categories-list" id="expenseList"></ul>
+              <label class="sr-only" for="expense-category">Expense category</label>
+              <input
+                type="text"
+                id="expense-category"
+                class="pp-configure-form__input"
+                placeholder="Enter expense category"
+                required
+                maxlength="20">
+              <button type="button" id="add-expenseButton" class="pp-configure-form__button btn btn-success btn-add">
+                <span class="glyphicon glyphicon-plus"> </span>
+              </button>
             </div>
           </form>
-          <form class="configure-form">
-            <div class="col-lg-6 col-md-6 col-sm-9">
-              <h2>Income</h2>
+          <form class="pp-configure-form">
+            <div class="col-lg-6 col-md-6 col-sm-4">
+              <h3>Income</h3>
+              <ul class="pp-categories-list" id="incomeList"></ul>
+              <label class="sr-only" for="income-category">Income category</label>
+              <input
+                type="text"
+                id="income-category"
+                class="pp-configure-form__input"
+                placeholder="Enter income category"
+                required
+                maxlength="20">
+              <button type="button" id="add-incomeButton" class="pp-configure-form__button btn btn-success btn-add">
+                <span class="glyphicon glyphicon-plus"> </span>
+              </button>
             </div>
           </form>
         </div>

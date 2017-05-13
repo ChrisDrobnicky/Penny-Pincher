@@ -1,5 +1,30 @@
 .pp-categories {
   color: #fff;
+    .pp-categories-list {
+      list-style-type: none;
+      padding-left: 0;
+      .pp-categories-list__item {
+        margin-bottom: 10px;
+        width: 350px;
+        height: 34px;
+      }
+      .pp-categories-list__name{
+        line-height: 34px;
+      }
+      .pp-categories-list__button {
+        margin-right: 50px;
+        float: right;
+      }
+    }
+  .pp-configure-form {
+    .pp-configure-form__input {
+      color: #222;
+    }
+    .pp-configure-form__button {
+      float: right;
+      margin-right: 255px;
+    }
+  }
   .pp-continue-container {
     margin: 0 auto;
     display: block;

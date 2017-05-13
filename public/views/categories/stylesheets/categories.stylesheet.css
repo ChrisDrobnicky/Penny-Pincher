@@ -1,5 +1,22 @@
 .pp-categories {
   color: #fff; }
+  .pp-categories .pp-categories-list {
+    list-style-type: none;
+    padding-left: 0; }
+    .pp-categories .pp-categories-list .pp-categories-list__item {
+      margin-bottom: 10px;
+      width: 350px;
+      height: 34px; }
+    .pp-categories .pp-categories-list .pp-categories-list__name {
+      line-height: 34px; }
+    .pp-categories .pp-categories-list .pp-categories-list__button {
+      margin-right: 50px;
+      float: right; }
+  .pp-categories .pp-configure-form .pp-configure-form__input {
+    color: #222; }
+  .pp-categories .pp-configure-form .pp-configure-form__button {
+    float: right;
+    margin-right: 255px; }
   .pp-categories .pp-continue-container {
     margin: 0 auto;
     display: block;
