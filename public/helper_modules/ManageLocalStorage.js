@@ -22,6 +22,22 @@ var manageLocalStorage = (function() {
     }
   }
 
+  function removeCategory(id) {
+    debugger;
+    var savedCategories = localStorage.getItem('categories');
+    var currentCategories = JSON.parse(savedCategories);
+    if (savedCategories !== null) {
+      var categoriesToSave = currentCategories.filter(function(item) {
+        return item.id !== id;
+      });
+      currentCategories = categoriesToSave;
+      localStorage.setItem('categories', JSON.stringify(categoriesToSave));
+    }
+    if (currentCategories.length === 0) {
+      localStorage.setItem('categoryID', 1);
+    }
+  }
+
   function getAllAccounts(){
     var savedAccounts = localStorage.getItem('accounts');
     var listOfAccounts;
@@ -31,6 +47,22 @@ var manageLocalStorage = (function() {
         var retrievedName = listOfAccounts[i].name;
         var retrievedBalance = listOfAccounts[i].balance;
         addAccountToDom(retrievedName, retrievedBalance);
+      }
+    }
+  }
+
+  function getAllCategories() {
+    var savedCategories = localStorage.getItem('categories');
+    var listOfCategories;
+    if (savedCategories) {
+      listOfCategories = JSON.parse(savedCategories);
+      for (var i = 0; i < listOfCategories.length; i++) {
+        var currentCategory = listOfCategories[i];
+        if (listOfCategories[i].isExpense === true) {
+          addExpenseToDOM(currentCategory.name, currentCategory.id);
+        } else {
+          addIncomeToDOM(currentCategory.name, currentCategory.id);
+        }
       }
     }
   }
@@ -49,6 +81,10 @@ var manageLocalStorage = (function() {
 
   function getAccountID() {
     return localStorage.getItem('accountID');
+  }
+
+  function getCategoryID () {
+    return localStorage.getItem('categoryID');
   }
 
   function generateCategoryID() {
@@ -75,10 +111,13 @@ var manageLocalStorage = (function() {
   return {
     addAccount: addAccount,
     removeAccount: removeAccount,
+    removeCategory: removeCategory,
     getAllAccounts: getAllAccounts,
     generateAccountID: generateAccountID,
     getAccountID: getAccountID,
+    getCategoryID: getCategoryID,
     generateCategoryID: generateCategoryID,
-    saveCategory: saveCategory
+    saveCategory: saveCategory,
+    getAllCategories: getAllCategories
   }
 })();

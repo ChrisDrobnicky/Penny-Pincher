@@ -1,4 +1,4 @@
-function addExpenseToDOM(expense) {
+function addExpenseToDOM(expense, id) {
   var $expenseList = $('#expenseList');
   var $expenseItem = $(document.createElement('li'));
   var $newExpenseCategory = $(document.createElement('span'));
@@ -13,12 +13,13 @@ function addExpenseToDOM(expense) {
   $deleteButton.append($deleteIcon);
   $deleteButton.click(removeCategory);
   $newExpenseCategory.text(expense);
+  $expenseItem.attr('id', id);
   $expenseItem.append($newExpenseCategory);
   $expenseItem.append($deleteButton);
   $expenseList.append($expenseItem);
 }
 
-function addIncomeToDOM(income) {
+function addIncomeToDOM(income, id) {
   var $incomeList = $('#incomeList');
   var $incomeItem = $(document.createElement('li'));
   var $newIncomeCategory = $(document.createElement('span'));
@@ -33,6 +34,7 @@ function addIncomeToDOM(income) {
   $deleteButton.append($deleteIcon);
   $deleteButton.click(removeCategory);
   $newIncomeCategory.text(income);
+  $incomeItem.attr('id', id);
   $incomeItem.append($newIncomeCategory);
   $incomeItem.append($deleteButton);
   $incomeList.append($incomeItem);
@@ -58,8 +60,9 @@ function clearFormInputs(elementID) {
 
 function saveExpenseCategory() {
   var $expenseCategory = $('#expense-category');
+  var currentCategoryID = manageLocalStorage.getCategoryID();
   if (checkCategoryInput($expenseCategory.val()) === true) {
-    addExpenseToDOM($expenseCategory.val());
+    addExpenseToDOM($expenseCategory.val(), currentCategoryID);
     manageLocalStorage.saveCategory($expenseCategory.val(), true);
     clearFormInputs($expenseCategory.attr('id'));
   }
@@ -67,8 +70,9 @@ function saveExpenseCategory() {
 
 function saveIncomeCategory() {
   var $incomeCategory = $('#income-category');
+  var currentCategoryID = manageLocalStorage.getCategoryID();
   if (checkCategoryInput($incomeCategory.val()) === true) {
-    addIncomeToDOM($incomeCategory.val());
+    addIncomeToDOM($incomeCategory.val(), currentCategoryID);
     manageLocalStorage.saveCategory($incomeCategory.val(), false);
     clearFormInputs($incomeCategory.attr('id'));
   }
@@ -76,8 +80,10 @@ function saveIncomeCategory() {
 
 function removeCategory() {
   var $btn = $(this);
-  var $categoryToRemove = $btn[0].parentNode;
-  removeCategoryFromDOM($categoryToRemove);
+  var categoryToRemove = $btn[0].parentNode;
+  var categoryID = categoryToRemove.id;
+  removeCategoryFromDOM(categoryToRemove);
+  manageLocalStorage.removeCategory(categoryID);
 }
 
 function removeCategoryFromDOM(category) {
@@ -92,6 +98,7 @@ function onPageLoaded() {
   if (localStorage.getItem('categoryID')=== null ) {
     manageLocalStorage.generateCategoryID();
   }
+  manageLocalStorage.getAllCategories();
 }
 
 document.onload = onPageLoaded();
