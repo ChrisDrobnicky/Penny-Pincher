@@ -23,18 +23,17 @@ var manageLocalStorage = (function() {
   }
 
   function removeCategory(id) {
-    debugger;
     var savedCategories = localStorage.getItem('categories');
     var currentCategories = JSON.parse(savedCategories);
     if (savedCategories !== null) {
       var categoriesToSave = currentCategories.filter(function(item) {
-        return item.id !== id;
+        return Number(item.id) !== Number(id);
       });
       currentCategories = categoriesToSave;
       localStorage.setItem('categories', JSON.stringify(categoriesToSave));
     }
     if (currentCategories.length === 0) {
-      localStorage.setItem('categoryID', 1);
+      localStorage.setItem('categoryID', 10);
     }
   }
 
@@ -53,16 +52,27 @@ var manageLocalStorage = (function() {
 
   function getAllCategories() {
     var savedCategories = localStorage.getItem('categories');
-    var listOfCategories;
-    if (savedCategories) {
-      listOfCategories = JSON.parse(savedCategories);
-      for (var i = 0; i < listOfCategories.length; i++) {
-        var currentCategory = listOfCategories[i];
-        if (listOfCategories[i].isExpense === true) {
-          addExpenseToDOM(currentCategory.name, currentCategory.id);
-        } else {
-          addIncomeToDOM(currentCategory.name, currentCategory.id);
-        }
+    var listOfCategories = JSON.parse(savedCategories);
+    if (listOfCategories === null || (listOfCategories && listOfCategories.length === 0)) {
+      listOfCategories = [
+        {id: 1, isExpense: true, name: 'rent&bills'},
+        {id: 2, isExpense: true, name: 'food'},
+        {id: 3, isExpense: true, name: 'entertainment'},
+        {id: 4, isExpense: true, name: 'car'},
+        {id: 5, isExpense: true, name: 'clothes'},
+        {id: 6, isExpense: true, name: 'sports'},
+        {id: 7, isExpense: false, name: 'salary'},
+        {id: 8, isExpense: false, name: 'lottery wins'},
+        {id: 9, isExpense: false, name: 'rent'},
+      ]
+      localStorage.setItem('categories', JSON.stringify(listOfCategories));
+    }
+    for (var i = 0; i < listOfCategories.length; i++) {
+      var currentCategory = listOfCategories[i];
+      if (listOfCategories[i].isExpense === true) {
+        addExpenseToDOM(currentCategory.name, currentCategory.id);
+      } else {
+        addIncomeToDOM(currentCategory.name, currentCategory.id);
       }
     }
   }
@@ -94,7 +104,7 @@ var manageLocalStorage = (function() {
       existingCategoryID = Number(existingCategoryID);
       updateCategoryID = existingCategoryID + 1;
     } else {
-      updateCategoryID = 1;
+      updateCategoryID = 10;
     }
     localStorage.setItem('categoryID', updateCategoryID);
   }
@@ -106,6 +116,7 @@ var manageLocalStorage = (function() {
     currentCategories.push(categoryToAdd);
     localStorage.setItem('categories', JSON.stringify(currentCategories));
     generateCategoryID();
+    return categoryToAdd;
   }
 
   return {

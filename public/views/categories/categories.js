@@ -79,6 +79,7 @@ function saveIncomeCategory() {
 }
 
 function removeCategory() {
+  debugger;
   var $btn = $(this);
   var categoryToRemove = $btn[0].parentNode;
   var categoryID = categoryToRemove.id;
