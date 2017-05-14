@@ -2,21 +2,21 @@ body {
   background-color: #333;
 }
 
-.header {
+.pp-header {
   text-align: center;
   margin: 20px;
   color: #fff;
   font-size: 36px;
 
-  .header__heading {
+  .pp-header__heading {
     text-transform: uppercase;
   }
 }
 
-.continue-container {
+.pp-continue-container {
   padding-top: 50px;
 
-  .continue-button {
+  .pp-continue-button {
     margin: 0 auto;
     display: block;
     width: 100px;

@@ -1,21 +1,21 @@
-.accounts-container {
+.pp-accounts-container {
   color: #fff; }
-  .accounts-container .account-list {
+  .pp-accounts-container .pp-account-list {
     list-style-type: none;
     color: #fff;
     padding: 5px; }
-    .accounts-container .account-list .account-list__item {
+    .pp-accounts-container .pp-account-list .pp-account-list__item {
       margin-bottom: 10px; }
-    .accounts-container .account-list .account-list__name {
+    .pp-accounts-container .pp-account-list .pp-account-list__name {
       display: inline-block;
       width: 195px; }
-    .accounts-container .account-list .account-list__balance {
+    .pp-accounts-container .pp-account-list .pp-account-list__balance {
       display: inline-block;
       width: 140px; }
-    .accounts-container .account-list .account-list__button {
+    .pp-accounts-container .pp-account-list .pp-account-list__button {
       margin-left: 50px; }
 
-.configure-form .configure-form__input {
+.pp-configure-form .pp-configure-form__input {
   color: #222; }
 
 /*# sourceMappingURL=accounts.stylesheet.css.map */

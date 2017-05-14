@@ -22,6 +22,21 @@ var manageLocalStorage = (function() {
     }
   }
 
+  function removeCategory(id) {
+    var savedCategories = localStorage.getItem('categories');
+    var currentCategories = JSON.parse(savedCategories);
+    if (savedCategories !== null) {
+      var categoriesToSave = currentCategories.filter(function(item) {
+        return Number(item.id) !== Number(id);
+      });
+      currentCategories = categoriesToSave;
+      localStorage.setItem('categories', JSON.stringify(categoriesToSave));
+    }
+    if (currentCategories.length === 0) {
+      localStorage.setItem('categoryID', 10);
+    }
+  }
+
   function getAllAccounts(){
     var savedAccounts = localStorage.getItem('accounts');
     var listOfAccounts;
@@ -31,6 +46,33 @@ var manageLocalStorage = (function() {
         var retrievedName = listOfAccounts[i].name;
         var retrievedBalance = listOfAccounts[i].balance;
         addAccountToDom(retrievedName, retrievedBalance);
+      }
+    }
+  }
+
+  function getAllCategories() {
+    var savedCategories = localStorage.getItem('categories');
+    var listOfCategories = JSON.parse(savedCategories);
+    if (listOfCategories === null || (listOfCategories && listOfCategories.length === 0)) {
+      listOfCategories = [
+        {id: 1, isExpense: true, name: 'rent&bills'},
+        {id: 2, isExpense: true, name: 'food'},
+        {id: 3, isExpense: true, name: 'entertainment'},
+        {id: 4, isExpense: true, name: 'car'},
+        {id: 5, isExpense: true, name: 'clothes'},
+        {id: 6, isExpense: true, name: 'sports'},
+        {id: 7, isExpense: false, name: 'salary'},
+        {id: 8, isExpense: false, name: 'lottery wins'},
+        {id: 9, isExpense: false, name: 'rent'},
+      ]
+      localStorage.setItem('categories', JSON.stringify(listOfCategories));
+    }
+    for (var i = 0; i < listOfCategories.length; i++) {
+      var currentCategory = listOfCategories[i];
+      if (listOfCategories[i].isExpense === true) {
+        addExpenseToDOM(currentCategory.name, currentCategory.id);
+      } else {
+        addIncomeToDOM(currentCategory.name, currentCategory.id);
       }
     }
   }
@@ -51,18 +93,42 @@ var manageLocalStorage = (function() {
     return localStorage.getItem('accountID');
   }
 
-  /*function addCategory (id, name, isExpense){
+  function getCategoryID () {
+    return localStorage.getItem('categoryID');
+  }
+
+  function generateCategoryID() {
+    var existingCategoryID = localStorage.getItem('categoryID');
+    var updateCategoryID;
+    if (existingCategoryID) {
+      existingCategoryID = Number(existingCategoryID);
+      updateCategoryID = existingCategoryID + 1;
+    } else {
+      updateCategoryID = 10;
+    }
+    localStorage.setItem('categoryID', updateCategoryID);
+  }
+
+  function saveCategory(name, isExpense) {
     var currentCategories = JSON.parse(localStorage.getItem('categories')) || [];
-    var categoryToAdd = { id: id, name: name, isExpense: isExpense };
+    var categoryID = localStorage.getItem('categoryID');
+    var categoryToAdd = { name: name, isExpense: isExpense, id: categoryID};
     currentCategories.push(categoryToAdd);
     localStorage.setItem('categories', JSON.stringify(currentCategories));
-  }*/
+    generateCategoryID();
+    return categoryToAdd;
+  }
 
   return {
     addAccount: addAccount,
     removeAccount: removeAccount,
+    removeCategory: removeCategory,
     getAllAccounts: getAllAccounts,
     generateAccountID: generateAccountID,
-    getAccountID: getAccountID
+    getAccountID: getAccountID,
+    getCategoryID: getCategoryID,
+    generateCategoryID: generateCategoryID,
+    saveCategory: saveCategory,
+    getAllCategories: getAllCategories
   }
 })();
