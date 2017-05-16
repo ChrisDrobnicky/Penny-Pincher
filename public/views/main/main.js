@@ -1,5 +1,5 @@
 function displayToFirstColumn(name, balance) {
-  var $accountsList = $('#accountsListColumn1');
+  var $accountsList = $('#accountList1');
   var $newListItem = $(document.createElement('li'));
   var $AccountName = $(document.createElement('span'));
   var $AccountBalance = $(document.createElement('span'));
@@ -14,7 +14,7 @@ function displayToFirstColumn(name, balance) {
 }
 
 function displayToSecondColumn(name, balance) {
-  var $accountsList = $('#accountsListColumn2');
+  var $accountsList = $('#accountList2');
   var $newListItem = $(document.createElement('li'));
   var $AccountName = $(document.createElement('span'));
   var $AccountBalance = $(document.createElement('span'));
