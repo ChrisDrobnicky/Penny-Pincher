@@ -118,6 +118,26 @@ var manageLocalStorage = (function() {
     generateCategoryID();
     return categoryToAdd;
   }
+/* not used yet:
+  function getAccountsNumber() {
+    if (!localStorage.getItem('accounts')) {
+      return false
+    }
+    return JSON.parse(localStorage.getItem('accounts')).length;
+  } */
+
+  function displayAccounts() {
+    var listOfAccounts = JSON.parse(localStorage.getItem('accounts'));
+    for (var i = 0; i < listOfAccounts.length; i++) {
+      var retrievedName = listOfAccounts[i].name;
+      var retrievedBalance = listOfAccounts[i].balance;
+      if (i <= 2) {
+        displayToFirstColumn(retrievedName, retrievedBalance);
+      } else {
+        displayToSecondColumn(retrievedName, retrievedBalance);
+      }
+    }
+  }
 
   return {
     addAccount: addAccount,
@@ -129,6 +149,8 @@ var manageLocalStorage = (function() {
     getCategoryID: getCategoryID,
     generateCategoryID: generateCategoryID,
     saveCategory: saveCategory,
-    getAllCategories: getAllCategories
+    getAllCategories: getAllCategories,
+    /*getAccountsNumber: getAccountsNumber, */
+    displayAccounts: displayAccounts
   }
 })();

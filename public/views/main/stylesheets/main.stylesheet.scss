@@ -1,0 +1,16 @@
+.pp-account-list {
+  list-style-type: none;
+  color: #fff;
+  padding: 5px;
+  .pp-account-list__item {
+    float: left;
+    margin: 10px;
+    border: 2px solid #fff;
+  }
+  .pp-account-list__name {
+    margin-left: 5px;
+  }
+  .pp-account-list__balance {
+    margin-left: 5px;
+  }
+}
