@@ -1,6 +1,8 @@
-.pp-account {
+.pp-main .pp-accounts-container .pp-account-details {
   width: 30%;
   float: left;
   margin: 5px; }
+.pp-main .pp-transaction-container {
+  margin-top: 10px; }
 
 /*# sourceMappingURL=main.stylesheet.css.map */

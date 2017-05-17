@@ -1,19 +1,19 @@
 function displayAccountsInDOM(name, balance) {
   var $accountList = $('#accountList');
-  var $accountContainer = $(document.createElement('div'));
+  var $accountDetails = $(document.createElement('div'));
   var $accountName = $(document.createElement('div'));
   var $accountBalance = $(document.createElement('div'));
 
-  $accountContainer.addClass('pp-account panel panel-success');
+  $accountDetails.addClass('pp-account-details panel panel-success');
   $accountName.addClass('panel-heading');
   $accountBalance.addClass('panel-body');
 
   $accountName.text(name);
   $accountBalance.text(balance);
 
-  $accountContainer.append($accountName);
-  $accountContainer.append($accountBalance);
-  $accountList.append($accountContainer);
+  $accountDetails.append($accountName);
+  $accountDetails.append($accountBalance);
+  $accountList.append($accountDetails);
 }
 
 function onPageLoaded() {
