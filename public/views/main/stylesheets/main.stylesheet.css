@@ -2,6 +2,9 @@
   width: 30%;
   float: left;
   margin: 5px; }
+.pp-main .pp-total-container {
+  width: 30%;
+  margin: 20px auto; }
 .pp-main .pp-transaction-container {
   margin-top: 10px; }
 

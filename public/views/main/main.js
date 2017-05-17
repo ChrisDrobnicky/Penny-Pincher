@@ -6,7 +6,7 @@ function displayAccountsInDOM(name, balance) {
 
   $accountDetails.addClass('pp-account-details panel panel-success');
   $accountName.addClass('panel-heading');
-  $accountBalance.addClass('panel-body');
+  $accountBalance.addClass('pp-account-balance panel-body');
 
   $accountName.text(name);
   $accountBalance.text(balance);
@@ -16,8 +16,19 @@ function displayAccountsInDOM(name, balance) {
   $accountList.append($accountDetails);
 }
 
+function getTotalBalance() {
+  var $totalBalance = $('#totalBalance');
+  var balanceFromAccounts = 0;
+  var allAccounts = document.getElementsByClassName('pp-account-balance');
+    for(var i = 0; i < allAccounts.length; i++) {
+      balanceFromAccounts = balanceFromAccounts + Number(allAccounts[i].textContent);
+    }
+  $totalBalance.text(balanceFromAccounts);
+}
+
 function onPageLoaded() {
   manageLocalStorage.displayAccounts();
+  getTotalBalance();
 }
 
 document.onload = onPageLoaded();
