@@ -127,14 +127,14 @@ var manageLocalStorage = (function() {
   } */
 
   function displayAccounts() {
-    var listOfAccounts = JSON.parse(localStorage.getItem('accounts'));
-    for (var i = 0; i < listOfAccounts.length; i++) {
-      var retrievedName = listOfAccounts[i].name;
-      var retrievedBalance = listOfAccounts[i].balance;
-      if (i <= 2) {
-        displayToFirstColumn(retrievedName, retrievedBalance);
-      } else {
-        displayToSecondColumn(retrievedName, retrievedBalance);
+    if (!localStorage.getItem('accounts')) {
+      return false;
+    } else {
+      var listOfAccounts = JSON.parse(localStorage.getItem('accounts'));
+      for (var i = 0; i < listOfAccounts.length; i++) {
+        var retrievedName = listOfAccounts[i].name;
+        var retrievedBalance = listOfAccounts[i].balance;
+        displayAccountsInDOM(retrievedName, retrievedBalance);
       }
     }
   }

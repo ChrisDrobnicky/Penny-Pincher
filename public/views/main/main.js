@@ -1,31 +1,19 @@
-function displayToFirstColumn(name, balance) {
-  var $accountsList = $('#accountList1');
-  var $newListItem = $(document.createElement('li'));
-  var $AccountName = $(document.createElement('span'));
-  var $AccountBalance = $(document.createElement('span'));
+function displayAccountsInDOM(name, balance) {
+  var $accountList = $('#accountList');
+  var $accountContainer = $(document.createElement('div'));
+  var $accountName = $(document.createElement('div'));
+  var $accountBalance = $(document.createElement('div'));
 
-  $newListItem.addClass('pp-account-list__item');
-  $AccountName.text(name).addClass('pp-account-list__name');
-  $AccountBalance.text(balance).addClass('pp-account-list__balance');
+  $accountContainer.addClass('col-lg-4 panel panel-success');
+  $accountName.addClass('panel-heading');
+  $accountBalance.addClass('panel-body');
 
-  $newListItem.append($AccountName);
-  $newListItem.append($AccountBalance);
-  $accountsList.append($newListItem);
-}
+  $accountName.text(name);
+  $accountBalance.text(balance);
 
-function displayToSecondColumn(name, balance) {
-  var $accountsList = $('#accountList2');
-  var $newListItem = $(document.createElement('li'));
-  var $AccountName = $(document.createElement('span'));
-  var $AccountBalance = $(document.createElement('span'));
-
-  $newListItem.addClass('pp-account-list__item');
-  $AccountName.text(name).addClass('pp-account-list__name');
-  $AccountBalance.text(balance).addClass('pp-account-list__balance');
-
-  $newListItem.append($AccountName);
-  $newListItem.append($AccountBalance);
-  $accountsList.append($newListItem);
+  $accountContainer.append($accountName);
+  $accountContainer.append($accountBalance);
+  $accountList.append($accountContainer);
 }
 
 function onPageLoaded() {
