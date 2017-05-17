@@ -4,7 +4,7 @@ function displayAccountsInDOM(name, balance) {
   var $accountName = $(document.createElement('div'));
   var $accountBalance = $(document.createElement('div'));
 
-  $accountContainer.addClass('col-lg-4 panel panel-success');
+  $accountContainer.addClass('pp-account panel panel-success');
   $accountName.addClass('panel-heading');
   $accountBalance.addClass('panel-body');
 
