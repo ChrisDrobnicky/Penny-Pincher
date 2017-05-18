@@ -23,7 +23,7 @@ function displayTotalBalance() {
 
 function onPageLoaded() {
   manageLocalStorage.displayAccounts();
-  getTotalBalance();
+  displayTotalBalance();
 }
 
 document.onload = onPageLoaded();
