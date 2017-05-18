@@ -12,7 +12,7 @@ function displayAccountsInDOM(name, balance) {
   $accountBalance.addClass('pp-account-balance panel-body');
   $historyButton.addClass('btn btn-info');
   $historyButton.text('Show history');
-  $historyButton.attr('href', '../history/categories.template.html');
+  $historyButton.attr('href', '../history/history.template.html');
 
   $accountName.text(name);
   $accountBalance.text(balance);
