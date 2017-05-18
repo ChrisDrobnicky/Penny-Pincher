@@ -21,9 +21,9 @@ function getTotalBalance() {
   var balanceFromAccounts = 0;
   var allAccounts = document.getElementsByClassName('pp-account-balance');
     for(var i = 0; i < allAccounts.length; i++) {
-      balanceFromAccounts = balanceFromAccounts + Number(allAccounts[i].textContent);
+      balanceFromAccounts = balanceFromAccounts + parseFloat(allAccounts[i].textContent);
     }
-  $totalBalance.text(balanceFromAccounts);
+  $totalBalance.text(balanceFromAccounts.toFixed(2));
 }
 
 function onPageLoaded() {
