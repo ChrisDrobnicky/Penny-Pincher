@@ -1,10 +1,14 @@
 .pp-main {
   .pp-accounts-container {
-    .pp-account-details {
+    .pp-account-container {
       width: 30%;
       float: left;
       margin: 5px;
-      .pp-account-balance {
+      .pp-account-details {
+
+        .pp-account-balance {
+
+        }
       }
     }
   }
@@ -13,6 +17,7 @@
     margin: 20px auto;
   }
   .pp-transaction-container {
-    margin-top: 10px;
+    margin: 10px auto;
+    width: 100px;
   }
 }
