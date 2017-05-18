@@ -16,14 +16,9 @@ function displayAccountsInDOM(name, balance) {
   $accountList.append($accountDetails);
 }
 
-function getTotalBalance() {
+function displayTotalBalance() {
   var $totalBalance = $('#totalBalance');
-  var balanceFromAccounts = 0;
-  var allAccounts = document.getElementsByClassName('pp-account-balance');
-    for(var i = 0; i < allAccounts.length; i++) {
-      balanceFromAccounts = balanceFromAccounts + parseFloat(allAccounts[i].textContent);
-    }
-  $totalBalance.text(balanceFromAccounts.toFixed(2));
+  $totalBalance.text(manageLocalStorage.getTotalBalance().toFixed(2));
 }
 
 function onPageLoaded() {
