@@ -6,10 +6,10 @@ function displayAccountsInDOM(name, balance) {
   var $accountBalance = $(document.createElement('div'));
   var $historyButton = $(document.createElement('a'));
 
-  $accountContainer.addClass('pp-account-container');
+  $accountContainer.addClass('pp-account');
   $accountDetails.addClass('pp-account-details panel panel-success');
   $accountName.addClass('panel-heading');
-  $accountBalance.addClass('pp-account-balance panel-body');
+  $accountBalance.addClass('pp-account-details__balance panel-body');
   $historyButton.addClass('btn btn-info');
   $historyButton.text('Show history');
   $historyButton.attr('href', '../history/history.template.html');
