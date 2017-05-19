@@ -119,6 +119,33 @@ var manageLocalStorage = (function() {
     return categoryToAdd;
   }
 
+  function displayAccounts() {
+    if (!localStorage.getItem('accounts')) {
+      return false;
+    } else {
+      var listOfAccounts = JSON.parse(localStorage.getItem('accounts'));
+      for (var i = 0; i < listOfAccounts.length; i++) {
+        var retrievedName = listOfAccounts[i].name;
+        var retrievedBalance = listOfAccounts[i].balance;
+        displayAccountsInDOM(retrievedName, retrievedBalance);
+      }
+    }
+  }
+
+  function getTotalBalance() {
+    if (!localStorage.getItem('accounts')) {
+      return false;
+    } else {
+      var totalBalance = 0;
+      var listOfAccounts = JSON.parse(localStorage.getItem('accounts'));
+      for (var i = 0; i < listOfAccounts.length; i++) {
+        var accountBalance = parseFloat(listOfAccounts[i].balance);
+        totalBalance = totalBalance + accountBalance;
+      }
+      return totalBalance;
+    }
+  }
+
   return {
     addAccount: addAccount,
     removeAccount: removeAccount,
@@ -129,6 +156,8 @@ var manageLocalStorage = (function() {
     getCategoryID: getCategoryID,
     generateCategoryID: generateCategoryID,
     saveCategory: saveCategory,
-    getAllCategories: getAllCategories
+    getAllCategories: getAllCategories,
+    displayAccounts: displayAccounts,
+    getTotalBalance: getTotalBalance
   }
 })();

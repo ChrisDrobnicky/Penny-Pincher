@@ -1,0 +1,23 @@
+.pp-main {
+  .pp-accounts-container {
+    .pp-account {
+      width: 30%;
+      float: left;
+      margin: 5px;
+      .pp-account-details {
+        .pp-account-details__balance {
+        }
+      }
+    }
+  }
+  .pp-total-container {
+    width: 30%;
+    margin: 20px auto;
+  }
+  .pp-transaction-container {
+    margin: 10px auto;
+    width: 100px;
+    .pp-transaction-container__button {
+    }
+  }
+}
