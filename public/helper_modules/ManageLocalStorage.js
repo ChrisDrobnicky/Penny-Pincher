@@ -146,6 +146,18 @@ var manageLocalStorage = (function() {
     }
   }
 
+  function getAccountsNames(){
+    var savedAccounts = localStorage.getItem('accounts');
+    var listOfAccounts;
+    if (savedAccounts) {
+      listOfAccounts = JSON.parse(savedAccounts);
+      for (var i = 0; i < listOfAccounts.length; i++) {
+        var accountName = listOfAccounts[i].name;
+        addAccountToForm(accountName);
+      }
+    }
+  }
+
   return {
     addAccount: addAccount,
     removeAccount: removeAccount,
@@ -158,6 +170,7 @@ var manageLocalStorage = (function() {
     saveCategory: saveCategory,
     getAllCategories: getAllCategories,
     displayAccounts: displayAccounts,
-    getTotalBalance: getTotalBalance
+    getTotalBalance: getTotalBalance,
+    getAccountsNames: getAccountsNames
   }
 })();
