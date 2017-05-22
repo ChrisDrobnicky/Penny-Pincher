@@ -158,6 +158,34 @@ var manageLocalStorage = (function() {
     }
   }
 
+  function getExpenseCategories() {
+    var savedCategories = localStorage.getItem('categories');
+    var listOfCategories;
+    if (savedCategories) {
+      listOfCategories = JSON.parse(savedCategories);
+      for (var i = 0; i < listOfCategories.length; i++) {
+        var category = listOfCategories[i];
+        if (listOfCategories[i].isExpense === true) {
+          addCategoryToForm(category.name);
+        }
+      }
+    }
+  }
+
+  function getIncomeCategories() {
+    var savedCategories = localStorage.getItem('categories');
+    var listOfCategories;
+    if (savedCategories) {
+      listOfCategories = JSON.parse(savedCategories);
+      for (var i = 0; i < listOfCategories.length; i++) {
+        var category = listOfCategories[i];
+        if (listOfCategories[i].isExpense === false) {
+          addCategoryToForm(category.name);
+        }
+      }
+    }
+  }
+
   return {
     addAccount: addAccount,
     removeAccount: removeAccount,
@@ -171,6 +199,8 @@ var manageLocalStorage = (function() {
     getAllCategories: getAllCategories,
     displayAccounts: displayAccounts,
     getTotalBalance: getTotalBalance,
-    getAccountsNames: getAccountsNames
+    getAccountsNames: getAccountsNames,
+    getExpenseCategories: getExpenseCategories,
+    getIncomeCategories: getIncomeCategories
   }
 })();
