@@ -158,28 +158,14 @@ var manageLocalStorage = (function() {
     }
   }
 
-  function getExpenseCategories() {
+  function getListOfCategories(isExpense) {
     var savedCategories = localStorage.getItem('categories');
     var listOfCategories;
     if (savedCategories) {
       listOfCategories = JSON.parse(savedCategories);
       for (var i = 0; i < listOfCategories.length; i++) {
         var category = listOfCategories[i];
-        if (listOfCategories[i].isExpense === true) {
-          addCategoryToForm(category.name);
-        }
-      }
-    }
-  }
-
-  function getIncomeCategories() {
-    var savedCategories = localStorage.getItem('categories');
-    var listOfCategories;
-    if (savedCategories) {
-      listOfCategories = JSON.parse(savedCategories);
-      for (var i = 0; i < listOfCategories.length; i++) {
-        var category = listOfCategories[i];
-        if (listOfCategories[i].isExpense === false) {
+        if (listOfCategories[i].isExpense === isExpense) {
           addCategoryToForm(category.name);
         }
       }
@@ -200,7 +186,6 @@ var manageLocalStorage = (function() {
     displayAccounts: displayAccounts,
     getTotalBalance: getTotalBalance,
     getAccountsNames: getAccountsNames,
-    getExpenseCategories: getExpenseCategories,
-    getIncomeCategories: getIncomeCategories
+    getListOfCategories: getListOfCategories
   }
 })();

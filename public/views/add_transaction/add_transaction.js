@@ -6,14 +6,16 @@ function addAccountToForm(accountName) {
   $accountPicker.append($accountToSelect);
 }
 
-function checkTransactionType() {
+function addListenerToTransaction() {
+  var transactionType = document.querySelector("#transaction-select");
+  debugger;
+  transactionType.addEventListener('change', setCategories, false);
+}
+
+function setCategories() {
   var $expenseType = $('#expense');
-  var $incomeType = $('#income');
-  if ($expenseType[0].checked = true){
-    manageLocalStorage.getExpenseCategories();
-  } else if ($incomeType[0].checked = true){
-    manageLocalStorage.getIncomeCategories();
-  }
+  var isExpense = $expenseType[0].selected;
+  manageLocalStorage.getListOfCategories(isExpense);
 }
 
 function addCategoryToForm(category) {
@@ -25,7 +27,7 @@ function addCategoryToForm(category) {
 
 function onPageLoaded() {
   manageLocalStorage.getAccountsNames();
-  checkTransactionType();
+  addListenerToTransaction();
 }
 
 document.onload = onPageLoaded();

@@ -22,12 +22,12 @@
       <div class="pp-transaction">
         <div class="form-horizontal" role="form">
           <div class="pp-transaction__type form-group">
-            <label class="radio-inline">
-              <input type="radio" name="transaction-type" id="expense" checked>Expense
-            </label>
-            <label class="radio-inline">
-              <input type="radio" name="transaction-type" id="income">Income
-            </label>
+            <label for="transaction-select">Select transaction type:</label>
+            <select class="form-control" id="transaction-select">
+              <option selected disabled hidden>Choose here</option>
+              <option id="expense">Expense</option>
+              <option id="income">Income</option>
+            </select>
           </div>
           <div class="pp-transaction__title form-group">
             <label for="title" class="control-label col-sm-2">Title</label>
