@@ -28,6 +28,7 @@ function addCategoryToForm(category) {
 function onPageLoaded() {
   manageLocalStorage.getAccountsNames();
   addListenerToTransaction();
+  setCategories();
 }
 
 document.onload = onPageLoaded();
