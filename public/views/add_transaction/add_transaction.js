@@ -2,7 +2,7 @@ function addAccountToForm(accountName) {
   var $accountPicker = $('#account');
   var $accountToSelect = $(document.createElement('option'));
 
-  $accountToSelect.text(accountName);
+  $accountToSelect.text(accountName).val(accountName);
   $accountPicker.append($accountToSelect);
 }
 
