@@ -162,13 +162,8 @@ var manageLocalStorage = (function() {
     var savedCategories = localStorage.getItem('categories');
     var listOfCategories;
     if (savedCategories) {
-      listOfCategories = JSON.parse(savedCategories);
-      for (var i = 0; i < listOfCategories.length; i++) {
-        var category = listOfCategories[i];
-        if (listOfCategories[i].isExpense === isExpense) {
-          addCategoryToForm(category.name);
-        }
-      }
+      listOfCategories = JSON.parse(savedCategories).filter(function(n){return n.isExpense=== isExpense});
+      return listOfCategories;
     }
   }
 

@@ -13,16 +13,16 @@ function addListenerToTransaction() {
 }
 
 function setCategories() {
+  var $categoryPicker = $('#category');
   var $expenseType = $('#expense');
   var isExpense = $expenseType[0].selected;
-  manageLocalStorage.getListOfCategories(isExpense);
-}
-
-function addCategoryToForm(category) {
-  var $categoryPicker = $('#category');
-  var $categoryToSelect = $(document.createElement('option'));
-  $categoryToSelect.text(category);
-  $categoryPicker.append($categoryToSelect);
+  var listOfCategories = manageLocalStorage.getListOfCategories(isExpense);
+  $categoryPicker.find('option').remove();
+  for (var i=0; i < listOfCategories.length; i++){
+    var $option = $(document.createElement('option'));
+    $option.text(listOfCategories[i].name);
+    $categoryPicker.append($option);
+  }
 }
 
 function onPageLoaded() {
