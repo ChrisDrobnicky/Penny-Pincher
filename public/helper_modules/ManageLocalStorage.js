@@ -146,17 +146,19 @@ var manageLocalStorage = (function() {
     }
   }
 
-  function getAccountsNames(){
+  function getAccountsToForm() {
     var savedAccounts = localStorage.getItem('accounts');
     var listOfAccounts;
     if (savedAccounts) {
       listOfAccounts = JSON.parse(savedAccounts);
       for (var i = 0; i < listOfAccounts.length; i++) {
         var accountName = listOfAccounts[i].name;
-        addAccountToForm(accountName);
+        var accountID = listOfAccounts[i].id;
+        addAccountsToForm(accountName, accountID);
       }
     }
   }
+
 
   function getListOfCategories(isExpense) {
     var savedCategories = localStorage.getItem('categories');
@@ -167,19 +169,33 @@ var manageLocalStorage = (function() {
     }
   }
 
-  function addTransaction (title, date, category, account, amount) {
+  function addTransaction (title, date, categoryID, accountID, amount) {
     var currentAccounts = JSON.parse(localStorage.getItem('accounts'));
-    var transactionToAdd = { title: title, date: date, category: category, amount: amount };
-    var chosenAccount;
+    var transactionToAdd = { title: title, date: date, categoryID: categoryID, amount: amount };
     for (var i = 0; i < currentAccounts.length; i++) {
-      if (currentAccounts[i].name === account) {
-        chosenAccount = currentAccounts[i];
-        chosenAccount.transactions.push(transactionToAdd);
+      if (currentAccounts[i].id === accountID) {
+        currentAccounts[i].transactions.push(transactionToAdd);
       }
     }
-    currentAccounts.push(chosenAccount);
     localStorage.setItem('accounts', JSON.stringify(currentAccounts));
   }
+/*
+  function updateAccountBalance (isExpense, account, amount) {
+    var currentAccounts = JSON.parse(localStorage.getItem('accounts'));
+    var newBalance;
+    for (var i = 0; i < currentAccounts.length; i++) {
+      if (currentAccounts[i].name === account && isExpense === true) {
+        var accountBalance = parseFloat(currentAccounts[i].balance);
+        debugger;
+        newBalance = accountBalance + amount;
+      } else if (currentAccounts[i].name === account && isExpense === false){
+        var accountBalance = parseFloat(currentAccounts[i].balance);
+        debugger;
+        newBalance = accountBalance - amount;
+      }
+      alert (newBalance);
+      }
+  } */
 
   return {
     addAccount: addAccount,
@@ -194,8 +210,9 @@ var manageLocalStorage = (function() {
     getAllCategories: getAllCategories,
     displayAccounts: displayAccounts,
     getTotalBalance: getTotalBalance,
-    getAccountsNames: getAccountsNames,
+    getAccountsToForm: getAccountsToForm,
     getListOfCategories: getListOfCategories,
-    addTransaction: addTransaction
+    addTransaction: addTransaction,
+    /*updateAccountBalance: updateAccountBalance */
   }
 })();
