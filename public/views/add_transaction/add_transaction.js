@@ -6,10 +6,25 @@ function addAccountToForm(accountName) {
   $accountPicker.append($accountToSelect);
 }
 
-function addListenerToTransaction() {
-  var transactionType = document.querySelector("#transaction-select");
-  debugger;
+function setupListeners() {
+  var transactionType = document.querySelector('#transaction-select');
   transactionType.addEventListener('change', setCategories, false);
+
+  var $addTransactionButton = $('#addTransactionButton');
+  $addTransactionButton.click(saveTransaction);
+}
+
+function saveTransaction() {
+  var title = document.querySelector('#title').value;
+  var date = document.querySelector('#date').value;
+  var category = document.querySelector('#category').value;
+  var account = document.querySelector('#account').value;
+  var amount = document.querySelector('#amount').value;
+  manageLocalStorage.addTransaction(title, date, category, account, amount);
+  /*
+  manageLocalStorage.updateAccountBalance(transactionAmount);
+  goBackToMainView();
+   */
 }
 
 function setCategories() {
@@ -27,7 +42,7 @@ function setCategories() {
 
 function onPageLoaded() {
   manageLocalStorage.getAccountsNames();
-  addListenerToTransaction();
+  setupListeners();
   setCategories();
 }
 

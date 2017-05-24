@@ -167,6 +167,20 @@ var manageLocalStorage = (function() {
     }
   }
 
+  function addTransaction (title, date, category, account, amount) {
+    var currentAccounts = JSON.parse(localStorage.getItem('accounts'));
+    var transactionToAdd = { title: title, date: date, category: category, amount: amount };
+    var chosenAccount;
+    for (var i = 0; i < currentAccounts.length; i++) {
+      if (currentAccounts[i].name === account) {
+        chosenAccount = currentAccounts[i];
+        chosenAccount.transactions = transactionToAdd;
+      }
+    }
+    currentAccounts.push(chosenAccount);
+    localStorage.setItem('accounts', JSON.stringify(currentAccounts));
+  }
+
   return {
     addAccount: addAccount,
     removeAccount: removeAccount,
@@ -181,6 +195,7 @@ var manageLocalStorage = (function() {
     displayAccounts: displayAccounts,
     getTotalBalance: getTotalBalance,
     getAccountsNames: getAccountsNames,
-    getListOfCategories: getListOfCategories
+    getListOfCategories: getListOfCategories,
+    addTransaction: addTransaction
   }
 })();
