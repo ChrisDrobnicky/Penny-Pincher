@@ -174,7 +174,7 @@ var manageLocalStorage = (function() {
     for (var i = 0; i < currentAccounts.length; i++) {
       if (currentAccounts[i].name === account) {
         chosenAccount = currentAccounts[i];
-        chosenAccount.transactions = transactionToAdd;
+        chosenAccount.transactions.push(transactionToAdd);
       }
     }
     currentAccounts.push(chosenAccount);
