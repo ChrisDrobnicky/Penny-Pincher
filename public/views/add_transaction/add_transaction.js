@@ -12,6 +12,7 @@ function setupListeners() {
 
   var $addTransactionButton = $('#addTransactionButton');
   $addTransactionButton.click(saveTransaction);
+  $addTransactionButton.click(goBackToMainView);
 }
 
 function saveTransaction() {
@@ -38,6 +39,10 @@ function addCategoriesToForm() {
     $option.val(listOfCategories[i].id);
     $categoryPicker.append($option);
   }
+}
+
+function goBackToMainView() {
+  window.location.replace("../main/main.template.html");
 }
 
 function onPageLoaded() {
