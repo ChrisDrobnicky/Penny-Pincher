@@ -169,33 +169,38 @@ var manageLocalStorage = (function() {
     }
   }
 
-  function addTransaction (title, date, categoryID, accountID, amount) {
+  function addTransaction(title, date, categoryID, accountID, amount, isExpense) {
     var currentAccounts = JSON.parse(localStorage.getItem('accounts'));
     var transactionToAdd = { title: title, date: date, categoryID: categoryID, amount: amount };
     for (var i = 0; i < currentAccounts.length; i++) {
       if (currentAccounts[i].id === accountID) {
         currentAccounts[i].transactions.push(transactionToAdd);
+        if (isExpense === true) {
+          currentAccounts[i].balance -= amount;
+        } else {
+          currentAccounts[i].balance += amount;
+        }
       }
     }
     localStorage.setItem('accounts', JSON.stringify(currentAccounts));
   }
-/*
-  function updateAccountBalance (isExpense, account, amount) {
+
+  function updateAccountBalance (isExpense, accountID, amount) {
     var currentAccounts = JSON.parse(localStorage.getItem('accounts'));
     var newBalance;
     for (var i = 0; i < currentAccounts.length; i++) {
-      if (currentAccounts[i].name === account && isExpense === true) {
+      if (currentAccounts[i].id === accountID && isExpense === true) {
         var accountBalance = parseFloat(currentAccounts[i].balance);
-        debugger;
-        newBalance = accountBalance + amount;
-      } else if (currentAccounts[i].name === account && isExpense === false){
-        var accountBalance = parseFloat(currentAccounts[i].balance);
-        debugger;
         newBalance = accountBalance - amount;
+        currentAccounts[i].balance = newBalance;
+      } else if (currentAccounts[i].id === accountID && isExpense === false) {
+        var accountBalance = parseFloat(currentAccounts[i].balance);
+        newBalance = accountBalance + amount;
+        currentAccounts[i].balance = newBalance;
       }
-      alert (newBalance);
-      }
-  } */
+    }
+    localStorage.setItem('accounts', JSON.stringify(currentAccounts));
+  }
 
   return {
     addAccount: addAccount,
@@ -213,6 +218,6 @@ var manageLocalStorage = (function() {
     getAccountsToForm: getAccountsToForm,
     getListOfCategories: getListOfCategories,
     addTransaction: addTransaction,
-    /*updateAccountBalance: updateAccountBalance */
+    updateAccountBalance: updateAccountBalance
   }
 })();

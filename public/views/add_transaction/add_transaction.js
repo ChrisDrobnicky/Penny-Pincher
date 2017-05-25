@@ -23,11 +23,7 @@ function saveTransaction() {
   var categoryID = document.querySelector('#category').value;
   var accountID = document.querySelector('#account').value;
   var amount = parseFloat(document.querySelector('#amount').value);
-  manageLocalStorage.addTransaction(title, date, categoryID, accountID, amount);
-  /*
-  manageLocalStorage.updateAccountBalance(isExpense, account, amount);
-  goBackToMainView();
-   */
+  manageLocalStorage.addTransaction(title, date, categoryID, accountID, amount, isExpense);
 }
 
 function addCategoriesToForm() {
