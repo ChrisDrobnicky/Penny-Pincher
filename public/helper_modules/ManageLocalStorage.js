@@ -146,6 +146,67 @@ var manageLocalStorage = (function() {
     }
   }
 
+  function getAccountsToForm() {
+    var savedAccounts = localStorage.getItem('accounts');
+    var listOfAccounts;
+    if (savedAccounts) {
+      listOfAccounts = JSON.parse(savedAccounts);
+      for (var i = 0; i < listOfAccounts.length; i++) {
+        var accountName = listOfAccounts[i].name;
+        var accountID = listOfAccounts[i].id;
+        addAccountsToForm(accountName, accountID);
+      }
+    }
+  }
+
+
+  function getListOfCategories(isExpense) {
+    var savedCategories = localStorage.getItem('categories');
+    var listOfCategories;
+    if (savedCategories) {
+      listOfCategories = JSON.parse(savedCategories).filter(function(n){return n.isExpense=== isExpense});
+      return listOfCategories;
+    }
+  }
+
+  function addTransaction(title, date, categoryID, accountID, amount, isExpense) {
+    var currentAccounts = JSON.parse(localStorage.getItem('accounts'));
+    var transactionToAdd = { title: title, date: date, categoryID: categoryID, amount: amount };
+    var accountBalance;
+    for (var i = 0; i < currentAccounts.length; i++) {
+      if (currentAccounts[i].id === accountID) {
+        currentAccounts[i].transactions.push(transactionToAdd);
+        if (isExpense === true) {
+          accountBalance = parseFloat(currentAccounts[i].balance);
+          accountBalance -= Number(amount.toFixed(2));
+          currentAccounts[i].balance = accountBalance;
+        } else {
+          accountBalance = parseFloat(currentAccounts[i].balance);
+          accountBalance += Number(amount.toFixed(2));
+          currentAccounts[i].balance = accountBalance;
+        }
+      }
+    }
+    localStorage.setItem('accounts', JSON.stringify(currentAccounts));
+  }
+
+  function updateAccountBalance (isExpense, accountID, amount) {
+    var currentAccounts = JSON.parse(localStorage.getItem('accounts'));
+    var newBalance;
+    for (var i = 0; i < currentAccounts.length; i++) {
+      if (currentAccounts[i].id === accountID && isExpense === true) {
+        var accountBalance = parseFloat(currentAccounts[i].balance);
+        newBalance = accountBalance - amount;
+        currentAccounts[i].balance = newBalance;
+      } else if (currentAccounts[i].id === accountID && isExpense === false) {
+        var accountBalance = parseFloat(currentAccounts[i].balance);
+        newBalance = accountBalance + amount;
+        currentAccounts[i].balance = newBalance;
+      }
+    }
+    localStorage.setItem('accounts', JSON.stringify(currentAccounts));
+  }
+
   return {
     addAccount: addAccount,
     removeAccount: removeAccount,
@@ -158,6 +219,10 @@ var manageLocalStorage = (function() {
     saveCategory: saveCategory,
     getAllCategories: getAllCategories,
     displayAccounts: displayAccounts,
-    getTotalBalance: getTotalBalance
+    getTotalBalance: getTotalBalance,
+    getAccountsToForm: getAccountsToForm,
+    getListOfCategories: getListOfCategories,
+    addTransaction: addTransaction,
+    updateAccountBalance: updateAccountBalance
   }
 })();
