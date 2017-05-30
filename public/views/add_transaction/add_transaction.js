@@ -25,8 +25,7 @@ function saveTransaction() {
   var amount = parseFloat(document.querySelector('#amount').value);
   if(validateForm(title, date, amount)) {
     manageLocalStorage.addTransaction(title, date, categoryID, accountID, amount, isExpense);
-    /*goBackToMainView();
-     */
+    goBackToMainView();
   }
 }
 
