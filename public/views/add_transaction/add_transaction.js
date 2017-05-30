@@ -12,7 +12,6 @@ function setupListeners() {
 
   var $addTransactionButton = $('#addTransactionButton');
   $addTransactionButton.click(saveTransaction);
-  $addTransactionButton.click(goBackToMainView);
 }
 
 function saveTransaction() {
@@ -24,7 +23,33 @@ function saveTransaction() {
   var categoryID = document.querySelector('#category').value;
   var accountID = document.querySelector('#account').value;
   var amount = parseFloat(document.querySelector('#amount').value);
-  manageLocalStorage.addTransaction(title, date, categoryID, accountID, amount, isExpense);
+  if(validateForm(title, date, amount)) {
+    manageLocalStorage.addTransaction(title, date, categoryID, accountID, amount, isExpense);
+    /*goBackToMainView();
+     */
+  }
+}
+
+
+function validateForm(title, date, amount) {
+  if (title.length < 1) {
+    showError('<strong>Error:</strong>Title must include at least one letter');
+    return false;
+  } else if (date.length < 1) {
+    showError('<strong>Error:</strong> Please select transaction\'s date');
+    return false;
+  } else if (isNaN(amount) || amount <= 0){
+    showError('<strong>Error:</strong> Please type transaction\'s amount');
+    return false;
+  } else {
+    return true;
+  }
+}
+
+function showError(alertText) {
+  var $alertForUser = $('#alertForUser');
+  $alertForUser.addClass('alert alert-danger');
+  $alertForUser.html(alertText);
 }
 
 function addCategoriesToForm() {
