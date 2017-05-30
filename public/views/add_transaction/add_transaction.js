@@ -31,7 +31,7 @@ function saveTransaction() {
 
 
 function validateForm(title, date, amount) {
-  if (title.length < 1) {
+  if (title.trim().length < 1) {
     showError('<strong>Error:</strong>Title must include at least one letter');
     return false;
   } else if (date.length < 1) {
