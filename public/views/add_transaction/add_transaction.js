@@ -31,14 +31,18 @@ function saveTransaction() {
 
 
 function validateForm(title, date, amount) {
+  var amountAfterDecimalPoint = ('' + amount).split('.')[1];
   if (title.length < 1) {
     showError('<strong>Error:</strong>Title must include at least one letter');
     return false;
   } else if (date.length < 1) {
     showError('<strong>Error:</strong> Please select transaction\'s date');
     return false;
-  } else if (isNaN(amount) || amount <= 0){
+  } else if (isNaN(amount) || amount <= 0) {
     showError('<strong>Error:</strong> Please type transaction\'s amount');
+    return false;
+  } else if (amountAfterDecimalPoint.length > 2){
+    showError('<strong>Error:</strong> Please enter maximum two numbers after decimal point in Amount');
     return false;
   } else {
     return true;
