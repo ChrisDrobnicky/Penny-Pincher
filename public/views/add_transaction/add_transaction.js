@@ -18,7 +18,7 @@ function saveTransaction() {
   var $expenseType = $('#expense');
   var isExpense = $expenseType[0].selected;
 
-  var title = document.querySelector('#title').value;
+  var title = document.querySelector('#title').value.trim();
   var date = document.querySelector('#date').value;
   var categoryID = document.querySelector('#category').value;
   var accountID = document.querySelector('#account').value;
@@ -31,7 +31,7 @@ function saveTransaction() {
 
 
 function validateForm(title, date, amount) {
-  if (title.trim().length < 1) {
+  if (title.length < 1) {
     showError('<strong>Error:</strong>Title must include at least one letter');
     return false;
   } else if (date.length < 1) {
