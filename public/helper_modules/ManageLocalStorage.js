@@ -212,6 +212,10 @@ var manageLocalStorage = (function() {
     localStorage.setItem('clickedAccountID', clickedAccountID);
   }
 
+  function getClickedAccountID() {
+    return localStorage.getItem('clickedAccountID');
+  }
+
   function getTransactions() {
     var savedAccounts = localStorage.getItem('accounts');
     var listOfAccounts;
@@ -245,6 +249,7 @@ var manageLocalStorage = (function() {
     addTransaction: addTransaction,
     updateAccountBalance: updateAccountBalance,
     getTransactions: getTransactions,
-    saveClickedAccountID: saveClickedAccountID
+    saveClickedAccountID: saveClickedAccountID,
+    getClickedAccountID: getClickedAccountID
   }
 })();
