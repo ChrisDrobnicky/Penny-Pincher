@@ -208,6 +208,10 @@ var manageLocalStorage = (function() {
     localStorage.setItem('accounts', JSON.stringify(currentAccounts));
   }
 
+  function saveClickedAccountID(clickedAccountID) {
+    localStorage.setItem('clickedAccountID', clickedAccountID);
+  }
+
   function getTransactions() {
     var savedAccounts = localStorage.getItem('accounts');
     var listOfAccounts;
@@ -219,10 +223,6 @@ var manageLocalStorage = (function() {
         var transactionDate = listOfAccounts[0].transactions[i].date;
         var transactionAmount = listOfAccounts[0].transactions[i].amount;
         addTransactionsToDOM(transactionCategory, transactionTitle, transactionDate, transactionAmount);
-       /*
-        chyba trzeba tu zastosowac petle w petli
-        ale to i tak bedzie dla jednego konta a nie wszystkich
-        */
       }
     }
   }
@@ -244,6 +244,7 @@ var manageLocalStorage = (function() {
     getListOfCategories: getListOfCategories,
     addTransaction: addTransaction,
     updateAccountBalance: updateAccountBalance,
-    getTransactions: getTransactions
+    getTransactions: getTransactions,
+    saveClickedAccountID: saveClickedAccountID
   }
 })();

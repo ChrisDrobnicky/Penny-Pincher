@@ -7,13 +7,14 @@ function displayAccountsInDOM(name, balance, id) {
   var $historyButton = $(document.createElement('a'));
 
   $accountContainer.addClass('pp-account');
-  $accountContainer.attr('id', id);
   $accountDetails.addClass('pp-account-details panel panel-success');
   $accountName.addClass('panel-heading');
   $accountBalance.addClass('pp-account-details__balance panel-body');
   $historyButton.addClass('btn btn-info');
   $historyButton.text('Show history');
   $historyButton.attr('href', '../history/history.template.html');
+  $historyButton.attr('id', id);
+  $historyButton.click(saveClickedAccountID);
 
   $accountName.text(name);
   $accountBalance.text(balance);
@@ -23,6 +24,11 @@ function displayAccountsInDOM(name, balance, id) {
   $accountContainer.append($accountDetails);
   $accountContainer.append($historyButton);
   $accountList.append($accountContainer);
+}
+
+function saveClickedAccountID(event) {
+  var clickedAccountID = event.target.id;
+  manageLocalStorage.saveClickedAccountID(clickedAccountID);
 }
 
 function displayTotalBalance() {
