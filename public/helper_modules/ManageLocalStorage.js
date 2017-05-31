@@ -219,14 +219,20 @@ var manageLocalStorage = (function() {
   function getTransactions() {
     var savedAccounts = localStorage.getItem('accounts');
     var listOfAccounts;
+    var clickedID = manageLocalStorage.getClickedAccountID();
     if (savedAccounts) {
       listOfAccounts = JSON.parse(savedAccounts);
-      for (var i = 0; i < listOfAccounts[0].transactions.length; i++) {
-        var transactionCategory = listOfAccounts[0].transactions[i].categoryID;
-        var transactionTitle = listOfAccounts[0].transactions[i].title;
-        var transactionDate = listOfAccounts[0].transactions[i].date;
-        var transactionAmount = listOfAccounts[0].transactions[i].amount;
-        addTransactionsToDOM(transactionCategory, transactionTitle, transactionDate, transactionAmount);
+      for (var i = 0; i < listOfAccounts[i].length; i++) {
+        if (listOfAccounts[i].id === clickedID) {
+          var clickedAccount = listOfAccounts[i];
+          for (var j = 0; j < clickedAccount.transactions.length; j++) {
+            var transactionCategory = clickedAccount.transactions[j].categoryID;
+            var transactionTitle = clickedAccount.transactions[j].title;
+            var transactionDate = clickedAccount.transactions[j].date;
+            var transactionAmount = clickedAccount.transactions[j].amount;
+            addTransactionsToDOM(transactionCategory, transactionTitle, transactionDate, transactionAmount);
+          }
+        }
       }
     }
   }
