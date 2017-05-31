@@ -127,7 +127,8 @@ var manageLocalStorage = (function() {
       for (var i = 0; i < listOfAccounts.length; i++) {
         var retrievedName = listOfAccounts[i].name;
         var retrievedBalance = listOfAccounts[i].balance;
-        displayAccountsInDOM(retrievedName, retrievedBalance);
+        var retrievedID = listOfAccounts[i].id;
+        displayAccountsInDOM(retrievedName, retrievedBalance, retrievedID);
       }
     }
   }
@@ -207,6 +208,25 @@ var manageLocalStorage = (function() {
     localStorage.setItem('accounts', JSON.stringify(currentAccounts));
   }
 
+  function getTransactions() {
+    var savedAccounts = localStorage.getItem('accounts');
+    var listOfAccounts;
+    if (savedAccounts) {
+      listOfAccounts = JSON.parse(savedAccounts);
+      for (var i = 0; i < listOfAccounts[0].transactions.length; i++) {
+        var transactionCategory = listOfAccounts[0].transactions[i].categoryID;
+        var transactionTitle = listOfAccounts[0].transactions[i].title;
+        var transactionDate = listOfAccounts[0].transactions[i].date;
+        var transactionAmount = listOfAccounts[0].transactions[i].amount;
+        addTransactionsToDOM(transactionCategory, transactionTitle, transactionDate, transactionAmount);
+       /*
+        chyba trzeba tu zastosowac petle w petli
+        ale to i tak bedzie dla jednego konta a nie wszystkich
+        */
+      }
+    }
+  }
+
   return {
     addAccount: addAccount,
     removeAccount: removeAccount,
@@ -223,6 +243,7 @@ var manageLocalStorage = (function() {
     getAccountsToForm: getAccountsToForm,
     getListOfCategories: getListOfCategories,
     addTransaction: addTransaction,
-    updateAccountBalance: updateAccountBalance
+    updateAccountBalance: updateAccountBalance,
+    getTransactions: getTransactions
   }
 })();

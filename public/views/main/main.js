@@ -1,4 +1,4 @@
-function displayAccountsInDOM(name, balance) {
+function displayAccountsInDOM(name, balance, id) {
   var $accountList = $('#accountList');
   var $accountContainer = $(document.createElement('div'));
   var $accountDetails = $(document.createElement('div'));
@@ -7,6 +7,7 @@ function displayAccountsInDOM(name, balance) {
   var $historyButton = $(document.createElement('a'));
 
   $accountContainer.addClass('pp-account');
+  $accountContainer.attr('id', id);
   $accountDetails.addClass('pp-account-details panel panel-success');
   $accountName.addClass('panel-heading');
   $accountBalance.addClass('pp-account-details__balance panel-body');
