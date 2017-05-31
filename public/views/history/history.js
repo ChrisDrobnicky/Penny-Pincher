@@ -1,6 +1,5 @@
 
 function addTransactionsToDOM(category, title, date, amount) {
-  debugger;
   var historyTableBody = document.querySelector('#historyTableBody');
   var newRow = historyTableBody.insertRow();
   newRow.classList.add('info');

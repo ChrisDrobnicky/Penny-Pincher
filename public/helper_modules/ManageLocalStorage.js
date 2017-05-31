@@ -222,7 +222,7 @@ var manageLocalStorage = (function() {
     var clickedID = manageLocalStorage.getClickedAccountID();
     if (savedAccounts) {
       listOfAccounts = JSON.parse(savedAccounts);
-      for (var i = 0; i < listOfAccounts[i].length; i++) {
+      for (var i = 0; i < listOfAccounts.length; i++) {
         if (listOfAccounts[i].id === clickedID) {
           var clickedAccount = listOfAccounts[i];
           for (var j = 0; j < clickedAccount.transactions.length; j++) {
