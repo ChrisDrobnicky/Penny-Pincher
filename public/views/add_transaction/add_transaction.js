@@ -41,7 +41,7 @@ function validateForm(title, date, amount) {
   } else if (isNaN(amount) || amount <= 0) {
     showError('<strong>Error:</strong> Please type transaction\'s amount');
     return false;
-  } else if (amountAfterDecimalPoint.length > 2){
+  } else if (amountAfterDecimalPoint && amountAfterDecimalPoint.length > 2){
     showError('<strong>Error:</strong> Please enter maximum two numbers after decimal point in Amount');
     return false;
   } else {
