@@ -216,15 +216,14 @@ var manageLocalStorage = (function() {
     return localStorage.getItem('clickedAccountID');
   }
 
-  function getCategoryName(categoryID) {
+  function getCategory(categoryID) {
     var savedCategories = localStorage.getItem('categories');
     var categoryToGet;
     if (savedCategories) {
       categoryToGet = JSON.parse(savedCategories).filter(function (n) {
-        return n.id === Number(categoryID);
+        return Number(n.id) === Number(categoryID);
       });
-      debugger;
-      return categoryToGet[0].name;
+      return categoryToGet[0];
     }
   }
 
@@ -239,12 +238,10 @@ var manageLocalStorage = (function() {
           var clickedAccount = listOfAccounts[i];
           for (var j = 0; j < clickedAccount.transactions.length; j++) {
             var transactionCategoryID = clickedAccount.transactions[j].categoryID;
-            debugger;
             var transactionTitle = clickedAccount.transactions[j].title;
             var transactionDate = clickedAccount.transactions[j].date;
             var transactionAmount = clickedAccount.transactions[j].amount;
-            var transactionCategoryName = getCategoryName(transactionCategoryID);
-            debugger;
+            var transactionCategoryName = getCategory(transactionCategoryID).name;
             addTransactionsToDOM(transactionCategoryName, transactionTitle, transactionDate, transactionAmount);
           }
         }
