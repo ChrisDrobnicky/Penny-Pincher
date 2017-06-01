@@ -236,13 +236,14 @@ var manageLocalStorage = (function() {
       for (var i = 0; i < listOfAccounts.length; i++) {
         if (listOfAccounts[i].id === clickedID) {
           var clickedAccount = listOfAccounts[i];
+          var accountName = clickedAccount.name;
           for (var j = 0; j < clickedAccount.transactions.length; j++) {
             var transactionCategoryID = clickedAccount.transactions[j].categoryID;
             var transactionTitle = clickedAccount.transactions[j].title;
             var transactionDate = clickedAccount.transactions[j].date;
             var transactionAmount = clickedAccount.transactions[j].amount;
             var transactionCategoryName = getCategory(transactionCategoryID).name;
-            addTransactionsToDOM(transactionCategoryName, transactionTitle, transactionDate, transactionAmount);
+            addTransactionsToDOM(transactionCategoryName, transactionTitle, transactionDate, transactionAmount, accountName);
           }
         }
       }

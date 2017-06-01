@@ -1,6 +1,8 @@
 
-function addTransactionsToDOM(category, title, date, amount) {
+function addTransactionsToDOM(category, title, date, amount, account) {
   var historyTableBody = document.querySelector('#historyTableBody');
+  var accountName = document.querySelector('#accountName');
+  accountName.textContent = account + ' - account history';
   var newRow = historyTableBody.insertRow();
   newRow.classList.add('info');
 
