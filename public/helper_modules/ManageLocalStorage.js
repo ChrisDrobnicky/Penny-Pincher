@@ -216,6 +216,17 @@ var manageLocalStorage = (function() {
     return localStorage.getItem('clickedAccountID');
   }
 
+  function getCategoryName(categoryID) {
+    var savedCategories = localStorage.getItem('categories');
+    var categoryToGet;
+    if (savedCategories) {
+      categoryToGet = JSON.parse(savedCategories).filter(function (n) {
+        return n.id === Number(categoryID);
+      });
+      return categoryToGet[0].name;
+    }
+  }
+
   function getTransactions() {
     var savedAccounts = localStorage.getItem('accounts');
     var listOfAccounts;
@@ -226,11 +237,12 @@ var manageLocalStorage = (function() {
         if (listOfAccounts[i].id === clickedID) {
           var clickedAccount = listOfAccounts[i];
           for (var j = 0; j < clickedAccount.transactions.length; j++) {
-            var transactionCategory = clickedAccount.transactions[j].categoryID;
+            var transactionCategoryID = clickedAccount.transactions[j].categoryID;
             var transactionTitle = clickedAccount.transactions[j].title;
             var transactionDate = clickedAccount.transactions[j].date;
             var transactionAmount = clickedAccount.transactions[j].amount;
-            addTransactionsToDOM(transactionCategory, transactionTitle, transactionDate, transactionAmount);
+            var transactionCategoryName = getCategoryName(transactionCategoryID);
+            addTransactionsToDOM(transactionCategoryName, transactionTitle, transactionDate, transactionAmount);
           }
         }
       }
