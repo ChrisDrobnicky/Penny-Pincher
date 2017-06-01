@@ -223,6 +223,7 @@ var manageLocalStorage = (function() {
       categoryToGet = JSON.parse(savedCategories).filter(function (n) {
         return n.id === Number(categoryID);
       });
+      debugger;
       return categoryToGet[0].name;
     }
   }
@@ -238,10 +239,12 @@ var manageLocalStorage = (function() {
           var clickedAccount = listOfAccounts[i];
           for (var j = 0; j < clickedAccount.transactions.length; j++) {
             var transactionCategoryID = clickedAccount.transactions[j].categoryID;
+            debugger;
             var transactionTitle = clickedAccount.transactions[j].title;
             var transactionDate = clickedAccount.transactions[j].date;
             var transactionAmount = clickedAccount.transactions[j].amount;
             var transactionCategoryName = getCategoryName(transactionCategoryID);
+            debugger;
             addTransactionsToDOM(transactionCategoryName, transactionTitle, transactionDate, transactionAmount);
           }
         }
