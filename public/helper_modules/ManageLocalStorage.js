@@ -175,26 +175,21 @@ var manageLocalStorage = (function() {
     var amountToAdd;
     var transactionToAdd;
     var accountBalance;
+    if (isExpense === true) {
+      amountToAdd = -Math.abs(Number(amount.toFixed(2)));
+    } else {
+      amountToAdd = Number(amount.toFixed(2));
+    }
+    transactionToAdd = { title: title, date: date, categoryID: categoryID, amount: amountToAdd, isExpense: isExpense };
+
     for (var i = 0; i < currentAccounts.length; i++) {
       if (currentAccounts[i].id === accountID) {
-        if (isExpense === true) {
-          amountToAdd = -Math.abs(Number(amount.toFixed(2)));
-          transactionToAdd = { title: title, date: date, categoryID: categoryID, amount: amountToAdd, isExpense: isExpense };
-          currentAccounts[i].transactions.push(transactionToAdd);
-          accountBalance = parseFloat(currentAccounts[i].balance);
-          accountBalance += amountToAdd;
-          currentAccounts[i].balance = accountBalance;
-        } else {
-          amountToAdd = Number(amount.toFixed(2));
-          transactionToAdd = { title: title, date: date, categoryID: categoryID, amount: amountToAdd, isExpense: isExpense };
-          currentAccounts[i].transactions.push(transactionToAdd);
-          accountBalance = parseFloat(currentAccounts[i].balance);
-          accountBalance += amountToAdd;
-          currentAccounts[i].balance = accountBalance;
+        currentAccounts[i].transactions.push(transactionToAdd);
+        accountBalance = parseFloat(currentAccounts[i].balance);
+        accountBalance += amountToAdd;
+        currentAccounts[i].balance = accountBalance;
         }
       }
-    }
-
     localStorage.setItem('accounts', JSON.stringify(currentAccounts));
   }
 
