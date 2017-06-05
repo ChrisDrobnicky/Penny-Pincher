@@ -172,22 +172,29 @@ var manageLocalStorage = (function() {
 
   function addTransaction(title, date, categoryID, accountID, amount, isExpense) {
     var currentAccounts = JSON.parse(localStorage.getItem('accounts'));
-    var transactionToAdd = { title: title, date: date, categoryID: categoryID, amount: amount };
+    var amountToAdd;
+    var transactionToAdd;
     var accountBalance;
     for (var i = 0; i < currentAccounts.length; i++) {
       if (currentAccounts[i].id === accountID) {
-        currentAccounts[i].transactions.push(transactionToAdd);
         if (isExpense === true) {
+          amountToAdd = -Math.abs(Number(amount.toFixed(2)));
+          transactionToAdd = { title: title, date: date, categoryID: categoryID, amount: amountToAdd, isExpense: isExpense };
+          currentAccounts[i].transactions.push(transactionToAdd);
           accountBalance = parseFloat(currentAccounts[i].balance);
-          accountBalance -= Number(amount.toFixed(2));
+          accountBalance += amountToAdd;
           currentAccounts[i].balance = accountBalance;
         } else {
+          amountToAdd = Number(amount.toFixed(2));
+          transactionToAdd = { title: title, date: date, categoryID: categoryID, amount: amountToAdd, isExpense: isExpense };
+          currentAccounts[i].transactions.push(transactionToAdd);
           accountBalance = parseFloat(currentAccounts[i].balance);
-          accountBalance += Number(amount.toFixed(2));
+          accountBalance += amountToAdd;
           currentAccounts[i].balance = accountBalance;
         }
       }
     }
+
     localStorage.setItem('accounts', JSON.stringify(currentAccounts));
   }
 
