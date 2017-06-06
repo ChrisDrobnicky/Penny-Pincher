@@ -31,11 +31,36 @@ function addAllTransactionsToDOM(listOfTransactions) {
   }
 }
 
+function setListeners() {
+  var amountHeader = document.querySelector('#amountHeader');
+  amountHeader.addEventListener('click', function() {
+    sortByAmount(false);
+  }, false);
 
+}
+
+function sortByAmount(isDescending) {
+  var historyTableBody = document.querySelector('#historyTableBody');
+  var currentList = manageLocalStorage.getTransactions();
+  var sortedTransactions;
+  historyTableBody.innerHTML = '';
+  if (isDescending) {
+    sortedTransactions = currentList.sort(function(a, b) {
+      return b.amount - a.amount
+    })
+  } else {
+    sortedTransactions = currentList.sort(function(a, b) {
+      return a.amount - b.amount
+    })
+  }
+  debugger;
+  addAllTransactionsToDOM(sortedTransactions);
+}
 
 function onPageLoaded() {
   var currentListOfTransactions = manageLocalStorage.getTransactions();
   addAllTransactionsToDOM(currentListOfTransactions);
+  setListeners();
 }
 
 document.onload = onPageLoaded();
