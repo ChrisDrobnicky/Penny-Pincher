@@ -218,6 +218,20 @@ var manageLocalStorage = (function() {
     return localStorage.getItem('clickedAccountID');
   }
 
+  function getClickedAccountName() {
+    var savedAccounts = localStorage.getItem('accounts');
+    var clickedID = manageLocalStorage.getClickedAccountID();
+    var listOfAccounts;
+    if (savedAccounts) {
+      listOfAccounts = JSON.parse(savedAccounts);
+      for (var i = 0; i < listOfAccounts.length; i++) {
+        if (listOfAccounts[i].id === clickedID) {
+          return listOfAccounts[i].name;
+        }
+      }
+    }
+  }
+
   function getCategory(categoryID) {
     var savedCategories = localStorage.getItem('categories');
     var categoryToGet;
@@ -231,22 +245,13 @@ var manageLocalStorage = (function() {
 
   function getTransactions() {
     var savedAccounts = localStorage.getItem('accounts');
-    var listOfAccounts;
     var clickedID = manageLocalStorage.getClickedAccountID();
+    var listOfAccounts;
     if (savedAccounts) {
       listOfAccounts = JSON.parse(savedAccounts);
       for (var i = 0; i < listOfAccounts.length; i++) {
         if (listOfAccounts[i].id === clickedID) {
-          var clickedAccount = listOfAccounts[i];
-          var accountName = clickedAccount.name;
-          for (var j = 0; j < clickedAccount.transactions.length; j++) {
-            var transactionCategoryID = clickedAccount.transactions[j].categoryID;
-            var transactionTitle = clickedAccount.transactions[j].title;
-            var transactionDate = clickedAccount.transactions[j].date;
-            var transactionAmount = clickedAccount.transactions[j].amount;
-            var transactionCategoryName = getCategory(transactionCategoryID).name;
-            addTransactionsToDOM(transactionCategoryName, transactionTitle, transactionDate, transactionAmount, accountName);
-          }
+          return listOfAccounts[i].transactions;
         }
       }
     }
@@ -271,6 +276,9 @@ var manageLocalStorage = (function() {
     updateAccountBalance: updateAccountBalance,
     getTransactions: getTransactions,
     saveClickedAccountID: saveClickedAccountID,
-    getClickedAccountID: getClickedAccountID
+    getClickedAccountID: getClickedAccountID,
+    getClickedAccountName: getClickedAccountName,
+    getCategory: getCategory,
+    getTransaction: getTransactions
   }
 })();

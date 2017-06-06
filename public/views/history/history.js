@@ -19,8 +19,23 @@ function addTransactionsToDOM(category, title, date, amount, account) {
   historyTableBody.appendChild(newRow);
 }
 
+function addAllTransactionsToDOM(listOfTransactions) {
+  for (var j = 0; j < listOfTransactions.length; j++) {
+    var transactionCategoryID = listOfTransactions[j].categoryID;
+    var transactionTitle = listOfTransactions[j].title;
+    var transactionDate = listOfTransactions[j].date;
+    var transactionAmount = listOfTransactions[j].amount;
+    var transactionCategoryName = manageLocalStorage.getCategory(transactionCategoryID).name;
+    var accountName = manageLocalStorage.getClickedAccountName();
+    addTransactionsToDOM(transactionCategoryName, transactionTitle, transactionDate, transactionAmount, accountName);
+  }
+}
+
+
+
 function onPageLoaded() {
-  manageLocalStorage.getTransactions();
+  var currentListOfTransactions = manageLocalStorage.getTransactions();
+  addAllTransactionsToDOM(currentListOfTransactions);
 }
 
 document.onload = onPageLoaded();
