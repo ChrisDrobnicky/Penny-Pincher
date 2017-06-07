@@ -34,6 +34,9 @@ function addAllTransactionsToDOM(listOfTransactions) {
 function setListeners() {
   var amountHeader = document.querySelector('#amountHeader');
   amountHeader.addEventListener('click', sortByAmount, false);
+
+  var dateHeader = document.querySelector('#dateHeader');
+  dateHeader.addEventListener('click', sortByDate, false);
 }
 
 function sortByAmount() {
@@ -49,6 +52,24 @@ function sortByAmount() {
   } else {
     sortedTransactions = currentList.sort(function(a, b) {
       return a.amount - b.amount
+    })
+  }
+  addAllTransactionsToDOM(sortedTransactions);
+}
+
+function sortByDate() {
+  var isDescending = manageLocalStorage.getIsDescendingValue('date');
+  var historyTableBody = document.querySelector('#historyTableBody');
+  var currentList = manageLocalStorage.getTransactions();
+  var sortedTransactions;
+  historyTableBody.innerHTML = '';
+  if (isDescending) {
+    sortedTransactions = currentList.sort(function(a, b) {
+      return new Date(b.date) - new Date(a.date)
+    })
+  } else {
+    sortedTransactions = currentList.sort(function(a, b) {
+      return new Date(a.date) - new Date(b.date)
     })
   }
   addAllTransactionsToDOM(sortedTransactions);
