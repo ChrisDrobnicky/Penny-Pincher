@@ -271,22 +271,24 @@ var manageLocalStorage = (function() {
     }
   }
 
-  function getAmountIsDescending() {
+  function getIsDescendingValue(columnName) {
     var savedColumnsToSort = localStorage.getItem('allColumnsToSort');
     var updateColumnsToSort;
-    var updateAmountIsDescending;
-    var amountIsDescending;
+    var updateIsDescending;
+    var checkIfDescending;
     if (savedColumnsToSort) {
       updateColumnsToSort = JSON.parse(savedColumnsToSort);
-      amountIsDescending = updateColumnsToSort[3].isDescending;
-      updateAmountIsDescending = !amountIsDescending;
-      updateColumnsToSort[3].isDescending = updateAmountIsDescending;
+      for (var i = 0; i < updateColumnsToSort.length; i ++) {
+        if (updateColumnsToSort[i].column === columnName) {
+          checkIfDescending = updateColumnsToSort[i].isDescending;
+          updateIsDescending = !checkIfDescending;
+          updateColumnsToSort[i].isDescending = updateIsDescending;
+        }
+      }
       localStorage.setItem('allColumnsToSort',JSON.stringify(updateColumnsToSort));
-      return updateAmountIsDescending;
+      return updateIsDescending;
     }
   }
-
-
 
   return {
     addAccount: addAccount,
@@ -311,6 +313,6 @@ var manageLocalStorage = (function() {
     getClickedAccountName: getClickedAccountName,
     getCategory: getCategory,
     setTransactionsToSort: setTransactionsToSort,
-    getAmountIsDescending: getAmountIsDescending
+    getIsDescendingValue: getIsDescendingValue
   }
 })();

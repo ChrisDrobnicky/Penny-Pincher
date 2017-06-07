@@ -37,7 +37,7 @@ function setListeners() {
 }
 
 function sortByAmount() {
-  var isDescending = manageLocalStorage.getAmountIsDescending();
+  var isDescending = manageLocalStorage.getIsDescendingValue('amount');
   var historyTableBody = document.querySelector('#historyTableBody');
   var currentList = manageLocalStorage.getTransactions();
   var sortedTransactions;
