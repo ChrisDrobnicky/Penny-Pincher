@@ -310,7 +310,6 @@ var manageLocalStorage = (function() {
     getClickedAccountID: getClickedAccountID,
     getClickedAccountName: getClickedAccountName,
     getCategory: getCategory,
-    getTransaction: getTransactions,
     setTransactionsToSort: setTransactionsToSort,
     getAmountIsDescending: getAmountIsDescending
   }
