@@ -33,7 +33,9 @@ function addAllTransactionsToDOM(listOfTransactions) {
 
 function setListeners() {
   var amountHeader = document.querySelector('#amountHeader');
-  amountHeader.addEventListener('click', sortByAmount, false);
+  amountHeader.addEventListener('click', function() {
+    sortByNumber('amount');
+  }, false);
 
   var dateHeader = document.querySelector('#dateHeader');
   dateHeader.addEventListener('click', sortByDate, false);
@@ -42,19 +44,20 @@ function setListeners() {
   titleHeader.addEventListener('click', sortByTitle, false);
 }
 
-function sortByAmount() {
-  var isDescending = manageLocalStorage.getIsDescendingValue('amount');
+function sortByNumber(number) {
+  var isDescending = manageLocalStorage.getIsDescendingValue(number);
   var historyTableBody = document.querySelector('#historyTableBody');
   var currentList = manageLocalStorage.getTransactions();
+  debugger;
   var sortedTransactions;
   historyTableBody.innerHTML = '';
   if (isDescending) {
     sortedTransactions = currentList.sort(function(a, b) {
-      return b.amount - a.amount
+      return b[number] - a[number]
     })
   } else {
     sortedTransactions = currentList.sort(function(a, b) {
-      return a.amount - b.amount
+      return a[number] - b[number]
     })
   }
   addAllTransactionsToDOM(sortedTransactions);

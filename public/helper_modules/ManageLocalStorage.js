@@ -180,7 +180,7 @@ var manageLocalStorage = (function() {
     } else {
       amountToAdd = Number(amount.toFixed(2));
     }
-    transactionToAdd = { title: title, date: date, categoryID: categoryID, amount: amountToAdd, isExpense: isExpense };
+    transactionToAdd = { title: title, date: date, categoryID: Number(categoryID), amount: amountToAdd, isExpense: isExpense };
 
     for (var i = 0; i < currentAccounts.length; i++) {
       if (currentAccounts[i].id === accountID) {
