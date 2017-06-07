@@ -259,6 +259,7 @@ var manageLocalStorage = (function() {
 
   function setTransactionsToSort() {
     if (localStorage.getItem('allColumnsToSort')) {
+      debugger;
     } else {
       var allColumnsToSort = [
         {column: 'category', isDescending: true},
@@ -272,6 +273,7 @@ var manageLocalStorage = (function() {
 
   function getAmountIsDescending() {
     var savedColumnsToSort = localStorage.getItem('allColumnsToSort');
+    debugger;
     var updateColumnsToSort;
     var updateAmountIsDescending;
     var amountIsDescending;
@@ -280,7 +282,7 @@ var manageLocalStorage = (function() {
       amountIsDescending = updateColumnsToSort[3].isDescending;
       updateAmountIsDescending = !amountIsDescending;
       updateColumnsToSort[3].isDescending = updateAmountIsDescending;
-      localStorage.setItem('allColumnsToSort', updateColumnsToSort);
+      localStorage.setItem('allColumnsToSort',JSON.stringify(updateColumnsToSort));
       debugger;
       return updateAmountIsDescending;
     }
