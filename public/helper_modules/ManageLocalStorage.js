@@ -258,6 +258,8 @@ var manageLocalStorage = (function() {
   }
 
   function setTransactionsToSort() {
+    if (localStorage.getItem('allColumnsToSort')) {
+    } else {
       var allColumnsToSort = [
         {column: 'category', isDescending: true},
         {column: 'title', isDescending: true},
@@ -265,6 +267,7 @@ var manageLocalStorage = (function() {
         {column: 'amount', isDescending: true}
       ];
       localStorage.setItem('allColumnsToSort', JSON.stringify(allColumnsToSort));
+    }
   }
 
   function getAmountIsDescending() {
@@ -278,6 +281,7 @@ var manageLocalStorage = (function() {
       updateAmountIsDescending = !amountIsDescending;
       updateColumnsToSort[3].isDescending = updateAmountIsDescending;
       localStorage.setItem('allColumnsToSort', updateColumnsToSort);
+      debugger;
       return updateAmountIsDescending;
     }
   }
