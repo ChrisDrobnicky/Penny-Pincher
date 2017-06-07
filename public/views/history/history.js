@@ -39,9 +39,7 @@ function setListeners() {
   dateHeader.addEventListener('click', sortByDate, false);
 
   var titleHeader = document.querySelector('#titleHeader');
-  titleHeader.addEventListener('click', function() {
-    sortByName('title')
-  }, false);
+  titleHeader.addEventListener('click', sortByTitle, false);
 }
 
 function sortByAmount() {
@@ -80,8 +78,8 @@ function sortByDate() {
   addAllTransactionsToDOM(sortedTransactions);
 }
 
-function sortByName(string) {
-  var isDescending = manageLocalStorage.getIsDescendingValue(string);
+function sortByTitle() {
+  var isDescending = manageLocalStorage.getIsDescendingValue('title');
   var historyTableBody = document.querySelector('#historyTableBody');
   var currentList = manageLocalStorage.getTransactions();
   var sortedTransactions;
