@@ -37,6 +37,11 @@ function setListeners() {
     sortByNumber('amount');
   }, false);
 
+  var categoryHeader = document.querySelector('#categoryHeader');
+  categoryHeader.addEventListener('click', function() {
+    sortByNumber('categoryID');
+  }, false);
+
   var dateHeader = document.querySelector('#dateHeader');
   dateHeader.addEventListener('click', sortByDate, false);
 
@@ -48,7 +53,6 @@ function sortByNumber(number) {
   var isDescending = manageLocalStorage.getIsDescendingValue(number);
   var historyTableBody = document.querySelector('#historyTableBody');
   var currentList = manageLocalStorage.getTransactions();
-  debugger;
   var sortedTransactions;
   historyTableBody.innerHTML = '';
   if (isDescending) {

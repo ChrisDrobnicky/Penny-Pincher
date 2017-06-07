@@ -262,7 +262,7 @@ var manageLocalStorage = (function() {
       return;
     } else {
       var allColumnsToSort = [
-        {column: 'category', isDescending: true},
+        {column: 'categoryID', isDescending: true},
         {column: 'title', isDescending: true},
         {column: 'date', isDescending: true},
         {column: 'amount', isDescending: true}
