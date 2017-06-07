@@ -33,13 +33,11 @@ function addAllTransactionsToDOM(listOfTransactions) {
 
 function setListeners() {
   var amountHeader = document.querySelector('#amountHeader');
-  var isDescending = manageLocalStorage.getAmountIsDescending();
-  amountHeader.addEventListener('click', function() {
-    sortByAmount(isDescending);
-  }, false);
+  amountHeader.addEventListener('click', sortByAmount, false);
 }
 
-function sortByAmount(isDescending) {
+function sortByAmount() {
+  var isDescending = manageLocalStorage.getAmountIsDescending();
   var historyTableBody = document.querySelector('#historyTableBody');
   var currentList = manageLocalStorage.getTransactions();
   var sortedTransactions;
