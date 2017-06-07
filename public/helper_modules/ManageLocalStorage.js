@@ -258,23 +258,27 @@ var manageLocalStorage = (function() {
   }
 
   function setTransactionsToSort() {
-    var allColumnsToSort = [
-      {column: 'category', isDescending: true},
-      {column: 'title', isDescending: true},
-      {column: 'date', isDescending: true},
-      {column: 'amount', isDescending: true}
-    ];
-    debugger;
-    localStorage.setItem('columnsToSort', JSON.stringify(allColumnsToSort));
+      var allColumnsToSort = [
+        {column: 'category', isDescending: true},
+        {column: 'title', isDescending: true},
+        {column: 'date', isDescending: true},
+        {column: 'amount', isDescending: true}
+      ];
+      localStorage.setItem('allColumnsToSort', JSON.stringify(allColumnsToSort));
   }
 
   function getAmountIsDescending() {
-    var allColumnsToSort = localStorage.getItem('columnsToSort');
-    debugger;
-    if (allColumnsToSort) {
-      var columnToSort = JSON.parse(allColumnsToSort)[3];
-      debugger;
-      return columnToSort.isDescending;
+    var savedColumnsToSort = localStorage.getItem('allColumnsToSort');
+    var updateColumnsToSort;
+    var updateAmountIsDescending;
+    var amountIsDescending;
+    if (savedColumnsToSort) {
+      updateColumnsToSort = JSON.parse(savedColumnsToSort);
+      amountIsDescending = updateColumnsToSort[3].isDescending;
+      updateAmountIsDescending = !amountIsDescending;
+      updateColumnsToSort[3].isDescending = updateAmountIsDescending;
+      localStorage.setItem('allColumnsToSort', updateColumnsToSort);
+      return updateAmountIsDescending;
     }
   }
 
