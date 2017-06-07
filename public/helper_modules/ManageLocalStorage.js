@@ -257,6 +257,29 @@ var manageLocalStorage = (function() {
     }
   }
 
+  function setTransactionsToSort() {
+    var allColumnsToSort = [
+      {column: 'category', isDescending: true},
+      {column: 'title', isDescending: true},
+      {column: 'date', isDescending: true},
+      {column: 'amount', isDescending: true}
+    ];
+    debugger;
+    localStorage.setItem('columnsToSort', JSON.stringify(allColumnsToSort));
+  }
+
+  function getAmountIsDescending() {
+    var allColumnsToSort = localStorage.getItem('columnsToSort');
+    debugger;
+    if (allColumnsToSort) {
+      var columnToSort = JSON.parse(allColumnsToSort)[3];
+      debugger;
+      return columnToSort.isDescending;
+    }
+  }
+
+
+
   return {
     addAccount: addAccount,
     removeAccount: removeAccount,
@@ -279,6 +302,8 @@ var manageLocalStorage = (function() {
     getClickedAccountID: getClickedAccountID,
     getClickedAccountName: getClickedAccountName,
     getCategory: getCategory,
-    getTransaction: getTransactions
+    getTransaction: getTransactions,
+    setTransactionsToSort: setTransactionsToSort,
+    getAmountIsDescending: getAmountIsDescending
   }
 })();
