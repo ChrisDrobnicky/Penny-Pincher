@@ -33,12 +33,10 @@ function addAllTransactionsToDOM(listOfTransactions) {
 
 function setListeners() {
   var amountHeader = document.querySelector('#amountHeader');
-  amountHeader.addEventListener('click', function() {
-    sortBy('amount');
-  }, false);
+  amountHeader.addEventListener('click', sortByAmount, false);
 }
 
-function sortBy(column) {
+function sortByAmount() {
   var isDescending = manageLocalStorage.getAmountIsDescending();
   var historyTableBody = document.querySelector('#historyTableBody');
   var currentList = manageLocalStorage.getTransactions();
@@ -46,11 +44,11 @@ function sortBy(column) {
   historyTableBody.innerHTML = '';
   if (isDescending) {
     sortedTransactions = currentList.sort(function(a, b) {
-      return b[column] - a[column]
+      return b.amount - a.amount
     })
   } else {
     sortedTransactions = currentList.sort(function(a, b) {
-      return a[column] - b[column]
+      return a.amount - b.amount
     })
   }
   addAllTransactionsToDOM(sortedTransactions);
