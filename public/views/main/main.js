@@ -31,6 +31,15 @@ function saveClickedAccountID(event) {
   manageLocalStorage.saveClickedAccountID(clickedAccountID);
 }
 
+function setListenerOnButton() {
+  var $resetLocalStorageButton = $('#resetLocalStorageButton');
+  $resetLocalStorageButton.click(resetLocalStorage);
+}
+
+function resetLocalStorage() {
+  localStorage.clear();
+}
+
 function displayTotalBalance() {
   var $totalBalance = $('#totalBalance');
   $totalBalance.text(manageLocalStorage.getTotalBalance().toFixed(2));
@@ -39,6 +48,7 @@ function displayTotalBalance() {
 function onPageLoaded() {
   manageLocalStorage.displayAccounts();
   displayTotalBalance();
+  setListenerOnButton();
 }
 
 document.onload = onPageLoaded();
