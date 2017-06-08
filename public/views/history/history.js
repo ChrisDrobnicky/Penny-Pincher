@@ -49,19 +49,19 @@ function setListeners() {
   titleHeader.addEventListener('click', sortByTitle, false);
 }
 
-function sortByNumber(number) {
-  var isDescending = manageLocalStorage.getIsDescendingValue(number);
+function sortByNumber(propertyName) {
+  var isDescending = manageLocalStorage.getIsDescendingValue(propertyName);
   var historyTableBody = document.querySelector('#historyTableBody');
   var currentList = manageLocalStorage.getTransactions();
   var sortedTransactions;
   historyTableBody.innerHTML = '';
   if (isDescending) {
     sortedTransactions = currentList.sort(function(a, b) {
-      return b[number] - a[number]
+      return b[propertyName] - a[propertyName]
     })
   } else {
     sortedTransactions = currentList.sort(function(a, b) {
-      return a[number] - b[number]
+      return a[propertyName] - b[propertyName]
     })
   }
   addAllTransactionsToDOM(sortedTransactions);
