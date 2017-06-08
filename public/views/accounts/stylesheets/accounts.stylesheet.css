@@ -1,19 +1,16 @@
-.pp-accounts-container {
-  color: #fff; }
-  .pp-accounts-container .pp-account-list {
-    list-style-type: none;
-    color: #fff;
-    padding: 5px; }
-    .pp-accounts-container .pp-account-list .pp-account-list__item {
-      margin-bottom: 10px; }
-    .pp-accounts-container .pp-account-list .pp-account-list__name {
-      display: inline-block;
-      width: 195px; }
-    .pp-accounts-container .pp-account-list .pp-account-list__balance {
-      display: inline-block;
-      width: 140px; }
-    .pp-accounts-container .pp-account-list .pp-account-list__button {
-      margin-left: 50px; }
+.pp-accounts-container .pp-account-list {
+  list-style-type: none;
+  padding: 5px; }
+  .pp-accounts-container .pp-account-list .pp-account-list__item {
+    margin-bottom: 10px; }
+  .pp-accounts-container .pp-account-list .pp-account-list__name {
+    display: inline-block;
+    width: 195px; }
+  .pp-accounts-container .pp-account-list .pp-account-list__balance {
+    display: inline-block;
+    width: 140px; }
+  .pp-accounts-container .pp-account-list .pp-account-list__button {
+    margin-left: 50px; }
 
 .pp-configure-form .pp-configure-form__input {
   color: #222; }
