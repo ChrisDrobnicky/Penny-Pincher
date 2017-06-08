@@ -8,5 +8,7 @@
 .pp-main .pp-transaction-container {
   margin: 10px auto;
   width: 100px; }
+  .pp-main .pp-transaction-container .pp-transaction-container__button {
+    margin: 10px; }
 
 /*# sourceMappingURL=main.stylesheet.css.map */

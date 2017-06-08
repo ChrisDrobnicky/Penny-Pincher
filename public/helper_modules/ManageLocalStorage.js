@@ -127,7 +127,8 @@ var manageLocalStorage = (function() {
       for (var i = 0; i < listOfAccounts.length; i++) {
         var retrievedName = listOfAccounts[i].name;
         var retrievedBalance = listOfAccounts[i].balance;
-        displayAccountsInDOM(retrievedName, retrievedBalance);
+        var retrievedID = listOfAccounts[i].id;
+        displayAccountsInDOM(retrievedName, retrievedBalance, retrievedID);
       }
     }
   }
@@ -171,22 +172,24 @@ var manageLocalStorage = (function() {
 
   function addTransaction(title, date, categoryID, accountID, amount, isExpense) {
     var currentAccounts = JSON.parse(localStorage.getItem('accounts'));
-    var transactionToAdd = { title: title, date: date, categoryID: categoryID, amount: amount };
+    var amountToAdd;
+    var transactionToAdd;
     var accountBalance;
+    if (isExpense === true) {
+      amountToAdd = -Math.abs(Number(amount.toFixed(2)));
+    } else {
+      amountToAdd = Number(amount.toFixed(2));
+    }
+    transactionToAdd = { title: title, date: date, categoryID: Number(categoryID), amount: amountToAdd, isExpense: isExpense };
+
     for (var i = 0; i < currentAccounts.length; i++) {
       if (currentAccounts[i].id === accountID) {
         currentAccounts[i].transactions.push(transactionToAdd);
-        if (isExpense === true) {
-          accountBalance = parseFloat(currentAccounts[i].balance);
-          accountBalance -= Number(amount.toFixed(2));
-          currentAccounts[i].balance = accountBalance;
-        } else {
-          accountBalance = parseFloat(currentAccounts[i].balance);
-          accountBalance += Number(amount.toFixed(2));
-          currentAccounts[i].balance = accountBalance;
+        accountBalance = parseFloat(currentAccounts[i].balance);
+        accountBalance += amountToAdd;
+        currentAccounts[i].balance = accountBalance;
         }
       }
-    }
     localStorage.setItem('accounts', JSON.stringify(currentAccounts));
   }
 
@@ -207,6 +210,86 @@ var manageLocalStorage = (function() {
     localStorage.setItem('accounts', JSON.stringify(currentAccounts));
   }
 
+  function saveClickedAccountID(clickedAccountID) {
+    localStorage.setItem('clickedAccountID', clickedAccountID);
+  }
+
+  function getClickedAccountID() {
+    return localStorage.getItem('clickedAccountID');
+  }
+
+  function getClickedAccountName() {
+    var savedAccounts = localStorage.getItem('accounts');
+    var clickedID = manageLocalStorage.getClickedAccountID();
+    var listOfAccounts;
+    if (savedAccounts) {
+      listOfAccounts = JSON.parse(savedAccounts);
+      for (var i = 0; i < listOfAccounts.length; i++) {
+        if (listOfAccounts[i].id === clickedID) {
+          return listOfAccounts[i].name;
+        }
+      }
+    }
+  }
+
+  function getCategory(categoryID) {
+    var savedCategories = localStorage.getItem('categories');
+    var categoryToGet;
+    if (savedCategories) {
+      categoryToGet = JSON.parse(savedCategories).filter(function (n) {
+        return Number(n.id) === Number(categoryID);
+      });
+      return categoryToGet[0];
+    }
+  }
+
+  function getTransactions() {
+    var savedAccounts = localStorage.getItem('accounts');
+    var clickedID = manageLocalStorage.getClickedAccountID();
+    var listOfAccounts;
+    if (savedAccounts) {
+      listOfAccounts = JSON.parse(savedAccounts);
+      for (var i = 0; i < listOfAccounts.length; i++) {
+        if (listOfAccounts[i].id === clickedID) {
+          return listOfAccounts[i].transactions;
+        }
+      }
+    }
+  }
+
+  function setTransactionsToSort() {
+    if (localStorage.getItem('allColumnsToSort')) {
+      return;
+    } else {
+      var allColumnsToSort = [
+        {column: 'categoryID', isDescending: true},
+        {column: 'title', isDescending: true},
+        {column: 'date', isDescending: true},
+        {column: 'amount', isDescending: true}
+      ];
+      localStorage.setItem('allColumnsToSort', JSON.stringify(allColumnsToSort));
+    }
+  }
+
+  function getIsDescendingValue(columnName) {
+    var savedColumnsToSort = localStorage.getItem('allColumnsToSort');
+    var updateColumnsToSort;
+    var updateIsDescending;
+    var checkIfDescending;
+    if (savedColumnsToSort) {
+      updateColumnsToSort = JSON.parse(savedColumnsToSort);
+      for (var i = 0; i < updateColumnsToSort.length; i ++) {
+        if (updateColumnsToSort[i].column === columnName) {
+          checkIfDescending = updateColumnsToSort[i].isDescending;
+          updateIsDescending = !checkIfDescending;
+          updateColumnsToSort[i].isDescending = updateIsDescending;
+        }
+      }
+      localStorage.setItem('allColumnsToSort',JSON.stringify(updateColumnsToSort));
+      return updateIsDescending;
+    }
+  }
+
   return {
     addAccount: addAccount,
     removeAccount: removeAccount,
@@ -223,6 +306,13 @@ var manageLocalStorage = (function() {
     getAccountsToForm: getAccountsToForm,
     getListOfCategories: getListOfCategories,
     addTransaction: addTransaction,
-    updateAccountBalance: updateAccountBalance
+    updateAccountBalance: updateAccountBalance,
+    getTransactions: getTransactions,
+    saveClickedAccountID: saveClickedAccountID,
+    getClickedAccountID: getClickedAccountID,
+    getClickedAccountName: getClickedAccountName,
+    getCategory: getCategory,
+    setTransactionsToSort: setTransactionsToSort,
+    getIsDescendingValue: getIsDescendingValue
   }
 })();

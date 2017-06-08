@@ -25,6 +25,7 @@ function removeAccountFromDom(listItem){
   $(listItem).remove();
 }
 
+
 function checkInput(accountName, accountBalance){
   var $outputDiv = $('#outputDiv');
   if (accountName.length === 0 || accountBalance.length === 0) {
@@ -74,7 +75,26 @@ function getAccountsFromStorage () {
   manageLocalStorage.getAllAccounts();
 }
 
+function setListenerOnButton() {
+  var $continueButton = $('#continueButton');
+  $continueButton.click(checkAndContinue);
+}
+
+function checkAndContinue() {
+  var accountList = document.querySelector('#accountList');
+  var $outputDiv = $('#outputDiv');
+  if (accountList.children.length === 0) {
+    $outputDiv.addClass('alert alert-danger');
+    $outputDiv.html('<strong>Warning:</strong> Please create at least one account');
+  } else {
+    $outputDiv.removeClass('alert alert-danger');
+    $outputDiv.text('');
+    window.location.replace("../categories/categories.template.html");
+  }
+}
+
 function onPageLoaded() {
+  setListenerOnButton();
   var $addButton = $('#add-button');
   $addButton.click(saveAccount);
   getAccountsFromStorage();
