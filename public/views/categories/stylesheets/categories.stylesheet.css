@@ -1,17 +1,21 @@
 .pp-categories {
-  color: #fff; }
+  color: #222; }
   .pp-categories .pp-categories-list {
     list-style-type: none;
     padding-left: 0; }
     .pp-categories .pp-categories-list .pp-categories-list__item {
-      margin-bottom: 10px;
-      width: 350px;
-      height: 34px; }
+      width: 450px;
+      border: 1px solid #F6F5F8;
+      padding: 5px; }
     .pp-categories .pp-categories-list .pp-categories-list__name {
       line-height: 34px; }
     .pp-categories .pp-categories-list .pp-categories-list__button {
       margin-right: 50px;
       float: right; }
+  .pp-categories .pp-configure-form .pp-expense-heading {
+    color: #10EDC5; }
+  .pp-categories .pp-configure-form .pp-income-heading {
+    color: #ED1946; }
   .pp-categories .pp-configure-form .pp-configure-form__input {
     color: #222; }
   .pp-categories .pp-configure-form .pp-configure-form__button {

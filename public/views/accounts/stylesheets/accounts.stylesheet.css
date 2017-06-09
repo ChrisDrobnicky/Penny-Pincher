@@ -2,10 +2,13 @@
   list-style-type: none;
   padding: 5px; }
   .pp-accounts-container .pp-account-list .pp-account-list__item {
-    margin-bottom: 10px; }
+    border: 1px solid #F6F5F8;
+    width: 450px;
+    padding: 5px; }
   .pp-accounts-container .pp-account-list .pp-account-list__name {
     display: inline-block;
-    width: 195px; }
+    width: 195px;
+    color: #292788; }
   .pp-accounts-container .pp-account-list .pp-account-list__balance {
     display: inline-block;
     width: 140px; }

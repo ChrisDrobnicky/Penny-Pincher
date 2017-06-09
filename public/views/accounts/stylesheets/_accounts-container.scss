@@ -1,13 +1,18 @@
+@import "../../../stylesheets/variables";
+
 .pp-accounts-container {
   .pp-account-list {
     list-style-type: none;
     padding: 5px;
     .pp-account-list__item {
-      margin-bottom: 10px;
+      border: 1px solid #F6F5F8;
+      width: 450px;
+      padding: 5px;
     }
     .pp-account-list__name {
       display: inline-block;
       width: 195px;
+      color: $depth-blue;
     }
     .pp-account-list__balance {
       display: inline-block;

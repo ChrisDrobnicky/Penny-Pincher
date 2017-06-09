@@ -1,12 +1,14 @@
+@import "../../../stylesheets/variables";
+
 .pp-categories {
-  color: #fff;
+  color: #222;
     .pp-categories-list {
       list-style-type: none;
       padding-left: 0;
       .pp-categories-list__item {
-        margin-bottom: 10px;
-        width: 350px;
-        height: 34px;
+        width: 450px;
+        border: 1px solid #F6F5F8;
+        padding: 5px;
       }
       .pp-categories-list__name{
         line-height: 34px;
@@ -17,6 +19,12 @@
       }
     }
   .pp-configure-form {
+    .pp-expense-heading {
+      color: $teal-accent;
+    }
+    .pp-income-heading {
+      color: $pink-accent;
+    }
     .pp-configure-form__input {
       color: #222;
     }
