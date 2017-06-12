@@ -20,7 +20,18 @@
       width: 250px;
     }
     .pp-account-list__button {
+      width: 45px;
+      height: 45px;
       margin-left: 50px;
+      background: $pink-accent;
+      padding: 6px;
+      border: none;
+      color: white;
+      font-size: 15px;
+      line-height: 1.5;
+      .pp-account-list__icon {
+        color: #fff;
+      }
     }
   }
 }

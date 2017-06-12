@@ -10,7 +10,7 @@ function addAccountToDom (name, balance){
   $newAccountName.text(name).addClass('pp-account-list__name');
   $newAccountBalance.text(balance).addClass('pp-account-list__balance');
   $deleteButton.addClass('pp-account-list__button');
-  $deleteIcon.addClass('glyphicon glyphicon-minus');
+  $deleteIcon.addClass('pp-account-list__icon glyphicon glyphicon-trash');
 
   $deleteButton.click(removeAccount);
 

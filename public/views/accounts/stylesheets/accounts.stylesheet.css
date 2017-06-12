@@ -14,7 +14,17 @@
     display: inline-block;
     width: 250px; }
   .pp-accounts-container .pp-account-list .pp-account-list__button {
-    margin-left: 50px; }
+    width: 45px;
+    height: 45px;
+    margin-left: 50px;
+    background: #ED1946;
+    padding: 6px;
+    border: none;
+    color: white;
+    font-size: 15px;
+    line-height: 1.5; }
+    .pp-accounts-container .pp-account-list .pp-account-list__button .pp-account-list__icon {
+      color: #fff; }
 
 .pp-configure-form .pp-configure-form__input {
   color: #222; }
