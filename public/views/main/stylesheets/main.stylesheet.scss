@@ -6,8 +6,15 @@
       width: 30%;
       float: left;
       margin: 5px;
+      border: 2px solid $depth-blue;
       .pp-account-details {
+        color: #fff;
+        text-align: center;
+        .pp-account-details__name {
+          background-color: $depth-blue;
+        }
         .pp-account-details__balance {
+          color: $depth-blue;
         }
         .pp-account-details__button {
           padding: 6px 16px;
