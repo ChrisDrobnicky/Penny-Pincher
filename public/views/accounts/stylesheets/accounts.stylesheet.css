@@ -32,7 +32,19 @@
     .pp-accounts-container .pp-account-list .pp-account-list__button .pp-account-list__icon {
       color: #fff; }
 
-.pp-configure-form .pp-configure-form__input {
-  color: #222; }
+.pp-form-container {
+  margin-top: 20px; }
+  .pp-form-container .pp-configure-form .pp-configure-form__input {
+    color: #222; }
+  .pp-form-container .pp-configure-form .pp-configure-form__button {
+    width: 45px;
+    height: 45px;
+    margin-left: 50px;
+    background: #10EDC5;
+    border-radius: 25px;
+    padding: 6px;
+    border: none;
+    color: white;
+    font-size: 15px; }
 
 /*# sourceMappingURL=accounts.stylesheet.css.map */
