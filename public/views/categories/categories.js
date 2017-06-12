@@ -8,7 +8,7 @@ function addExpenseToDOM(expense, id) {
   $expenseItem.addClass('pp-categories-list__item');
   $deleteButton.addClass('pp-categories-list__button');
   $newExpenseCategory.addClass('pp-categories-list__name');
-  $deleteIcon.addClass('glyphicon glyphicon-minus');
+  $deleteIcon.addClass('glyphicon glyphicon-trash');
 
   $deleteButton.append($deleteIcon);
   $deleteButton.click(removeCategory);
@@ -29,7 +29,7 @@ function addIncomeToDOM(income, id) {
   $incomeItem.addClass('pp-categories-list__item');
   $deleteButton.addClass('pp-categories-list__button');
   $newIncomeCategory.addClass('pp-categories-list__name');
-  $deleteIcon.addClass('glyphicon glyphicon-minus');
+  $deleteIcon.addClass('glyphicon glyphicon-trash');
 
   $deleteButton.append($deleteIcon);
   $deleteButton.click(removeCategory);

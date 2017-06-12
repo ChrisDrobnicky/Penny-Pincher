@@ -7,15 +7,34 @@
       padding-left: 0;
       .pp-categories-list__item {
         width: 450px;
+        height: 55px;
         border: 1px solid #F6F5F8;
         padding: 5px;
+        &:hover {
+          background-color: #ececec;
+        }
+        &:hover > .pp-categories-list__button {
+          display: inline-block;
+        }
+        &:hover > .pp-categories-list__name {
+          margin-left: 40px;
+        }
       }
       .pp-categories-list__name{
         line-height: 34px;
+        margin-left: 10px;
       }
       .pp-categories-list__button {
-        margin-right: 50px;
+        margin: 0 50px;
         float: right;
+        display: none;
+        width: 45px;
+        height: 45px;
+        background: $pink-accent;
+        padding: 6px;
+        border: none;
+        color: white;
+        font-size: 15px;
       }
     }
   .pp-configure-form {
@@ -28,9 +47,31 @@
     .pp-configure-form__input {
       color: #222;
     }
-    .pp-configure-form__button {
+    .pp-configure-form__button--income {
       float: right;
       margin-right: 255px;
+      padding: 6px;
+      width: 45px;
+      height: 45px;
+      margin-left: 50px;
+      background: $pink-accent;
+      border-radius: 25px;
+      border: none;
+      color: white;
+      font-size: 15px;
+    }
+    .pp-configure-form__button--expense {
+      float: right;
+      margin-right: 255px;
+      padding: 6px;
+      width: 45px;
+      height: 45px;
+      margin-left: 50px;
+      background: $teal-accent;
+      border-radius: 25px;
+      border: none;
+      color: white;
+      font-size: 15px;
     }
   }
   .pp-continue-container {
