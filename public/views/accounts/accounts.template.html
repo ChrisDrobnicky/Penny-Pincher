@@ -32,7 +32,7 @@
                 <input
                   type="text"
                   id="account-name"
-                  class="configure-form__input"
+                  class="pp-configure-form__input"
                   placeholder="Your Account's name"
                   required
                   maxlength="20">
@@ -45,7 +45,7 @@
                   <input
                     type="text"
                     id="account-balance"
-                    class="configure-form__input"
+                    class="pp-configure-form__input"
                     placeholder="Initial balance (e.g. 0.00)"
                     required
                     maxlength="12">
@@ -53,8 +53,8 @@
               </div>
           </div>
             <div class="col-lg-8 col-md-6 col-sm-6">
-              <button type="button" id="add-button" class="btn btn-success btn-add">
-                <span class="glyphicon glyphicon-plus"> </span>
+              <button type="button" id="add-button" class="pp-configure-form__button btn btn-success">
+               <span class="glyphicon glyphicon-plus"> </span>
               </button>
             </div>
           </form>
@@ -62,12 +62,13 @@
         <div id="outputDiv"></div>
       </div>
       <div class="pp-continue-container">
-        <button
+        <a
           type="button"
-          class="btn btn-primary continue-button"
+          href="../categories/categories.template.html"
+          class="pp-continue-button"
           id="continueButton">
           Continue
-        </button>
+        </a>
       </div>
     </div>
     <script src="../../helper_modules/ManageLocalStorage.js"></script>

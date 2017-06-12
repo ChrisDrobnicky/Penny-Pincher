@@ -9,7 +9,7 @@ function addAccountToDom (name, balance){
   $newListItem.addClass('pp-account-list__item').attr('id', accountID);
   $newAccountName.text(name).addClass('pp-account-list__name');
   $newAccountBalance.text(balance).addClass('pp-account-list__balance');
-  $deleteButton.addClass('btn btn-danger btn-remove pp-account-list__button');
+  $deleteButton.addClass('pp-account-list__button');
   $deleteIcon.addClass('glyphicon glyphicon-minus');
 
   $deleteButton.click(removeAccount);

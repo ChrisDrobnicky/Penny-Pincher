@@ -11,5 +11,20 @@
         color: #111;
       }
     }
+    .pp-transaction-history__button {
+      padding: 6px 16px;
+      border: 1px solid #446d88;
+      background-color: $depth-blue;
+      border-radius: 25px;
+      box-shadow: 0 1px 5px gray;
+      color: white;
+      text-shadow: 0 -1px 1px #335166;
+      font-size: 20px;
+      line-height: 1.5;
+      text-decoration: none;
+      &:hover {
+        background-color: darkcyan;
+      }
+    }
   }
 }

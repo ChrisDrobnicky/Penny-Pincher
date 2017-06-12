@@ -9,6 +9,21 @@
       .pp-account-details {
         .pp-account-details__balance {
         }
+        .pp-account-details__button {
+          padding: 6px 16px;
+          border: 1px solid #446d88;
+          background-color: $depth-blue;
+          border-radius: 25px;
+          box-shadow: 0 1px 5px gray;
+          color: white;
+          text-shadow: 0 -1px 1px #335166;
+          font-size: 20px;
+          line-height: 1.5;
+          text-decoration: none;
+          &:hover {
+            background-color: darkcyan;
+          }
+        }
       }
     }
   }
@@ -18,9 +33,38 @@
   }
   .pp-transaction-container {
     margin: 10px auto;
-    width: 100px;
-    .pp-transaction-container__button {
-      margin: 10px;
+    width: 650px;
+    padding-top: 50px;
+    text-align: center;
+    .pp-transaction-container__button--add {
+      padding: 6px 16px;
+      border: 1px solid #446d88;
+      background-color: $depth-blue;
+      border-radius: 25px;
+      box-shadow: 0 1px 5px gray;
+      color: white;
+      text-shadow: 0 -1px 1px #335166;
+      font-size: 20px;
+      line-height: 1.5;
+      text-decoration: none;
+      &:hover {
+        background-color: darkcyan;
+      }
+    }
+    .pp-transaction-container__button--reset {
+      padding: 6px 16px;
+      border: 1px solid #446d88;
+      background-color: $depth-blue;
+      border-radius: 25px;
+      box-shadow: 0 1px 5px gray;
+      color: white;
+      text-shadow: 0 -1px 1px #335166;
+      font-size: 20px;
+      line-height: 1.5;
+      text-decoration: none;
+      &:hover {
+        background-color: darkcyan;
+      }
     }
   }
 }

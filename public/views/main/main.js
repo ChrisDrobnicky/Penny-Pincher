@@ -10,7 +10,7 @@ function displayAccountsInDOM(name, balance, id) {
   $accountDetails.addClass('pp-account-details panel panel-success');
   $accountName.addClass('panel-heading');
   $accountBalance.addClass('pp-account-details__balance panel-body');
-  $historyButton.addClass('btn btn-info');
+  $historyButton.addClass('pp-account-details__button');
   $historyButton.text('Show history');
   $historyButton.attr('href', '../history/history.template.html');
   $historyButton.attr('id', id);
