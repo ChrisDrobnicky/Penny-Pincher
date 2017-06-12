@@ -4,16 +4,23 @@
   .pp-accounts-container .pp-account-list .pp-account-list__item {
     border: 1px solid #F6F5F8;
     width: 650px;
+    height: 55px;
     padding: 5px; }
+    .pp-accounts-container .pp-account-list .pp-account-list__item:hover {
+      background-color: #ececec; }
+    .pp-accounts-container .pp-account-list .pp-account-list__item:hover > .pp-account-list__button {
+      display: inline-block; }
+    .pp-accounts-container .pp-account-list .pp-account-list__item:hover > .pp-account-list__name {
+      margin-left: 40px; }
   .pp-accounts-container .pp-account-list .pp-account-list__name {
     display: inline-block;
     width: 250px;
-    color: #292788;
-    margin-left: 40px; }
+    margin-left: 10px; }
   .pp-accounts-container .pp-account-list .pp-account-list__balance {
     display: inline-block;
     width: 250px; }
   .pp-accounts-container .pp-account-list .pp-account-list__button {
+    display: none;
     width: 45px;
     height: 45px;
     margin-left: 50px;
@@ -21,8 +28,7 @@
     padding: 6px;
     border: none;
     color: white;
-    font-size: 15px;
-    line-height: 1.5; }
+    font-size: 15px; }
     .pp-accounts-container .pp-account-list .pp-account-list__button .pp-account-list__icon {
       color: #fff; }
 

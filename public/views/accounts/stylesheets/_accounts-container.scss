@@ -7,19 +7,29 @@
     .pp-account-list__item {
       border: 1px solid #F6F5F8;
       width: 650px;
+      height: 55px;
       padding: 5px;
+      &:hover {
+        background-color: #ececec;
+      }
+      &:hover > .pp-account-list__button {
+        display: inline-block;
+      }
+      &:hover > .pp-account-list__name {
+        margin-left:40px;
+      }
     }
     .pp-account-list__name {
       display: inline-block;
       width: 250px;
-      color: $depth-blue;
-      margin-left: 40px;
+      margin-left: 10px;
     }
     .pp-account-list__balance {
       display: inline-block;
       width: 250px;
     }
     .pp-account-list__button {
+      display: none;
       width: 45px;
       height: 45px;
       margin-left: 50px;
@@ -28,7 +38,6 @@
       border: none;
       color: white;
       font-size: 15px;
-      line-height: 1.5;
       .pp-account-list__icon {
         color: #fff;
       }
