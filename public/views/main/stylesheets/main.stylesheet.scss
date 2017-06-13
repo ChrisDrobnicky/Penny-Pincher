@@ -10,11 +10,13 @@
       .pp-account-details {
         color: #fff;
         text-align: center;
+        height: 90px;
         .pp-account-details__name {
           background-color: $depth-blue;
         }
         .pp-account-details__balance {
           color: $depth-blue;
+          font-size: 20px;
         }
         .pp-account-details__button {
           padding: 6px 16px;
@@ -24,19 +26,30 @@
           box-shadow: 0 1px 5px gray;
           color: white;
           text-shadow: 0 -1px 1px #335166;
-          font-size: 20px;
+          font-size: 12px;
           line-height: 1.5;
           text-decoration: none;
           &:hover {
-            background-color: darkcyan;
+            background-color: lighten($depth-blue, 20%);
           }
         }
       }
     }
   }
-  .pp-total-container {
+  .pp-total-details {
     width: 30%;
     margin: 20px auto;
+    border: 2px solid $teal-accent;
+    text-align: center;
+    font-size: 25px;
+    color: white;
+    background-color: $teal-accent;
+    .pp-total-details__heading {
+
+    }
+    .pp-total-details__balance {
+      margin-top: 20px;
+    }
   }
   .pp-transaction-container {
     margin: 10px auto;
@@ -45,7 +58,7 @@
     .pp-transaction-container__button--add {
       padding: 6px 16px;
       border: 1px solid #446d88;
-      background-color: $teal-accent;
+      background-color: darken($teal-accent,20%);
       border-radius: 25px;
       box-shadow: 0 1px 5px gray;
       color: white;
@@ -54,13 +67,13 @@
       line-height: 1.5;
       text-decoration: none;
       &:hover {
-        background-color: darken($teal-accent,20%);
+        background-color: $teal-accent;
       }
     }
     .pp-transaction-container__button--reset {
       padding: 6px 16px;
       border: 1px solid #446d88;
-      background-color: $pink-accent;
+      background-color: darken($pink-accent, 20%);
       border-radius: 25px;
       box-shadow: 0 1px 5px gray;
       color: white;
@@ -70,7 +83,7 @@
       text-decoration: none;
       float: right;
       &:hover {
-        background-color: darken($pink-accent, 20%);
+        background-color: $pink-accent;
       }
     }
   }

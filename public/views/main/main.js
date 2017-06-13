@@ -21,8 +21,8 @@ function displayAccountsInDOM(name, balance, id) {
 
   $accountDetails.append($accountName);
   $accountDetails.append($accountBalance);
+  $accountDetails.append($historyButton);
   $accountContainer.append($accountDetails);
-  $accountContainer.append($historyButton);
   $accountList.append($accountContainer);
 }
 

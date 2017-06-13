@@ -5,11 +5,13 @@
   border: 2px solid #292788; }
   .pp-main .pp-accounts-container .pp-account .pp-account-details {
     color: #fff;
-    text-align: center; }
+    text-align: center;
+    height: 90px; }
     .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__name {
       background-color: #292788; }
     .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__balance {
-      color: #292788; }
+      color: #292788;
+      font-size: 20px; }
     .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__button {
       padding: 6px 16px;
       border: 1px solid #446d88;
@@ -18,14 +20,21 @@
       box-shadow: 0 1px 5px gray;
       color: white;
       text-shadow: 0 -1px 1px #335166;
-      font-size: 20px;
+      font-size: 12px;
       line-height: 1.5;
       text-decoration: none; }
       .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__button:hover {
-        background-color: darkcyan; }
-.pp-main .pp-total-container {
+        background-color: #4d4acb; }
+.pp-main .pp-total-details {
   width: 30%;
-  margin: 20px auto; }
+  margin: 20px auto;
+  border: 2px solid #10EDC5;
+  text-align: center;
+  font-size: 25px;
+  color: white;
+  background-color: #10EDC5; }
+  .pp-main .pp-total-details .pp-total-details__balance {
+    margin-top: 20px; }
 .pp-main .pp-transaction-container {
   margin: 10px auto;
   padding-top: 50px;
@@ -33,7 +42,7 @@
   .pp-main .pp-transaction-container .pp-transaction-container__button--add {
     padding: 6px 16px;
     border: 1px solid #446d88;
-    background-color: #10EDC5;
+    background-color: #0a8d76;
     border-radius: 25px;
     box-shadow: 0 1px 5px gray;
     color: white;
@@ -42,11 +51,11 @@
     line-height: 1.5;
     text-decoration: none; }
     .pp-main .pp-transaction-container .pp-transaction-container__button--add:hover {
-      background-color: #0a8d76; }
+      background-color: #10EDC5; }
   .pp-main .pp-transaction-container .pp-transaction-container__button--reset {
     padding: 6px 16px;
     border: 1px solid #446d88;
-    background-color: #ED1946;
+    background-color: #940c29;
     border-radius: 25px;
     box-shadow: 0 1px 5px gray;
     color: white;
@@ -56,6 +65,6 @@
     text-decoration: none;
     float: right; }
     .pp-main .pp-transaction-container .pp-transaction-container__button--reset:hover {
-      background-color: #940c29; }
+      background-color: #ED1946; }
 
 /*# sourceMappingURL=main.stylesheet.css.map */
