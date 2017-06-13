@@ -1,5 +1,29 @@
 .pp-add-transaction {
   color: #111; }
+  .pp-add-transaction .pp-transaction .pp-transaction__type {
+    text-align: center; }
+    .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__type--expense {
+      padding: 6px 16px;
+      border: 1px solid #446d88;
+      background-color: #10EDC5;
+      border-radius: 25px;
+      box-shadow: 0 1px 5px gray;
+      color: white;
+      text-shadow: 0 -1px 1px #335166;
+      font-size: 20px;
+      line-height: 1.5;
+      text-decoration: none; }
+    .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__type--income {
+      padding: 6px 16px;
+      border: 1px solid #446d88;
+      background-color: #ED1946;
+      border-radius: 25px;
+      box-shadow: 0 1px 5px gray;
+      color: white;
+      text-shadow: 0 -1px 1px #335166;
+      font-size: 20px;
+      line-height: 1.5;
+      text-decoration: none; }
   .pp-add-transaction .pp-transaction .pp-transaction-add {
     text-align: center; }
     .pp-add-transaction .pp-transaction .pp-transaction-add .pp-transaction__button--add {

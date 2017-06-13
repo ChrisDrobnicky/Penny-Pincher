@@ -7,8 +7,20 @@ function addAccountsToForm(accountName, accountID) {
 }
 
 function setupListeners() {
+  /*
   var transactionType = document.querySelector('#transaction-select');
   transactionType.addEventListener('change', addCategoriesToForm, false);
+  */
+
+  var $expenseButton = $('#expenseButton');
+  $expenseButton.click(function() {
+    addCategoriesToForm(true);
+  });
+
+  var $incomeButton = $('#incomeButton');
+  $incomeButton.click(function() {
+    addCategoriesToForm(false);
+  });
 
   var $addTransactionButton = $('#addTransactionButton');
   $addTransactionButton.click(saveTransaction);
@@ -55,10 +67,10 @@ function showError(alertText) {
   $alertForUser.html(alertText);
 }
 
-function addCategoriesToForm() {
+function addCategoriesToForm(isExpense) {
   var $categoryPicker = $('#category');
-  var $expenseType = $('#expense');
-  var isExpense = $expenseType[0].selected;
+  //var $expenseType = $('#expense');
+  //var isExpense = $expenseType[0].selected;
   var listOfCategories = manageLocalStorage.getListOfCategories(isExpense);
   $categoryPicker.find('option').remove();
   for (var i=0; i < listOfCategories.length; i++){
@@ -75,7 +87,7 @@ function goBackToMainView() {
 
 function onPageLoaded() {
   manageLocalStorage.getAccountsToForm();
-  addCategoriesToForm();
+  addCategoriesToForm(true);
   setupListeners();
 }
 document.onload = onPageLoaded();

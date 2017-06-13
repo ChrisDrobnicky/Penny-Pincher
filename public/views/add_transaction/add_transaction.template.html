@@ -22,11 +22,9 @@
       <div class="pp-transaction">
         <form class="form-horizontal" role="form">
           <div class="pp-transaction__type form-group">
-            <label for="transaction-select">Select transaction type:</label>
-            <select class="form-control" id="transaction-select" required>
-              <option id="expense" selected>Expense</option>
-              <option id="income">Income</option>
-            </select>
+            <p>Choose transaction's type:</p>
+            <button type="button" class="pp-transaction__type--expense" id="expenseButton">Expense</button>
+            <button type="button" class="pp-transaction__type--income" id="incomeButton">Income</button>
           </div>
           <div class="pp-transaction__title form-group">
             <label for="title" class="control-label col-sm-2">Title</label>
