@@ -8,17 +8,35 @@ function addAccountsToForm(accountName, accountID) {
 
 function setupListeners() {
   var $expenseButton = $('#expenseButton');
+  var $incomeButton = $('#incomeButton');
+  var $addTransactionButton = $('#addTransactionButton');
+
   $expenseButton.click(function() {
     addCategoriesToForm(true);
   });
+  $expenseButton.click(function() {
+    setExpenseActive($expenseButton, $incomeButton);
+  });
 
-  var $incomeButton = $('#incomeButton');
+
   $incomeButton.click(function() {
     addCategoriesToForm(false);
   });
+  $incomeButton.click(function() {
+    setIncomeActive($incomeButton, $expenseButton);
+  });
 
-  var $addTransactionButton = $('#addTransactionButton');
   $addTransactionButton.click(saveTransaction);
+}
+
+function setExpenseActive (activeButton, inactiveButton) {
+  activeButton.addClass('pp-transaction__expense--active');
+  inactiveButton.removeClass('pp-transaction__income--active');
+}
+
+function setIncomeActive (activeButton, inactiveButton) {
+  activeButton.addClass('pp-transaction__income--active');
+  inactiveButton.removeClass('pp-transaction__expense--active');
 }
 
 function saveTransaction() {

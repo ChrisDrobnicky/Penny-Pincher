@@ -3,31 +3,55 @@
 .pp-add-transaction {
   color: #111;
   .pp-transaction {
+    .pp-transaction__form {
+      .pp-transaction__form--expense {
+        color: $teal-accent;
+      }
+      .pp-transaction__form--income {
+        color: $pink-accent;
+      }
+    }
     .pp-transaction__type {
       text-align: center;
-      .pp-transaction__type--expense {
+      .pp-transaction__expense {
         padding: 6px 16px;
         border: 1px solid #446d88;
-        background-color: $teal-accent;
+        background-color: $blue-grey;
         border-radius: 25px;
         box-shadow: 0 1px 5px gray;
-        color: white;
+        color: #111;
         text-shadow: 0 -1px 1px #335166;
         font-size: 20px;
         line-height: 1.5;
         text-decoration: none;
+        z-index: 1;
+        position: relative;
       }
-      .pp-transaction__type--income {
+      .pp-transaction__expense--active {
+        background-color: $teal-accent;
+        color: #fff;
+        z-index: 2;
+      }
+
+      .pp-transaction__income {
         padding: 6px 16px;
         border: 1px solid #446d88;
-        background-color: $pink-accent;
+        background-color: $blue-grey;
         border-radius: 25px;
         box-shadow: 0 1px 5px gray;
-        color: white;
+        color: #111;
         text-shadow: 0 -1px 1px #335166;
         font-size: 20px;
         line-height: 1.5;
         text-decoration: none;
+        z-index: 1;
+        margin-left: -15px;
+        position: relative;
+      }
+      .pp-transaction__income--active {
+        background-color: $pink-accent;
+        color: #fff;
+        z-index: 2;
       }
     }
     .pp-transaction-add {

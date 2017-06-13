@@ -1,29 +1,46 @@
 .pp-add-transaction {
   color: #111; }
+  .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__form--expense {
+    color: #10EDC5; }
+  .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__form--income {
+    color: #ED1946; }
   .pp-add-transaction .pp-transaction .pp-transaction__type {
     text-align: center; }
-    .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__type--expense {
+    .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__expense {
       padding: 6px 16px;
       border: 1px solid #446d88;
+      background-color: #9A9AAC;
+      border-radius: 25px;
+      box-shadow: 0 1px 5px gray;
+      color: #111;
+      text-shadow: 0 -1px 1px #335166;
+      font-size: 20px;
+      line-height: 1.5;
+      text-decoration: none;
+      z-index: 1;
+      position: relative; }
+    .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__expense--active {
       background-color: #10EDC5;
-      border-radius: 25px;
-      box-shadow: 0 1px 5px gray;
-      color: white;
-      text-shadow: 0 -1px 1px #335166;
-      font-size: 20px;
-      line-height: 1.5;
-      text-decoration: none; }
-    .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__type--income {
+      color: #fff;
+      z-index: 2; }
+    .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__income {
       padding: 6px 16px;
       border: 1px solid #446d88;
-      background-color: #ED1946;
+      background-color: #9A9AAC;
       border-radius: 25px;
       box-shadow: 0 1px 5px gray;
-      color: white;
+      color: #111;
       text-shadow: 0 -1px 1px #335166;
       font-size: 20px;
       line-height: 1.5;
-      text-decoration: none; }
+      text-decoration: none;
+      z-index: 1;
+      margin-left: -15px;
+      position: relative; }
+    .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__income--active {
+      background-color: #ED1946;
+      color: #fff;
+      z-index: 2; }
   .pp-add-transaction .pp-transaction .pp-transaction-add {
     text-align: center; }
     .pp-add-transaction .pp-transaction .pp-transaction-add .pp-transaction__button--add {
