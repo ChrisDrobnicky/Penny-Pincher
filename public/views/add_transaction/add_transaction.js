@@ -7,11 +7,6 @@ function addAccountsToForm(accountName, accountID) {
 }
 
 function setupListeners() {
-  /*
-  var transactionType = document.querySelector('#transaction-select');
-  transactionType.addEventListener('change', addCategoriesToForm, false);
-  */
-
   var $expenseButton = $('#expenseButton');
   $expenseButton.click(function() {
     addCategoriesToForm(true);
@@ -27,22 +22,18 @@ function setupListeners() {
 }
 
 function saveTransaction() {
-  var $expenseType = $('#expense');
-  var isExpense = $expenseType[0].selected;
-
   var title = document.querySelector('#title').value.trim();
   var date = document.querySelector('#date').value;
   var categoryID = document.querySelector('#category').value;
   var accountID = document.querySelector('#account').value;
   var amount = parseFloat(document.querySelector('#amount').value);
-  if(validateForm(title, date, amount)) {
-    manageLocalStorage.addTransaction(title, date, categoryID, accountID, amount, isExpense);
+  if(validateForm(title, date, amount, categoryID)) {
+    manageLocalStorage.addTransaction(title, date, categoryID, accountID, amount);
     goBackToMainView();
   }
 }
 
-
-function validateForm(title, date, amount) {
+function validateForm(title, date, amount, category) {
   var amountAfterDecimalPoint = ('' + amount).split('.')[1];
   if (title.length < 1) {
     showError('<strong>Error:</strong>Title must include at least one letter');
@@ -50,6 +41,8 @@ function validateForm(title, date, amount) {
   } else if (date.length < 1) {
     showError('<strong>Error:</strong> Please select transaction\'s date');
     return false;
+  } else if (category.length <1) {
+    showError('<strong>Error:</strong> Please choose transaction\'s type to see categories');
   } else if (isNaN(amount) || amount <= 0) {
     showError('<strong>Error:</strong> Please type transaction\'s amount');
     return false;
@@ -69,8 +62,6 @@ function showError(alertText) {
 
 function addCategoriesToForm(isExpense) {
   var $categoryPicker = $('#category');
-  //var $expenseType = $('#expense');
-  //var isExpense = $expenseType[0].selected;
   var listOfCategories = manageLocalStorage.getListOfCategories(isExpense);
   $categoryPicker.find('option').remove();
   for (var i=0; i < listOfCategories.length; i++){
@@ -79,6 +70,7 @@ function addCategoriesToForm(isExpense) {
     $option.val(listOfCategories[i].id);
     $categoryPicker.append($option);
   }
+  manageLocalStorage.setIsExpenseTransaction(isExpense);
 }
 
 function goBackToMainView() {
@@ -87,7 +79,6 @@ function goBackToMainView() {
 
 function onPageLoaded() {
   manageLocalStorage.getAccountsToForm();
-  addCategoriesToForm(true);
   setupListeners();
 }
 document.onload = onPageLoaded();
