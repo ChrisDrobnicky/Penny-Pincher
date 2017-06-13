@@ -1,4 +1,32 @@
 .pp-add-transaction {
   color: #111; }
+  .pp-add-transaction .pp-transaction .pp-transaction-add {
+    text-align: center; }
+    .pp-add-transaction .pp-transaction .pp-transaction-add .pp-transaction__button--add {
+      padding: 6px 16px;
+      border: 1px solid #446d88;
+      background-color: #0a8d76;
+      border-radius: 25px;
+      box-shadow: 0 1px 5px gray;
+      color: white;
+      text-shadow: 0 -1px 1px #335166;
+      font-size: 20px;
+      line-height: 1.5;
+      text-decoration: none; }
+      .pp-add-transaction .pp-transaction .pp-transaction-add .pp-transaction__button--add:hover {
+        background-color: #10EDC5; }
+    .pp-add-transaction .pp-transaction .pp-transaction-add .pp-transaction__button--cancel {
+      padding: 6px 16px;
+      border: 1px solid #446d88;
+      background-color: #940c29;
+      border-radius: 25px;
+      box-shadow: 0 1px 5px gray;
+      color: white;
+      text-shadow: 0 -1px 1px #335166;
+      font-size: 20px;
+      line-height: 1.5;
+      text-decoration: none; }
+      .pp-add-transaction .pp-transaction .pp-transaction-add .pp-transaction__button--cancel:hover {
+        background-color: #ED1946; }
 
 /*# sourceMappingURL=add_transaction.stylesheet.css.map */
