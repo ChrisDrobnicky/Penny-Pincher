@@ -5,14 +5,19 @@
   .pp-transaction-history {
     .pp-transaction-table {
       margin: 0 auto;
-      .pp-transaction-table__head {
+      width: auto;
+      .pp-transaction-table-head {
         background-color: $depth-blue;
         color: #fff;
-        .pp-transaction-table__head__tr {
+        .pp-transaction-table-head__tr {
 
         }
-        .pp-transaction-table__head__th {
-
+        .pp-transaction-table-head__th {
+          height: 80px;
+          font-size: 15px;
+          .pp-transaction-sorter {
+            margin-left: 20px;
+          }
         }
       }
       .pp-transaction-table-body {
@@ -23,6 +28,12 @@
           }
           .pp-transaction-table-body__td {
             width: 150px;
+            display: inline-block;
+            margin-left: 10px;
+            font-size: 18px;
+          }
+          .pp-transaction-table-body__td--date {
+            color: $blue-grey;
           }
           .pp-transaction-table-body__td--amountMinus {
             color: $pink-accent;
@@ -30,19 +41,6 @@
           .pp-transaction-table-body__td--amountPlus {
             color: $teal-accent;
           }
-        }
-        .pp-transaction-table-body__category {
-
-        }
-        .pp-transaction-table-body__titleDate {
-
-        }
-        .pp-transaction-table-body__titleDate--date {
-          color: $blue-grey;
-        }
-
-        .pp-transaction-table-body__amount {
-
         }
       }
     }

@@ -14,7 +14,7 @@ function addTransactionsToDOM(category, title, date, amount, account) {
   categoryCell.innerHTML = category;
   categoryCell.classList.add('pp-transaction-table-body__td');
 
-  titleAndDateCell.innerHTML = title + '</br>' + '<span class="pp-transaction-table-body__titleDate--date">'
+  titleAndDateCell.innerHTML = title + '</br>' + '<span class="pp-transaction-table-body__td--date">'
     + date + '</span>';
   titleAndDateCell.classList.add('pp-transaction-table-body__td');
 

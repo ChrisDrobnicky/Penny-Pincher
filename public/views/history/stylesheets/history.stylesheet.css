@@ -1,22 +1,31 @@
 .pp-history {
   color: #111; }
   .pp-history .pp-transaction-history .pp-transaction-table {
-    margin: 0 auto; }
-    .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table__head {
+    margin: 0 auto;
+    width: auto; }
+    .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-head {
       background-color: #292788;
       color: #fff; }
+      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-head .pp-transaction-table-head__th {
+        height: 80px;
+        font-size: 15px; }
+        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-head .pp-transaction-table-head__th .pp-transaction-sorter {
+          margin-left: 20px; }
     .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body {
       color: #111; }
       .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr:nth-child(even) {
         background-color: #efefef; }
       .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td {
-        width: 150px; }
+        width: 150px;
+        display: inline-block;
+        margin-left: 10px;
+        font-size: 18px; }
+      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--date {
+        color: #9A9AAC; }
       .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--amountMinus {
         color: #ED1946; }
       .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--amountPlus {
         color: #10EDC5; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__titleDate--date {
-        color: #9A9AAC; }
   .pp-history .pp-transaction-history .pp-buttonContainer {
     margin-top: 20px;
     text-align: center; }
