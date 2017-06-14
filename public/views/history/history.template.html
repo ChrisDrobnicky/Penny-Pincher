@@ -23,14 +23,16 @@
       <div class="pp-transaction-history">
         <table class="pp-transaction-table">
           <thead class="pp-transaction-table__head">
-            <tr>
-              <th class="pp-transaction-table__head--category" id="categoryHeader">Category</th>
-              <th class="pp-transaction-table__head--title" id="titleHeader">Title</th>
-              <th class="pp-transaction-table__head--date" id="dateHeader">Date</th>
-              <th class="pp-transaction-table__head--amount" id="amountHeader">Amount</th>
+            <tr class="pp-transaction-table__head__tr">
+              <th class="pp-transaction-table__head__th" colspan="3">
+                <span class="pp-transaction-sorter" id="categorySorter">cat</span>
+                <span class="pp-transaction-sorter" id="titleSorter">title</span>
+                <span class="pp-transaction-sorter" id="dateSorter">date</span>
+                <span class="pp-transaction-sorter" id="amountSorter">amount</span>
+              </th>
             </tr>
           </thead>
-          <tbody class="pp-transaction-table__body" id="historyTableBody">
+          <tbody class="pp-transaction-table-body" id="historyTableBody">
           </tbody>
         </table>
         <div class="pp-buttonContainer">

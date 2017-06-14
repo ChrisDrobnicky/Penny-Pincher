@@ -4,26 +4,47 @@
   color: #111;
   .pp-transaction-history {
     .pp-transaction-table {
+      margin: 0 auto;
       .pp-transaction-table__head {
-        .pp-transaction-table__head--category {
+        background-color: $depth-blue;
+        color: #fff;
+        .pp-transaction-table__head__tr {
 
         }
-        .pp-transaction-table__head--title {
-
-        }
-        .pp-transaction-table__head--date {
-
-        }
-        .pp-transaction-table__head--amount {
+        .pp-transaction-table__head__th {
 
         }
       }
-      .pp-transaction-table__body {
+      .pp-transaction-table-body {
         color: #111;
+        .pp-transaction-table-body__tr {
+          &:nth-child(even){
+            background-color: #efefef;
+          }
+          .pp-transaction-table-body__td {
+            width: 150px;
+          }
+
+        }
+        .pp-transaction-table-body__category {
+
+        }
+        .pp-transaction-table-body__titleDate {
+
+        }
+        .pp-transaction-table-body__titleDate--date {
+          color: $blue-grey;
+        }
+
+        .pp-transaction-table-body__amount {
+
+        }
       }
     }
 
     .pp-buttonContainer {
+      margin-top: 20px;
+      text-align: center;
       .pp-transaction-history__button {
         padding: 6px 16px;
         border: 1px solid #446d88;

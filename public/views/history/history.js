@@ -4,18 +4,22 @@ function addTransactionsToDOM(category, title, date, amount, account) {
   var accountName = document.querySelector('#accountName');
   accountName.textContent = account + ' - account history';
   var newRow = historyTableBody.insertRow();
-  newRow.classList.add('info');
+  newRow.classList.add('pp-transaction-table-body__tr');
 
   var categoryCell = newRow.insertCell(0);
-  var titleCell = newRow.insertCell(1);
-  var dateCell = newRow.insertCell(2);
-  var amountCell = newRow.insertCell(3);
+  var titleAndDateCell = newRow.insertCell(1);
+  //var dateCell = newRow.insertCell(2);
+  var amountCell = newRow.insertCell(2);
 
   categoryCell.innerHTML = category;
-  titleCell.innerHTML = title;
-  dateCell.innerHTML = date;
-  amountCell.innerHTML = amount;
+  categoryCell.classList.add('pp-transaction-table-body__td');
 
+  titleAndDateCell.innerHTML = title + '</br>' + '<span class="pp-transaction-table-body__titleDate--date">'
+    + date + '</span>';
+  titleAndDateCell.classList.add('pp-transaction-table-body__td');
+
+  amountCell.innerHTML = amount;
+  amountCell.classList.add('pp-transaction-table-body__td');
   historyTableBody.appendChild(newRow);
 }
 
@@ -32,21 +36,21 @@ function addAllTransactionsToDOM(listOfTransactions) {
 }
 
 function setListeners() {
-  var amountHeader = document.querySelector('#amountHeader');
-  amountHeader.addEventListener('click', function() {
+  var amountSorter = document.querySelector('#amountSorter');
+  amountSorter.addEventListener('click', function() {
     sortByNumber('amount');
   }, false);
 
-  var categoryHeader = document.querySelector('#categoryHeader');
-  categoryHeader.addEventListener('click', function() {
+  var categorySorter = document.querySelector('#categorySorter');
+  categorySorter.addEventListener('click', function() {
     sortByNumber('categoryID');
   }, false);
 
-  var dateHeader = document.querySelector('#dateHeader');
-  dateHeader.addEventListener('click', sortByDate, false);
+  var dateSorter = document.querySelector('#dateSorter');
+  dateSorter.addEventListener('click', sortByDate, false);
 
-  var titleHeader = document.querySelector('#titleHeader');
-  titleHeader.addEventListener('click', sortByTitle, false);
+  var titleSorter = document.querySelector('#titleSorter');
+  titleSorter.addEventListener('click', sortByTitle, false);
 }
 
 function sortByNumber(propertyName) {
