@@ -22,7 +22,7 @@
         </header>
         <div class="pp-total-details">
           <h2 class="pp-total-details__heading">
-            TOTAL
+            TOTAL BALANCE
           </h2>
           <p class="pp-total-details__balance" id="totalBalance">
           </p>
@@ -30,22 +30,21 @@
       </section>
       <div class="pp-accounts-container">
         <div class="row" id="accountList"></div>
-      </div>
-
-      <div class="pp-transaction-container">
-        <a
-          href="../add_transaction/add_transaction.template.html"
-          class="pp-transaction-container__button--add"
-          type="button">
-          Add transaction
-        </a>
-        <a
-          href="../accounts/accounts.template.html"
-          class="pp-transaction-container__button--reset"
-          id="resetLocalStorageButton"
-          type="button">
-          RESET & START AGAIN
-        </a>
+        <div class="pp-transaction-container">
+          <a
+            href="../add_transaction/add_transaction.template.html"
+            class="pp-transaction-container__button--add"
+            type="button">
+            Add transaction
+          </a>
+          <a
+            href="../accounts/accounts.template.html"
+            class="pp-transaction-container__button--reset"
+            id="resetLocalStorageButton"
+            type="button">
+            RESET & START AGAIN
+          </a>
+        </div>
       </div>
     </div>
     <script src="../../helper_modules/ManageLocalStorage.js"></script>

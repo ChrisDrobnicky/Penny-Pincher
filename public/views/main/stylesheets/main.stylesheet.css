@@ -17,63 +17,65 @@
       font-size: 45px;
       margin-top: 20px;
       font-weight: 300; }
-.pp-main .pp-accounts-container .pp-account {
-  width: 30%;
-  float: left;
-  margin: 5px 5px 10px 26px;
-  border: 2px solid #292787; }
-  .pp-main .pp-accounts-container .pp-account .pp-account-details {
-    color: #fff;
-    text-align: center;
-    height: 90px; }
-    .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__name {
-      background-color: #292787; }
-    .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__balance {
-      color: #292787;
-      font-size: 20px; }
-    .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__button {
+.pp-main .pp-accounts-container {
+  width: 450px;
+  margin: 0 auto; }
+  .pp-main .pp-accounts-container .pp-account {
+    float: left;
+    margin: 5px 5px 10px 26px;
+    border: 2px solid #292787; }
+    .pp-main .pp-accounts-container .pp-account .pp-account-details {
+      color: #fff;
+      text-align: center;
+      height: 90px; }
+      .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__name {
+        background-color: #292787; }
+      .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__balance {
+        color: #292787;
+        font-size: 20px; }
+      .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__button {
+        padding: 6px 16px;
+        border: 1px solid #446d88;
+        background-color: #292787;
+        border-radius: 25px;
+        box-shadow: 0 1px 5px gray;
+        color: white;
+        text-shadow: 0 -1px 1px #335166;
+        font-size: 12px;
+        line-height: 1.5;
+        text-decoration: none; }
+        .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__button:hover {
+          background-color: #4c49cb; }
+  .pp-main .pp-accounts-container .pp-transaction-container {
+    margin: 10px auto;
+    padding-top: 50px;
+    text-align: center; }
+    .pp-main .pp-accounts-container .pp-transaction-container .pp-transaction-container__button--add {
       padding: 6px 16px;
       border: 1px solid #446d88;
-      background-color: #292787;
+      background-color: #0a8d76;
       border-radius: 25px;
       box-shadow: 0 1px 5px gray;
       color: white;
       text-shadow: 0 -1px 1px #335166;
-      font-size: 12px;
+      font-size: 20px;
       line-height: 1.5;
       text-decoration: none; }
-      .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__button:hover {
-        background-color: #4c49cb; }
-.pp-main .pp-transaction-container {
-  margin: 10px auto;
-  padding-top: 50px;
-  text-align: center; }
-  .pp-main .pp-transaction-container .pp-transaction-container__button--add {
-    padding: 6px 16px;
-    border: 1px solid #446d88;
-    background-color: #0a8d76;
-    border-radius: 25px;
-    box-shadow: 0 1px 5px gray;
-    color: white;
-    text-shadow: 0 -1px 1px #335166;
-    font-size: 20px;
-    line-height: 1.5;
-    text-decoration: none; }
-    .pp-main .pp-transaction-container .pp-transaction-container__button--add:hover {
-      background-color: #10EDC5; }
-  .pp-main .pp-transaction-container .pp-transaction-container__button--reset {
-    padding: 6px 16px;
-    border: 1px solid #446d88;
-    background-color: #940c29;
-    border-radius: 25px;
-    box-shadow: 0 1px 5px gray;
-    color: white;
-    text-shadow: 0 -1px 1px #335166;
-    font-size: 15px;
-    line-height: 1.5;
-    text-decoration: none;
-    float: right; }
-    .pp-main .pp-transaction-container .pp-transaction-container__button--reset:hover {
-      background-color: #ED1946; }
+      .pp-main .pp-accounts-container .pp-transaction-container .pp-transaction-container__button--add:hover {
+        background-color: #10EDC5; }
+    .pp-main .pp-accounts-container .pp-transaction-container .pp-transaction-container__button--reset {
+      padding: 6px 16px;
+      border: 1px solid #446d88;
+      background-color: #940c29;
+      border-radius: 25px;
+      box-shadow: 0 1px 5px gray;
+      color: white;
+      text-shadow: 0 -1px 1px #335166;
+      font-size: 15px;
+      line-height: 1.5;
+      text-decoration: none;
+      float: right; }
+      .pp-main .pp-accounts-container .pp-transaction-container .pp-transaction-container__button--reset:hover {
+        background-color: #ED1946; }
 
 /*# sourceMappingURL=main.stylesheet.css.map */

@@ -25,8 +25,9 @@
     }
   }
   .pp-accounts-container {
+    width: 450px;
+    margin: 0 auto;
     .pp-account {
-      width: 30%;
       float: left;
       margin: 5px 5px 10px 26px;
       border: 2px solid $depth-blue;
@@ -58,41 +59,40 @@
         }
       }
     }
-  }
-
-  .pp-transaction-container {
-    margin: 10px auto;
-    padding-top: 50px;
-    text-align: center;
-    .pp-transaction-container__button--add {
-      padding: 6px 16px;
-      border: 1px solid #446d88;
-      background-color: darken($teal-accent,20%);
-      border-radius: 25px;
-      box-shadow: 0 1px 5px gray;
-      color: white;
-      text-shadow: 0 -1px 1px #335166;
-      font-size: 20px;
-      line-height: 1.5;
-      text-decoration: none;
-      &:hover {
-        background-color: $teal-accent;
+    .pp-transaction-container {
+      margin: 10px auto;
+      padding-top: 50px;
+      text-align: center;
+      .pp-transaction-container__button--add {
+        padding: 6px 16px;
+        border: 1px solid #446d88;
+        background-color: darken($teal-accent, 20%);
+        border-radius: 25px;
+        box-shadow: 0 1px 5px gray;
+        color: white;
+        text-shadow: 0 -1px 1px #335166;
+        font-size: 20px;
+        line-height: 1.5;
+        text-decoration: none;
+        &:hover {
+          background-color: $teal-accent;
+        }
       }
-    }
-    .pp-transaction-container__button--reset {
-      padding: 6px 16px;
-      border: 1px solid #446d88;
-      background-color: darken($pink-accent, 20%);
-      border-radius: 25px;
-      box-shadow: 0 1px 5px gray;
-      color: white;
-      text-shadow: 0 -1px 1px #335166;
-      font-size: 15px;
-      line-height: 1.5;
-      text-decoration: none;
-      float: right;
-      &:hover {
-        background-color: $pink-accent;
+      .pp-transaction-container__button--reset {
+        padding: 6px 16px;
+        border: 1px solid #446d88;
+        background-color: darken($pink-accent, 20%);
+        border-radius: 25px;
+        box-shadow: 0 1px 5px gray;
+        color: white;
+        text-shadow: 0 -1px 1px #335166;
+        font-size: 15px;
+        line-height: 1.5;
+        text-decoration: none;
+        float: right;
+        &:hover {
+          background-color: $pink-accent;
+        }
       }
     }
   }
