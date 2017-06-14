@@ -21,61 +21,79 @@
   width: 450px;
   margin: 0 auto; }
   .pp-main .pp-accounts-container .pp-account {
-    float: left;
-    margin: 5px 5px 10px 26px;
-    border: 2px solid #292787; }
-    .pp-main .pp-accounts-container .pp-account .pp-account-details {
-      color: #fff;
-      text-align: center;
-      height: 90px; }
-      .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__name {
-        background-color: #292787; }
-      .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__balance {
-        color: #292787;
-        font-size: 20px; }
-      .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__button {
+    list-style-type: none;
+    padding: 0px; }
+    .pp-main .pp-accounts-container .pp-account .pp-account__listItem {
+      margin: 0;
+      font-weight: 600;
+      height: 65px;
+      line-height: 65px;
+      font-size: 16px; }
+      .pp-main .pp-accounts-container .pp-account .pp-account__listItem:nth-child(even) {
+        background-color: #efefef; }
+      .pp-main .pp-accounts-container .pp-account .pp-account__listItem:hover > .pp-account__button {
+        display: inline-block; }
+      .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__name {
+        margin-right: 20px;
+        padding-left: 5px;
+        display: inline-block;
+        width: 200px; }
+      .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__balance {
+        padding-right: 20px;
+        float: right; }
+      .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__balance--minus {
+        color: #ED1946; }
+      .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__balance--plus {
+        color: #10EDC5; }
+      .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__button {
+        display: none;
+        position: relative;
+        left: 20px;
         padding: 6px 16px;
+        margin-left: 5px;
         border: 1px solid #446d88;
         background-color: #292787;
         border-radius: 25px;
-        box-shadow: 0 1px 5px gray;
         color: white;
-        text-shadow: 0 -1px 1px #335166;
         font-size: 12px;
         line-height: 1.5;
         text-decoration: none; }
-        .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__button:hover {
+        .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__button:hover {
           background-color: #4c49cb; }
-  .pp-main .pp-accounts-container .pp-transaction-container {
-    margin: 10px auto;
-    padding-top: 50px;
-    text-align: center; }
-    .pp-main .pp-accounts-container .pp-transaction-container .pp-transaction-container__button--add {
-      padding: 6px 16px;
-      border: 1px solid #446d88;
-      background-color: #0a8d76;
-      border-radius: 25px;
-      box-shadow: 0 1px 5px gray;
-      color: white;
-      text-shadow: 0 -1px 1px #335166;
-      font-size: 20px;
-      line-height: 1.5;
-      text-decoration: none; }
-      .pp-main .pp-accounts-container .pp-transaction-container .pp-transaction-container__button--add:hover {
-        background-color: #10EDC5; }
-    .pp-main .pp-accounts-container .pp-transaction-container .pp-transaction-container__button--reset {
-      padding: 6px 16px;
-      border: 1px solid #446d88;
-      background-color: #940c29;
-      border-radius: 25px;
-      box-shadow: 0 1px 5px gray;
-      color: white;
-      text-shadow: 0 -1px 1px #335166;
-      font-size: 15px;
-      line-height: 1.5;
-      text-decoration: none;
-      float: right; }
-      .pp-main .pp-accounts-container .pp-transaction-container .pp-transaction-container__button--reset:hover {
-        background-color: #ED1946; }
+.pp-main .pp-transaction-container {
+  margin: 10px auto;
+  padding-top: 10px;
+  text-align: center;
+  width: 450px; }
+  .pp-main .pp-transaction-container .pp-transaction-container__button--add {
+    display: block;
+    padding: 6px 16px;
+    border: 1px solid #446d88;
+    background-color: #0a8d76;
+    border-radius: 25px;
+    box-shadow: 0 1px 5px gray;
+    color: white;
+    text-shadow: 0 -1px 1px #335166;
+    font-size: 20px;
+    line-height: 1.5;
+    text-decoration: none; }
+    .pp-main .pp-transaction-container .pp-transaction-container__button--add:hover {
+      background-color: #10EDC5; }
+  .pp-main .pp-transaction-container .pp-transaction-container__button--reset {
+    display: block;
+    margin-top: 5px;
+    padding: 6px 16px;
+    border: 1px solid #446d88;
+    background-color: #940c29;
+    border-radius: 25px;
+    box-shadow: 0 1px 5px gray;
+    color: white;
+    text-shadow: 0 -1px 1px #335166;
+    font-size: 15px;
+    line-height: 1.5;
+    text-decoration: none;
+    float: right; }
+    .pp-main .pp-transaction-container .pp-transaction-container__button--reset:hover {
+      background-color: #ED1946; }
 
 /*# sourceMappingURL=main.stylesheet.css.map */

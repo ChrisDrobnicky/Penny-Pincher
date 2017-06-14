@@ -1,16 +1,14 @@
 function displayAccountsInDOM(name, balance, id) {
   var $accountList = $('#accountList');
-  var $accountContainer = $(document.createElement('div'));
-  var $accountDetails = $(document.createElement('div'));
-  var $accountName = $(document.createElement('div'));
-  var $accountBalance = $(document.createElement('div'));
+  var $accountContainer = $(document.createElement('li'));
+  var $accountName = $(document.createElement('span'));
+  var $accountBalance = $(document.createElement('span'));
   var $historyButton = $(document.createElement('a'));
 
-  $accountContainer.addClass('pp-account');
-  $accountDetails.addClass('pp-account-details');
-  $accountName.addClass('pp-account-details__name');
-  $accountBalance.addClass('pp-account-details__balance');
-  $historyButton.addClass('pp-account-details__button');
+  $accountContainer.addClass('pp-account__listItem');
+  $accountName.addClass('pp-account__name');
+  $accountBalance.addClass('pp-account__balance');
+  $historyButton.addClass('pp-account__button');
   $historyButton.text('Show history');
   $historyButton.attr('href', '../history/history.template.html');
   $historyButton.attr('id', id);
@@ -18,11 +16,15 @@ function displayAccountsInDOM(name, balance, id) {
 
   $accountName.text(name);
   $accountBalance.text(balance);
+  if (balance < 0) {
+    $accountBalance.addClass('pp-account__balance--minus');
+  } else {
+    $accountBalance.addClass('pp-account__balance--plus');
+  }
 
-  $accountDetails.append($accountName);
-  $accountDetails.append($accountBalance);
-  $accountDetails.append($historyButton);
-  $accountContainer.append($accountDetails);
+  $accountContainer.append($accountName);
+  $accountContainer.append($accountBalance);
+  $accountContainer.append($historyButton);
   $accountList.append($accountContainer);
 }
 
