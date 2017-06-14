@@ -1,6 +1,29 @@
 @import "../../../stylesheets/variables";
 
 .pp-main {
+  .pp-total-information {
+    width: 450px;
+    height: 545px;
+    margin: 0 auto;
+    background-color: $depth-blue;
+    .pp-total-details {
+      width: 450px;
+      margin: 40px auto;
+      text-align: center;
+      font-size: 25px;
+      .pp-total-details__heading {
+        color: $subheading;
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+      .pp-total-details__balance {
+        color: #fff;
+        font-size: 45px;
+        margin-top: 20px;
+        font-weight: 300;
+      }
+    }
+  }
   .pp-accounts-container {
     .pp-account {
       width: 30%;
@@ -36,21 +59,7 @@
       }
     }
   }
-  .pp-total-details {
-    width: 30%;
-    margin: 20px auto;
-    border: 2px solid $teal-accent;
-    text-align: center;
-    font-size: 25px;
-    color: white;
-    background-color: $teal-accent;
-    .pp-total-details__heading {
 
-    }
-    .pp-total-details__balance {
-      margin-top: 20px;
-    }
-  }
   .pp-transaction-container {
     margin: 10px auto;
     padding-top: 50px;

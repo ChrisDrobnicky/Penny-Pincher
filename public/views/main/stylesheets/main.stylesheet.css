@@ -1,21 +1,40 @@
+.pp-main .pp-total-information {
+  width: 450px;
+  height: 545px;
+  margin: 0 auto;
+  background-color: #292787; }
+  .pp-main .pp-total-information .pp-total-details {
+    width: 450px;
+    margin: 40px auto;
+    text-align: center;
+    font-size: 25px; }
+    .pp-main .pp-total-information .pp-total-details .pp-total-details__heading {
+      color: #AAA9FF;
+      font-size: 12px;
+      letter-spacing: 1px; }
+    .pp-main .pp-total-information .pp-total-details .pp-total-details__balance {
+      color: #fff;
+      font-size: 45px;
+      margin-top: 20px;
+      font-weight: 300; }
 .pp-main .pp-accounts-container .pp-account {
   width: 30%;
   float: left;
   margin: 5px 5px 10px 26px;
-  border: 2px solid #292788; }
+  border: 2px solid #292787; }
   .pp-main .pp-accounts-container .pp-account .pp-account-details {
     color: #fff;
     text-align: center;
     height: 90px; }
     .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__name {
-      background-color: #292788; }
+      background-color: #292787; }
     .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__balance {
-      color: #292788;
+      color: #292787;
       font-size: 20px; }
     .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__button {
       padding: 6px 16px;
       border: 1px solid #446d88;
-      background-color: #292788;
+      background-color: #292787;
       border-radius: 25px;
       box-shadow: 0 1px 5px gray;
       color: white;
@@ -24,17 +43,7 @@
       line-height: 1.5;
       text-decoration: none; }
       .pp-main .pp-accounts-container .pp-account .pp-account-details .pp-account-details__button:hover {
-        background-color: #4d4acb; }
-.pp-main .pp-total-details {
-  width: 30%;
-  margin: 20px auto;
-  border: 2px solid #10EDC5;
-  text-align: center;
-  font-size: 25px;
-  color: white;
-  background-color: #10EDC5; }
-  .pp-main .pp-total-details .pp-total-details__balance {
-    margin-top: 20px; }
+        background-color: #4c49cb; }
 .pp-main .pp-transaction-container {
   margin: 10px auto;
   padding-top: 50px;

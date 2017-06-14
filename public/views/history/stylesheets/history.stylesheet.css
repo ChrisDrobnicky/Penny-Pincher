@@ -4,7 +4,7 @@
     margin: 0 auto;
     width: auto; }
     .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-head {
-      background-color: #292788;
+      background-color: #292787;
       color: #fff; }
       .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-head .pp-transaction-table-head__th {
         height: 80px;
@@ -32,7 +32,7 @@
     .pp-history .pp-transaction-history .pp-buttonContainer .pp-transaction-history__button {
       padding: 6px 16px;
       border: 1px solid #446d88;
-      background-color: #292788;
+      background-color: #292787;
       border-radius: 25px;
       box-shadow: 0 1px 5px gray;
       color: white;
@@ -41,6 +41,6 @@
       line-height: 1.5;
       text-decoration: none; }
       .pp-history .pp-transaction-history .pp-buttonContainer .pp-transaction-history__button:hover {
-        background-color: #4d4acb; }
+        background-color: #4c49cb; }
 
 /*# sourceMappingURL=history.stylesheet.css.map */

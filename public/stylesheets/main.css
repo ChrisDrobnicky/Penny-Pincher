@@ -12,11 +12,11 @@ body {
   text-align: center;
   margin: 20px 5px;
   padding: 5px;
-  font-size: 36px;
-  background: #292788;
+  background: #292787;
   color: #fff; }
   .pp-header .pp-header__heading {
-    text-transform: uppercase; }
+    font-size: 18px;
+    font-weight: 700; }
 
 .pp-continue-container {
   padding-top: 50px;
@@ -24,7 +24,7 @@ body {
   .pp-continue-container .pp-continue-button {
     padding: 6px 16px;
     border: 1px solid #446d88;
-    background-color: #292788;
+    background-color: #292787;
     border-radius: 25px;
     box-shadow: 0 1px 5px gray;
     color: white;
@@ -33,6 +33,6 @@ body {
     line-height: 1.5;
     text-decoration: none; }
     .pp-continue-container .pp-continue-button:hover {
-      background-color: #4d4acb; }
+      background-color: #4c49cb; }
 
 /*# sourceMappingURL=main.css.map */

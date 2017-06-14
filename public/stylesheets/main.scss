@@ -15,12 +15,11 @@ body {
   text-align: center;
   margin: 20px 5px;
   padding: 5px;
-  font-size: 36px;
   background: $depth-blue;
   color:#fff;
-
   .pp-header__heading {
-    text-transform: uppercase;
+    font-size: 18px;
+    font-weight: 700;
   }
 }
 
