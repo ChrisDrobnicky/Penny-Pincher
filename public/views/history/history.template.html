@@ -21,21 +21,19 @@
         <h2 class="pp-header__subheading" id="accountName"></h2>
       </header>
       <div class="pp-transaction-history">
-        <div class="table-responsive">
-          <table class="pp-transaction-table table table-bordered">
-            <thead class="pp-transaction-table__head">
-              <tr>
-                <th id="categoryHeader">Category</th>
-                <th id="titleHeader">Title</th>
-                <th id="dateHeader">Date</th>
-                <th id="amountHeader">Amount</th>
-              </tr>
-            </thead>
-            <tbody class="pp-transaction-table__body" id="historyTableBody">
-            </tbody>
-          </table>
-        </div>
-        <div class="col-sm-offset-2 col-sm-10">
+        <table class="pp-transaction-table">
+          <thead class="pp-transaction-table__head">
+            <tr>
+              <th class="pp-transaction-table__head--category" id="categoryHeader">Category</th>
+              <th class="pp-transaction-table__head--title" id="titleHeader">Title</th>
+              <th class="pp-transaction-table__head--date" id="dateHeader">Date</th>
+              <th class="pp-transaction-table__head--amount" id="amountHeader">Amount</th>
+            </tr>
+          </thead>
+          <tbody class="pp-transaction-table__body" id="historyTableBody">
+          </tbody>
+        </table>
+        <div class="pp-buttonContainer">
           <a type="button" class="pp-transaction-history__button" href="../main/main.template.html">Back</a>
         </div>
       </div>

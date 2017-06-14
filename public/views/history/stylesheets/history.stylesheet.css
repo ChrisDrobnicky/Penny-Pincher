@@ -2,7 +2,7 @@
   color: #111; }
   .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table__body {
     color: #111; }
-  .pp-history .pp-transaction-history .pp-transaction-history__button {
+  .pp-history .pp-transaction-history .pp-buttonContainer .pp-transaction-history__button {
     padding: 6px 16px;
     border: 1px solid #446d88;
     background-color: #292788;
@@ -13,7 +13,7 @@
     font-size: 20px;
     line-height: 1.5;
     text-decoration: none; }
-    .pp-history .pp-transaction-history .pp-transaction-history__button:hover {
+    .pp-history .pp-transaction-history .pp-buttonContainer .pp-transaction-history__button:hover {
       background-color: #4d4acb; }
 
 /*# sourceMappingURL=history.stylesheet.css.map */
