@@ -30,7 +30,7 @@
       line-height: 65px;
       font-size: 16px; }
       .pp-main .pp-accounts-container .pp-account .pp-account__listItem:nth-child(even) {
-        background-color: #efefef; }
+        background-color: #F6F5F8; }
       .pp-main .pp-accounts-container .pp-account .pp-account__listItem:hover > .pp-account__button {
         display: inline-block; }
       .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__name {
