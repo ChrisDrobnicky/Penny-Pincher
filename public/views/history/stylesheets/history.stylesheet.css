@@ -11,6 +11,10 @@
         background-color: #efefef; }
       .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td {
         width: 150px; }
+      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--amountMinus {
+        color: #ED1946; }
+      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--amountPlus {
+        color: #10EDC5; }
       .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__titleDate--date {
         color: #9A9AAC; }
   .pp-history .pp-transaction-history .pp-buttonContainer {

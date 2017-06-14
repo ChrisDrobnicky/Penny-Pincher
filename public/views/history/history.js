@@ -20,8 +20,15 @@ function addTransactionsToDOM(category, title, date, amount, account) {
 
   amountCell.innerHTML = amount;
   amountCell.classList.add('pp-transaction-table-body__td');
+  if (amount < 0) {
+    amountCell.classList.add('pp-transaction-table-body__td--amountMinus');
+  } else {
+    amountCell.classList.add('pp-transaction-table-body__td--amountPlus')
+  }
+
   historyTableBody.appendChild(newRow);
 }
+
 
 function addAllTransactionsToDOM(listOfTransactions) {
   for (var j = 0; j < listOfTransactions.length; j++) {

@@ -24,7 +24,12 @@
           .pp-transaction-table-body__td {
             width: 150px;
           }
-
+          .pp-transaction-table-body__td--amountMinus {
+            color: $pink-accent;
+          }
+          .pp-transaction-table-body__td--amountPlus {
+            color: $teal-accent;
+          }
         }
         .pp-transaction-table-body__category {
 
