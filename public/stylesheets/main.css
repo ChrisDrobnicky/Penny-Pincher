@@ -7,31 +7,53 @@ body {
   font-weight: 400;
   line-height: 26.4px;
   color: #000; }
-
-.pp-header {
-  text-align: center;
-  padding: 5px;
-  background: #292787;
-  color: #fff; }
-  .pp-header .pp-header__heading {
-    font-size: 18px;
-    font-weight: 700; }
-
-.pp-continue-container {
-  padding-top: 50px;
-  text-align: center; }
-  .pp-continue-container .pp-continue-button {
-    padding: 6px 16px;
-    border: 1px solid #446d88;
-    background-color: #292787;
-    border-radius: 25px;
-    box-shadow: 0 1px 5px gray;
-    color: white;
-    text-shadow: 0 -1px 1px #335166;
-    font-size: 20px;
-    line-height: 1.5;
-    text-decoration: none; }
-    .pp-continue-container .pp-continue-button:hover {
-      background-color: #4c49cb; }
+  body .pp-total-information {
+    position: relative;
+    height: 545px;
+    margin: 0 auto;
+    background-color: #292787; }
+    body .pp-total-information .pp-header {
+      text-align: center;
+      padding: 5px;
+      background: #292787;
+      color: #fff; }
+      body .pp-total-information .pp-header .pp-header__heading {
+        font-size: 18px;
+        font-weight: 700; }
+    body .pp-total-information .pp-total-details {
+      height: 120px;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      font-size: 25px;
+      text-align: center; }
+      body .pp-total-information .pp-total-details .pp-total-details__heading {
+        color: #AAA9FF;
+        font-size: 12px;
+        letter-spacing: 1px; }
+      body .pp-total-information .pp-total-details .pp-total-details__balance {
+        color: #fff;
+        font-size: 45px;
+        margin-top: 20px;
+        font-weight: 300; }
+  body .pp-continue-container {
+    padding-top: 50px;
+    text-align: center; }
+    body .pp-continue-container .pp-continue-button {
+      padding: 6px 16px;
+      border: 1px solid #446d88;
+      background-color: #292787;
+      border-radius: 25px;
+      box-shadow: 0 1px 5px gray;
+      color: white;
+      text-shadow: 0 -1px 1px #335166;
+      font-size: 20px;
+      line-height: 1.5;
+      text-decoration: none; }
+      body .pp-continue-container .pp-continue-button:hover {
+        background-color: #4c49cb; }
 
 /*# sourceMappingURL=main.css.map */

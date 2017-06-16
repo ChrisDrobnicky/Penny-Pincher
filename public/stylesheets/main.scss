@@ -9,35 +9,66 @@ body {
   font-weight: 400;
   line-height: 26.4px;
   color: #000;
-}
 
-.pp-header {
-  text-align: center;
-  padding: 5px;
-  background: $depth-blue;
-  color:#fff;
-  .pp-header__heading {
-    font-size: 18px;
-    font-weight: 700;
-  }
-}
-
-.pp-continue-container {
-  padding-top: 50px;
-  text-align: center;
-  .pp-continue-button {
-    padding: 6px 16px;
-    border: 1px solid #446d88;
+  .pp-total-information {
+    position: relative;
+    height: 545px;
+    margin: 0 auto;
     background-color: $depth-blue;
-    border-radius: 25px;
-    box-shadow: 0 1px 5px gray;
-    color: white;
-    text-shadow: 0 -1px 1px #335166;
-    font-size: 20px;
-    line-height: 1.5;
-    text-decoration: none;
-    &:hover {
-      background-color: lighten($depth-blue, 20%);
+    .pp-header {
+      text-align: center;
+      padding: 5px;
+      background: $depth-blue;
+      color:#fff;
+      .pp-header__heading {
+        font-size: 18px;
+        font-weight: 700;
+      }
+    }
+    .pp-total-details {
+      height: 120px;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      font-size: 25px;
+      text-align: center;
+      .pp-total-details__heading {
+        color: $subheading;
+        font-size: 12px;
+        letter-spacing: 1px;
+      }
+      .pp-total-details__balance {
+        color: #fff;
+        font-size: 45px;
+        margin-top: 20px;
+        font-weight: 300;
+      }
+    }
+  }
+
+  .pp-continue-container {
+    padding-top: 50px;
+    text-align: center;
+    .pp-continue-button {
+      padding: 6px 16px;
+      border: 1px solid #446d88;
+      background-color: $depth-blue;
+      border-radius: 25px;
+      box-shadow: 0 1px 5px gray;
+      color: white;
+      text-shadow: 0 -1px 1px #335166;
+      font-size: 20px;
+      line-height: 1.5;
+      text-decoration: none;
+      &:hover {
+        background-color: lighten($depth-blue, 20%);
+      }
     }
   }
 }
+
+
+
