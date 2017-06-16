@@ -1,20 +1,25 @@
 @import "../../../stylesheets/variables";
 .pp-form-container {
-  margin: 20px auto;
+  margin: 30px auto;
+  width: 450px;
+  height: 50px;
+  position: relative;
   .pp-configure-form {
+    overflow: hidden;
+    .pp-configure-form__name {
+      float: left;
+      margin-left: 10px;
+    }
+    .pp-configure-form__balance {
+      float: left;
+      margin-left: 10px;
+    }
     .pp-configure-form__input {
       color: #222;
     }
     .pp-configure-form__button {
-      width: 45px;
-      height: 45px;
-      margin-left: 50px;
-      background: $teal-accent;
-      border-radius: 25px;
-      padding: 6px;
-      border: none;
-      color: white;
-      font-size: 15px;
+      position: absolute;
+      right: 0;
     }
   }
 }
