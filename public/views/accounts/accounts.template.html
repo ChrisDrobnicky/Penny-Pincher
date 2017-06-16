@@ -33,41 +33,33 @@
         </ul>
       </div>
       <div class="pp-form-container">
-        <div class="row">
-          <form class="pp-configure-form form-inline">
-            <div class="col-lg-2 col-md-3 col-sm-3">
-              <div class="form-group">
-                <label class="sr-only" for="account-name">Account name</label>
-                <input
-                  type="text"
-                  id="account-name"
-                  class="pp-configure-form__input"
-                  placeholder="Your Account's name"
-                  required
-                  maxlength="20">
-              </div>
-            </div>
-            <div class="col-lg-2 col-md-3 col-sm-3">
-              <div class="form-group">
-                <div class="input-group">
-                  <label class="sr-only" for="account-balance">Account balance </label>
-                  <input
-                    type="text"
-                    id="account-balance"
-                    class="pp-configure-form__input"
-                    placeholder="Initial balance (e.g. 0.00)"
-                    required
-                    maxlength="12">
-                </div>
-              </div>
+        <form class="pp-configure-form">
+          <p class="pp-configure-form__name">
+            <label class="sr-only" for="account-name">Account name</label>
+            <input
+              type="text"
+              id="account-name"
+              class="pp-configure-form__input"
+              placeholder="Your Account's name"
+              required
+              maxlength="20">
+          </p>
+          <p class="pp-configure-form__balance">
+            <label class="sr-only" for="account-balance">Account balance </label>
+            <input
+              type="text"
+              id="account-balance"
+              class="pp-configure-form__input"
+              placeholder="Initial balance (e.g. 0.00)"
+              required
+              maxlength="12">
+          </p>
+          <div class="pp-configure-form__button">
+            <button type="button" id="add-button">
+              <span class="glyphicon glyphicon-plus"> </span>
+            </button>
           </div>
-            <div class="col-lg-8 col-md-6 col-sm-6">
-              <button type="button" id="add-button" class="pp-configure-form__button">
-               <span class="glyphicon glyphicon-plus"> </span>
-              </button>
-            </div>
-          </form>
-        </div>
+        </form>
         <div id="outputDiv"></div>
       </div>
       <div class="pp-continue-container">
