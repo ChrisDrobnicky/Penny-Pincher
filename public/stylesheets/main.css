@@ -9,7 +9,7 @@ body {
   color: #000; }
   body .pp-total-information {
     position: relative;
-    height: 545px;
+    height: 50vh;
     margin: 0 auto;
     background-color: #292787; }
     body .pp-total-information .pp-header {
