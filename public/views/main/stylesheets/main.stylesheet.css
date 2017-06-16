@@ -1,13 +1,18 @@
 .pp-main .pp-total-information {
-  width: 450px;
+  position: relative;
   height: 545px;
   margin: 0 auto;
   background-color: #292787; }
   .pp-main .pp-total-information .pp-total-details {
-    width: 450px;
-    margin: 40px auto;
-    text-align: center;
-    font-size: 25px; }
+    height: 120px;
+    position: absolute;
+    margin: auto;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    font-size: 25px;
+    text-align: center; }
     .pp-main .pp-total-information .pp-total-details .pp-total-details__heading {
       color: #AAA9FF;
       font-size: 12px;
@@ -24,6 +29,7 @@
     list-style-type: none;
     padding: 0px; }
     .pp-main .pp-accounts-container .pp-account .pp-account__listItem {
+      position: relative;
       margin: 0;
       font-weight: 600;
       height: 65px;
@@ -31,69 +37,28 @@
       font-size: 16px; }
       .pp-main .pp-accounts-container .pp-account .pp-account__listItem:nth-child(even) {
         background-color: #F6F5F8; }
-      .pp-main .pp-accounts-container .pp-account .pp-account__listItem:hover > .pp-account__button {
-        display: inline-block; }
       .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__name {
-        margin-right: 20px;
+        margin-right: 50px;
         padding-left: 5px;
         display: inline-block;
         width: 200px; }
       .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__balance {
-        padding-right: 20px;
-        float: right; }
+        margin-left: 20px; }
       .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__balance--minus {
         color: #ED1946; }
       .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__balance--plus {
         color: #10EDC5; }
       .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__button {
-        display: none;
-        position: relative;
-        left: 20px;
-        padding: 6px 16px;
-        margin-left: 5px;
-        border: 1px solid #446d88;
-        background-color: #292787;
-        border-radius: 25px;
-        color: white;
-        font-size: 12px;
-        line-height: 1.5;
-        text-decoration: none; }
-        .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__button:hover {
-          background-color: #4c49cb; }
+        position: absolute;
+        right: 10px;
+        top: 20px; }
 .pp-main .pp-transaction-container {
   margin: 10px auto;
   padding-top: 10px;
-  text-align: center;
-  width: 450px; }
-  .pp-main .pp-transaction-container .pp-transaction-container__button--add {
-    display: block;
-    padding: 6px 16px;
-    border: 1px solid #446d88;
-    background-color: #0a8d76;
-    border-radius: 25px;
-    box-shadow: 0 1px 5px gray;
-    color: white;
-    text-shadow: 0 -1px 1px #335166;
-    font-size: 20px;
-    line-height: 1.5;
-    text-decoration: none; }
-    .pp-main .pp-transaction-container .pp-transaction-container__button--add:hover {
-      background-color: #10EDC5; }
+  position: relative;
+  text-align: center; }
   .pp-main .pp-transaction-container .pp-transaction-container__button--reset {
-    display: block;
-    margin-top: 5px;
-    padding: 6px 16px;
-    border: 1px solid #446d88;
-    background-color: #940c29;
-    border-radius: 25px;
-    box-shadow: 0 1px 5px gray;
-    color: white;
-    text-shadow: 0 -1px 1px #335166;
-    font-size: 15px;
-    line-height: 1.5;
-    text-decoration: none;
-    float: right; }
-    .pp-main .pp-transaction-container .pp-transaction-container__button--reset:hover {
-      background-color: #ED1946; }
+    position: absolute;
+    right: 10px; }
 
 /*# sourceMappingURL=main.stylesheet.css.map */

@@ -15,37 +15,39 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   </head>
   <body class="pp-main">
-    <div class="container">
-      <section class="pp-total-information">
-        <header class="pp-header">
-          <h1 class="pp-header__heading">Penny-Pincher</h1>
-        </header>
-        <div class="pp-total-details">
-          <h2 class="pp-total-details__heading">
-            TOTAL BALANCE
-          </h2>
-          <p class="pp-total-details__balance" id="totalBalance">
-          </p>
-        </div>
-      </section>
-      <div class="pp-accounts-container">
-        <ul class="pp-account" id="accountList"></ul>
-        <div class="pp-transaction-container">
-          <a
-            href="../add_transaction/add_transaction.template.html"
-            class="pp-transaction-container__button--add"
-            type="button">
-            Add transaction
-          </a>
-          <a
-            href="../accounts/accounts.template.html"
-            class="pp-transaction-container__button--reset"
-            id="resetLocalStorageButton"
-            type="button">
-            RESET & START AGAIN
-          </a>
-        </div>
+    <section class="pp-total-information">
+      <header class="pp-header">
+        <h1 class="pp-header__heading">Penny-Pincher</h1>
+      </header>
+      <div class="pp-total-details">
+        <h2 class="pp-total-details__heading">
+          TOTAL BALANCE
+        </h2>
+        <p class="pp-total-details__balance" id="totalBalance">
+        </p>
       </div>
+    </section>
+    <div class="pp-accounts-container">
+      <ul class="pp-account" id="accountList"></ul>
+    </div>
+    <div class="pp-transaction-container">
+      <span class="pp-transaction-container__button--add">
+        <a
+          href="../add_transaction/add_transaction.template.html"
+          class="btn btn-success"
+          type="button">
+          Add transaction
+        </a>
+      </span>
+      <span class="pp-transaction-container__button--reset">
+        <a
+          href="../accounts/accounts.template.html"
+          class="btn btn-danger"
+          id="resetLocalStorageButton"
+          type="button">
+          RESET & START AGAIN
+        </a>
+      </span>
     </div>
     <script src="../../helper_modules/ManageLocalStorage.js"></script>
     <script src="./main.js"></script>

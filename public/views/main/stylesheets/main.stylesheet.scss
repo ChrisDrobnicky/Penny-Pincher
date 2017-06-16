@@ -2,15 +2,20 @@
 
 .pp-main {
   .pp-total-information {
-    width: 450px;
+    position: relative;
     height: 545px;
     margin: 0 auto;
     background-color: $depth-blue;
     .pp-total-details {
-      width: 450px;
-      margin: 40px auto;
-      text-align: center;
+      height: 120px;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
       font-size: 25px;
+      text-align: center;
       .pp-total-details__heading {
         color: $subheading;
         font-size: 12px;
@@ -31,6 +36,7 @@
       list-style-type: none;
       padding: 0px;
       .pp-account__listItem {
+        position: relative;
         margin: 0;
         font-weight: 600;
         height: 65px;
@@ -39,18 +45,14 @@
         &:nth-child(even){
           background-color: #F6F5F8;
         }
-        &:hover > .pp-account__button {
-          display: inline-block;
-        }
         .pp-account__name {
-          margin-right: 20px;
+          margin-right: 50px;
           padding-left: 5px;
           display: inline-block;
           width: 200px;
         }
         .pp-account__balance {
-          padding-right: 20px;
-          float: right;
+          margin-left: 20px;
         }
         .pp-account__balance--minus{
           color: $pink-accent;
@@ -59,21 +61,9 @@
           color: $teal-accent;
         }
         .pp-account__button {
-          display: none;
-          position: relative;
-          left: 20px;
-          padding: 6px 16px;
-          margin-left: 5px;
-          border: 1px solid #446d88;
-          background-color: $depth-blue;
-          border-radius: 25px;
-          color: white;
-          font-size: 12px;
-          line-height: 1.5;
-          text-decoration: none;
-          &:hover {
-            background-color: lighten($depth-blue, 20%);
-          }
+          position: absolute;
+          right: 10px;
+          top: 20px;
         }
       }
     }
@@ -82,41 +72,13 @@
   .pp-transaction-container {
     margin: 10px auto;
     padding-top: 10px;
+    position: relative;
     text-align: center;
-    width: 450px;
     .pp-transaction-container__button--add {
-      display: block;
-      padding: 6px 16px;
-      border: 1px solid #446d88;
-      background-color: darken($teal-accent, 20%);
-      border-radius: 25px;
-      box-shadow: 0 1px 5px gray;
-      color: white;
-      text-shadow: 0 -1px 1px #335166;
-      font-size: 20px;
-      line-height: 1.5;
-      text-decoration: none;
-      &:hover {
-        background-color: $teal-accent;
-      }
     }
     .pp-transaction-container__button--reset {
-      display: block;
-      margin-top: 5px;
-      padding: 6px 16px;
-      border: 1px solid #446d88;
-      background-color: darken($pink-accent, 20%);
-      border-radius: 25px;
-      box-shadow: 0 1px 5px gray;
-      color: white;
-      text-shadow: 0 -1px 1px #335166;
-      font-size: 15px;
-      line-height: 1.5;
-      text-decoration: none;
-      float: right;
-      &:hover {
-        background-color: $pink-accent;
-      }
+      position: absolute;
+      right: 10px;
     }
   }
 }

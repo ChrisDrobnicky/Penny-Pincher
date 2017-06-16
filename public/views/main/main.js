@@ -8,7 +8,7 @@ function displayAccountsInDOM(name, balance, id) {
   $accountContainer.addClass('pp-account__listItem');
   $accountName.addClass('pp-account__name');
   $accountBalance.addClass('pp-account__balance');
-  $historyButton.addClass('pp-account__button');
+  $historyButton.addClass('pp-account__button btn btn-xs btn-warning');
   $historyButton.text('Show history');
   $historyButton.attr('href', '../history/history.template.html');
   $historyButton.attr('id', id);
@@ -44,7 +44,7 @@ function resetLocalStorage() {
 
 function displayTotalBalance() {
   var $totalBalance = $('#totalBalance');
-  $totalBalance.text(manageLocalStorage.getTotalBalance().toFixed(2));
+  $totalBalance.text(manageLocalStorage.getTotalBalance().toFixed(2) + ' PLN');
 }
 
 function onPageLoaded() {
