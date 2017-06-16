@@ -29,39 +29,39 @@
       </div>
     </section>
     <div class="form-container">
-      <form class="pp-configure-form">
-        <div class="pp-configure-form__expense">
-          <h3 class="pp-expense-heading">Expense</h3>
-          <ul class="pp-categories-list" id="expenseList"></ul>
-          <label class="sr-only" for="expense-category">Expense category</label>
-          <input
-            type="text"
-            id="expense-category"
-            class="pp-configure-form__input"
-            placeholder="Enter expense category"
-            required
-            maxlength="20">
-          <button type="button" id="add-expenseButton" class="pp-configure-form__button--expense">
+      <form class="pp-configure-form--expense">
+        <h3 class="pp-configure-form__heading--expense">Expense</h3>
+        <ul class="pp-categories-list" id="expenseList"></ul>
+        <label class="sr-only" for="expense-category">Expense category</label>
+        <input
+          type="text"
+          id="expense-category"
+          class="pp-configure-form__input--expense"
+          placeholder="Enter expense category"
+          required
+          maxlength="20">
+        <p class="pp-configure-form__button--expense">
+          <button type="button" id="add-expenseButton" class="btn btn-danger">
             <span class="glyphicon glyphicon-plus"> </span>
           </button>
-        </div>
+        </p>
       </form>
-      <form class="pp-configure-form">
-        <div class="pp-configure-form__income">
-          <h3 class="pp-income-heading">Income</h3>
-          <ul class="pp-categories-list" id="incomeList"></ul>
-          <label class="sr-only" for="income-category">Income category</label>
-          <input
-            type="text"
-            id="income-category"
-            class="pp-configure-form__input"
-            placeholder="Enter income category"
-            required
-            maxlength="20">
-          <button type="button" id="add-incomeButton" class="pp-configure-form__button--income">
+      <form class="pp-configure-form--income">
+        <h3 class="pp-configure-form__heading--income">Income</h3>
+        <ul class="pp-categories-list" id="incomeList"></ul>
+        <label class="sr-only" for="income-category">Income category</label>
+        <input
+          type="text"
+          id="income-category"
+          class="pp-configure-form__input--income"
+          placeholder="Enter income category"
+          required
+          maxlength="20">
+        <p class="pp-configure-form__button--income">
+          <button type="button" id="add-incomeButton" class="btn btn-success">
             <span class="glyphicon glyphicon-plus"> </span>
           </button>
-        </div>
+        </p>
       </form>
     </div>
     <div id="alertForUser"></div>
