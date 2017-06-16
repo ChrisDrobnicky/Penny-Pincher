@@ -1,6 +1,7 @@
 @import "../../../stylesheets/variables";
 
 .pp-main {
+  position: relative;
   .pp-accounts-container {
     width: 450px;
     margin: 0 auto;
@@ -53,10 +54,14 @@
     text-align: center;
     .pp-transaction-container__button--add {
     }
-    .pp-transaction-container__button--reset {
-      position: absolute;
-      right: 10px;
-    }
+  }
+
+  .pp-resetButton {
+    position: absolute;
+    bottom: 5px;
+    right: 5px;
   }
 }
+
+
 
