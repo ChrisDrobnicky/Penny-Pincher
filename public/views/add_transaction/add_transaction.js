@@ -95,8 +95,14 @@ function goBackToMainView() {
   window.location.replace("../main/main.template.html");
 }
 
+function displayTotalBalance() {
+  var $totalBalance = $('#totalBalance');
+  $totalBalance.text(manageLocalStorage.getTotalBalance().toFixed(2) + ' PLN');
+}
+
 function onPageLoaded() {
   manageLocalStorage.getAccountsToForm();
+  displayTotalBalance();
   setupListeners();
 }
 document.onload = onPageLoaded();
