@@ -24,6 +24,8 @@
         text-decoration: none;
         z-index: 1;
         position: relative; }
+        .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__expense:focus {
+          outline: none; }
       .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__expense--active {
         background-color: #10EDC5;
         color: #fff;
@@ -42,6 +44,8 @@
         z-index: 1;
         margin-left: -15px;
         position: relative; }
+        .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__income:focus {
+          outline: none; }
       .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__income--active {
         background-color: #ED1946;
         color: #fff;
