@@ -3,6 +3,8 @@
 .pp-add-transaction {
   color: #111;
   .pp-transaction {
+    width: 450px;
+    margin: 0 auto;
     .pp-transaction__form {
       .pp-transaction__form--expense {
         color: $teal-accent;
@@ -13,6 +15,9 @@
     }
     .pp-transaction__type {
       text-align: center;
+      .pp-transaction__heading {
+        font-size: 24px;
+      }
       .pp-transaction__expense {
         padding: 6px 16px;
         border: 1px solid #446d88;
