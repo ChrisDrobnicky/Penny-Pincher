@@ -4,6 +4,11 @@
   .pp-accounts-container {
     width: 450px;
     margin: 0 auto;
+    .pp-accounts-container__heading {
+      font-size: 16px;
+      margin: 15px auto;
+      text-align: center;
+    }
     .pp-account {
       list-style-type: none;
       padding: 0px;
