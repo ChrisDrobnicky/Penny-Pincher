@@ -15,57 +15,53 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   </head>
   <body class="pp-categories">
-    <div class="container">
-      <header class="pp-header">
-        <h1 class="pp-header__heading">Configure Penny-Pincher</h1>
-        <h2 class="pp-header__subheading">Step 2/2 - create your categories</h2>
-      </header>
-      <div class="form-container">
-        <div class="row">
-          <form class="pp-configure-form">
-            <div class="col-lg-6 col-md-6 col-sm-8">
-              <h3 class="pp-expense-heading">Expense</h3>
-              <ul class="pp-categories-list" id="expenseList"></ul>
-              <label class="sr-only" for="expense-category">Expense category</label>
-              <input
-                type="text"
-                id="expense-category"
-                class="pp-configure-form__input"
-                placeholder="Enter expense category"
-                required
-                maxlength="20">
-              <button type="button" id="add-expenseButton" class="pp-configure-form__button--expense">
-                <span class="glyphicon glyphicon-plus"> </span>
-              </button>
-            </div>
-          </form>
-          <form class="pp-configure-form">
-            <div class="col-lg-6 col-md-6 col-sm-4">
-              <h3 class="pp-income-heading">Income</h3>
-              <ul class="pp-categories-list" id="incomeList"></ul>
-              <label class="sr-only" for="income-category">Income category</label>
-              <input
-                type="text"
-                id="income-category"
-                class="pp-configure-form__input"
-                placeholder="Enter income category"
-                required
-                maxlength="20">
-              <button type="button" id="add-incomeButton" class="pp-configure-form__button--income">
-                <span class="glyphicon glyphicon-plus"> </span>
-              </button>
-            </div>
-          </form>
+    <header class="pp-header">
+      <h1 class="pp-header__heading">Configure Penny-Pincher</h1>
+      <h2 class="pp-header__subheading">Step 2/2 - create your categories</h2>
+    </header>
+    <div class="form-container">
+      <form class="pp-configure-form">
+        <div class="pp-configure-form__expense">
+          <h3 class="pp-expense-heading">Expense</h3>
+          <ul class="pp-categories-list" id="expenseList"></ul>
+          <label class="sr-only" for="expense-category">Expense category</label>
+          <input
+            type="text"
+            id="expense-category"
+            class="pp-configure-form__input"
+            placeholder="Enter expense category"
+            required
+            maxlength="20">
+          <button type="button" id="add-expenseButton" class="pp-configure-form__button--expense">
+            <span class="glyphicon glyphicon-plus"> </span>
+          </button>
         </div>
-      </div>
-      <div id="alertForUser"></div>
-      <div class="pp-continue-container">
-        <a
-          href="../main/main.template.html"
-          class="pp-continue-button">
-          Continue
-        </a>
-      </div>
+      </form>
+      <form class="pp-configure-form">
+        <div class="pp-configure-form__income">
+          <h3 class="pp-income-heading">Income</h3>
+          <ul class="pp-categories-list" id="incomeList"></ul>
+          <label class="sr-only" for="income-category">Income category</label>
+          <input
+            type="text"
+            id="income-category"
+            class="pp-configure-form__input"
+            placeholder="Enter income category"
+            required
+            maxlength="20">
+          <button type="button" id="add-incomeButton" class="pp-configure-form__button--income">
+            <span class="glyphicon glyphicon-plus"> </span>
+          </button>
+        </div>
+      </form>
+    </div>
+    <div id="alertForUser"></div>
+    <div class="pp-continue-container">
+      <a
+        href="../main/main.template.html"
+        class="pp-continue-button">
+        Continue
+      </a>
     </div>
     <script src="../../helper_modules/ManageLocalStorage.js"></script>
     <script src="./categories.js"></script>
