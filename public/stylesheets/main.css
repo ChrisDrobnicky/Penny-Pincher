@@ -20,6 +20,24 @@ body {
       body .pp-total-information .pp-header .pp-header__heading {
         font-size: 18px;
         font-weight: 700; }
+    body .pp-total-information .pp-configuration {
+      height: 120px;
+      position: absolute;
+      margin: auto;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      text-align: center; }
+      body .pp-total-information .pp-configuration .pp-configuration__heading {
+        color: #AAA9FF;
+        font-size: 22px;
+        letter-spacing: 1px; }
+      body .pp-total-information .pp-configuration .pp-configuration__subheading {
+        color: #fff;
+        font-size: 18px;
+        margin-top: 20px;
+        font-weight: 300; }
     body .pp-total-information .pp-total-details {
       height: 120px;
       position: absolute;

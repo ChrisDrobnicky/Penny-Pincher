@@ -14,12 +14,21 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
   </head>
   <body>
-    <div class="container">
+    <section class="pp-total-information">
       <header class="pp-header">
         <h1 class="pp-header__heading">Configure Penny-Pincher</h1>
-        <h2 class="pp-header__subheading">Step 1/2 - create your accounts</h2>
       </header>
+      <div class="pp-configuration">
+        <h1 class="pp-configuration__heading">
+          STEP 1/2
+        </h1>
+        <h2 class="pp-configuration__subheading">
+          Create your accounts
+        </h2>
+      </div>
+    </section>
       <div class="pp-accounts-container">
+        <h1 class="pp-accounts-container__heading">Accounts:</h1>
         <ul class="pp-account-list" id="accountList">
         </ul>
       </div>
@@ -70,7 +79,6 @@
           Continue
         </a>
       </div>
-    </div>
     <script src="../../helper_modules/ManageLocalStorage.js"></script>
     <script src="./accounts.js"></script>
   </body>

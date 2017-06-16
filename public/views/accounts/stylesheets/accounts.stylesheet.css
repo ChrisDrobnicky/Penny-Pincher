@@ -1,36 +1,44 @@
-.pp-accounts-container .pp-account-list {
-  list-style-type: none;
-  padding: 5px; }
-  .pp-accounts-container .pp-account-list .pp-account-list__item {
-    border: 1px solid #F6F5F8;
-    width: 650px;
-    height: 55px;
+.pp-accounts-container {
+  width: 450px;
+  margin: 0 auto; }
+  .pp-accounts-container .pp-accounts-container__heading {
+    font-size: 16px;
+    margin: 15px auto;
+    text-align: center; }
+  .pp-accounts-container .pp-account-list {
+    list-style-type: none;
     padding: 5px; }
-    .pp-accounts-container .pp-account-list .pp-account-list__item:hover {
-      background-color: #ececec; }
-    .pp-accounts-container .pp-account-list .pp-account-list__item:hover > .pp-account-list__button {
-      display: inline-block; }
-    .pp-accounts-container .pp-account-list .pp-account-list__item:hover > .pp-account-list__name {
-      margin-left: 40px; }
-  .pp-accounts-container .pp-account-list .pp-account-list__name {
-    display: inline-block;
-    width: 250px;
-    margin-left: 10px; }
-  .pp-accounts-container .pp-account-list .pp-account-list__balance {
-    display: inline-block;
-    width: 250px; }
-  .pp-accounts-container .pp-account-list .pp-account-list__button {
-    display: none;
-    width: 45px;
-    height: 45px;
-    margin-left: 50px;
-    background: #ED1946;
-    padding: 6px;
-    border: none;
-    color: white;
-    font-size: 15px; }
-    .pp-accounts-container .pp-account-list .pp-account-list__button .pp-account-list__icon {
-      color: #fff; }
+    .pp-accounts-container .pp-account-list .pp-account-list__item {
+      border: 1px solid #F6F5F8;
+      width: 450px;
+      height: 55px;
+      padding: 5px; }
+      .pp-accounts-container .pp-account-list .pp-account-list__item:nth-child(even) {
+        background-color: #F6F5F8; }
+      .pp-accounts-container .pp-account-list .pp-account-list__item:hover > .pp-account-list__button {
+        display: inline-block; }
+      .pp-accounts-container .pp-account-list .pp-account-list__item:hover > .pp-account-list__name {
+        margin-left: 40px; }
+    .pp-accounts-container .pp-account-list .pp-account-list__name {
+      margin-right: 50px;
+      padding-left: 5px;
+      display: inline-block;
+      width: 150px; }
+    .pp-accounts-container .pp-account-list .pp-account-list__balance {
+      display: inline-block;
+      width: 100px; }
+    .pp-accounts-container .pp-account-list .pp-account-list__button {
+      display: none;
+      width: 45px;
+      height: 45px;
+      margin-left: 50px;
+      background: #ED1946;
+      padding: 6px;
+      border: none;
+      color: white;
+      font-size: 15px; }
+      .pp-accounts-container .pp-account-list .pp-account-list__button .pp-account-list__icon {
+        color: #fff; }
 
 .pp-form-container {
   margin-top: 20px; }
