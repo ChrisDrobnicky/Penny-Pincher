@@ -61,36 +61,6 @@
     }
     .pp-transaction-add {
       text-align: center;
-      .pp-transaction__button--add {
-        padding: 6px 16px;
-        border: 1px solid #446d88;
-        background-color: darken($teal-accent,20%);
-        border-radius: 25px;
-        box-shadow: 0 1px 5px gray;
-        color: white;
-        text-shadow: 0 -1px 1px #335166;
-        font-size: 20px;
-        line-height: 1.5;
-        text-decoration: none;
-        &:hover {
-          background-color: $teal-accent;
-        }
-      }
-      .pp-transaction__button--cancel {
-        padding: 6px 16px;
-        border: 1px solid #446d88;
-        background-color: darken($pink-accent, 20%);
-        border-radius: 25px;
-        box-shadow: 0 1px 5px gray;
-        color: white;
-        text-shadow: 0 -1px 1px #335166;
-        font-size: 20px;
-        line-height: 1.5;
-        text-decoration: none;
-        &:hover {
-          background-color: $pink-accent;
-        }
-      }
     }
   }
 }
