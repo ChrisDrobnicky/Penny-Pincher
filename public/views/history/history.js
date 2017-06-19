@@ -2,7 +2,7 @@
 function addTransactionsToDOM(category, title, date, amount, account) {
   var historyTableBody = document.querySelector('#historyTableBody');
   var accountName = document.querySelector('#accountName');
-  accountName.textContent = account + ' - account history';
+  accountName.textContent = account.toUpperCase() + ' - ACCOUNT BALANCE';
   var newRow = historyTableBody.insertRow();
   newRow.classList.add('pp-transaction-table-body__tr');
 
@@ -114,9 +114,15 @@ function sortByTitle() {
   addAllTransactionsToDOM(sortedTransactions);
 }
 
+function displayAccountBalance() {
+  var accountID = manageLocalStorage.getClickedAccountID();
+  var $accountBalance = $('#accountBalance');
+  $accountBalance.text(manageLocalStorage.getClickedAccountBalance(accountID).toFixed(2) + ' PLN');
+}
 
 function onPageLoaded() {
   var currentListOfTransactions = manageLocalStorage.getTransactions();
+  displayAccountBalance();
   addAllTransactionsToDOM(currentListOfTransactions);
   manageLocalStorage.setTransactionsToSort();
   setListeners();

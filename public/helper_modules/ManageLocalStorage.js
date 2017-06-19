@@ -233,6 +233,20 @@ var manageLocalStorage = (function() {
     }
   }
 
+  function getClickedAccountBalance() {
+    var savedAccounts = localStorage.getItem('accounts');
+    var clickedID = manageLocalStorage.getClickedAccountID();
+    var listOfAccounts;
+    if (savedAccounts) {
+      listOfAccounts = JSON.parse(savedAccounts);
+      for (var i = 0; i < listOfAccounts.length; i++) {
+        if (listOfAccounts[i].id === clickedID) {
+          return parseFloat(listOfAccounts[i].balance);
+        }
+      }
+    }
+  }
+
   function getCategory(categoryID) {
     var savedCategories = localStorage.getItem('categories');
     var categoryToGet;
@@ -324,6 +338,7 @@ var manageLocalStorage = (function() {
     setTransactionsToSort: setTransactionsToSort,
     getIsDescendingValue: getIsDescendingValue,
     setIsExpenseTransaction: setIsExpenseTransaction,
-    getIsExpenseTransaction: getIsExpenseTransaction
+    getIsExpenseTransaction: getIsExpenseTransaction,
+    getClickedAccountBalance: getClickedAccountBalance
   }
 })();
