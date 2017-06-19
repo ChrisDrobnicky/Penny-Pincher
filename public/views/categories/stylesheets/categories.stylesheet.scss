@@ -2,110 +2,136 @@
 
 .pp-categories {
   color: #222;
-
-  .form-container {
-    width: 1100px;
+  .pp-categories-container {
+    width: 1000px;
     margin: 0 auto;
-    overflow: hidden;
-    .pp-configure-form--expense {
-      float:left;
-      .pp-configure-form__heading--expense {
+    .pp-expense {
+      width: 450px;
+      margin: 0 auto;
+      float: left;
+      .pp-expense__heading {
         color: $pink-accent;
+        text-align: center;
       }
-      .pp-categories-list {
+      .pp-expense-list {
         list-style-type: none;
         padding-left: 0;
-        .pp-categories-list__item {
+        .pp-expense-list__item {
           width: 450px;
           height: 55px;
           border: 1px solid #F6F5F8;
           padding: 5px;
-          &:nth-child(even){
+          &:nth-child(even) {
             background-color: #F6F5F8;
           }
-          &:hover > .pp-categories-list__button {
+          &:hover > .pp-expense-list__button {
             display: inline-block;
           }
-          &:hover > .pp-categories-list__name {
+          &:hover > .pp-expense-list__name {
             margin-left: 40px;
           }
+          .pp-expense-list__name {
+            line-height: 34px;
+            margin-left: 10px;
+          }
+          .pp-expense-list__button {
+            margin: 0;
+            float: right;
+            display: none;
+            width: 45px;
+            height: 45px;
+            background: $pink-accent;
+            padding: 6px;
+            border: none;
+            color: white;
+            font-size: 15px;
+          }
         }
-        .pp-categories-list__name {
-          line-height: 34px;
-          margin-left: 10px;
+      }
+      .pp-expense-form {
+        overflow: hidden;
+        width: 220px;
+        margin: 0 auto;
+        .pp-expense-form__input {
+          color: #222;
+          float: left;
         }
-        .pp-categories-list__button {
-          margin: 0 50px;
-          float: right;
-          display: none;
-          width: 45px;
-          height: 45px;
-          background: $pink-accent;
-          padding: 6px;
-          border: none;
-          color: white;
-          font-size: 15px;
+        .pp-expense-form__button {
+          float: left;
+          margin-left: 5px;
         }
       }
     }
-    .pp-configure-form__input--expense {
-      color: #222;
+
+    .pp-income {
+      width: 450px;
+      margin: 0 auto;
+      float: right;
+      .pp-income__heading {
+        color: $teal-accent;
+        text-align: center;
+      }
+      .pp-income-list {
+        list-style-type: none;
+        padding-left: 0;
+        .pp-income-list__item {
+          width: 450px;
+          height: 55px;
+          border: 1px solid #F6F5F8;
+          padding: 5px;
+          &:nth-child(even) {
+            background-color: #F6F5F8;
+          }
+          &:hover > .pp-income-list__button {
+            display: inline-block;
+          }
+          &:hover > .pp-income-list__name {
+            margin-left: 40px;
+          }
+          .pp-income-list__name {
+            line-height: 34px;
+            margin-left: 10px;
+          }
+          .pp-income-list__button {
+            margin: 0;
+            float: right;
+            display: none;
+            width: 45px;
+            height: 45px;
+            background: $pink-accent;
+            padding: 6px;
+            border: none;
+            color: white;
+            font-size: 15px;
+          }
+        }
+      }
+      .pp-income-form {
+        overflow: hidden;
+        width: 220px;
+        margin: 0 auto;
+        .pp-income-form__input {
+          color: #222;
+          float: left;
+        }
+        .pp-income-form__button {
+          float: left;
+          margin-left: 5px;
+        }
+      }
     }
-    .pp-configure-form__button--expense {
+
+
+    .pp-alert{
 
     }
-  }
-  .pp-configure-form--income {
-    float: right;
-    .pp-configure-form__heading--income {
-      color: $teal-accent;
-    }
-    .pp-categories-list {
-      list-style-type: none;
-      padding-left: 0;
-      .pp-categories-list__item {
-        width: 450px;
-        height: 55px;
-        border: 1px solid #F6F5F8;
-        padding: 5px;
-        &:nth-child(even){
-          background-color: #F6F5F8;
-        }
-        &:hover > .pp-categories-list__button {
-          display: inline-block;
-        }
-        &:hover > .pp-categories-list__name {
-          margin-left: 40px;
-        }
-      }
-      .pp-categories-list__name {
-        line-height: 34px;
-        margin-left: 10px;
-      }
-      .pp-categories-list__button {
-        margin: 0 50px;
-        float: right;
-        display: none;
-        width: 45px;
-        height: 45px;
-        background: $pink-accent;
-        padding: 6px;
-        border: none;
-        color: white;
-        font-size: 15px;
-      }
-    }
-    .pp-configure-form__input--income {
-      color: #222;
-    }
-    .pp-configure-form__button--income {
 
+    .pp-continue-container {
+      clear: both;
+      margin: 0 auto;
+      display: block;
+      width: 100px;
     }
-  }
-  .pp-continue-container {
-    margin: 0 auto;
-    display: block;
-    width: 100px;
   }
 }
 

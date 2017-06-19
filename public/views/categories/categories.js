@@ -5,9 +5,9 @@ function addExpenseToDOM(expense, id) {
   var $deleteButton = $(document.createElement('button'));
   var $deleteIcon = $(document.createElement('span'));
 
-  $expenseItem.addClass('pp-categories-list__item');
-  $deleteButton.addClass('pp-categories-list__button');
-  $newExpenseCategory.addClass('pp-categories-list__name');
+  $expenseItem.addClass('pp-expense-list__item');
+  $deleteButton.addClass('pp-expense-list__button');
+  $newExpenseCategory.addClass('pp-expense-list__name');
   $deleteIcon.addClass('glyphicon glyphicon-trash');
 
   $deleteButton.append($deleteIcon);
@@ -26,9 +26,9 @@ function addIncomeToDOM(income, id) {
   var $deleteButton = $(document.createElement('button'));
   var $deleteIcon = $(document.createElement('span'));
 
-  $incomeItem.addClass('pp-categories-list__item');
-  $deleteButton.addClass('pp-categories-list__button');
-  $newIncomeCategory.addClass('pp-categories-list__name');
+  $incomeItem.addClass('pp-income-list__item');
+  $deleteButton.addClass('pp-income-list__button');
+  $newIncomeCategory.addClass('pp-income-list__name');
   $deleteIcon.addClass('glyphicon glyphicon-trash');
 
   $deleteButton.append($deleteIcon);

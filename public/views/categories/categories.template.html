@@ -28,49 +28,53 @@
         </h2>
       </div>
     </section>
-    <div class="form-container">
-      <form class="pp-configure-form--expense">
-        <h3 class="pp-configure-form__heading--expense">Expense</h3>
-        <ul class="pp-categories-list" id="expenseList"></ul>
-        <label class="sr-only" for="expense-category">Expense category</label>
-        <input
-          type="text"
-          id="expense-category"
-          class="pp-configure-form__input--expense"
-          placeholder="Enter expense category"
-          required
-          maxlength="20">
-        <p class="pp-configure-form__button--expense">
-          <button type="button" id="add-expenseButton" class="btn btn-danger">
-            <span class="glyphicon glyphicon-plus"> </span>
-          </button>
-        </p>
-      </form>
-      <form class="pp-configure-form--income">
-        <h3 class="pp-configure-form__heading--income">Income</h3>
-        <ul class="pp-categories-list" id="incomeList"></ul>
-        <label class="sr-only" for="income-category">Income category</label>
-        <input
-          type="text"
-          id="income-category"
-          class="pp-configure-form__input--income"
-          placeholder="Enter income category"
-          required
-          maxlength="20">
-        <p class="pp-configure-form__button--income">
-          <button type="button" id="add-incomeButton" class="btn btn-success">
-            <span class="glyphicon glyphicon-plus"> </span>
-          </button>
-        </p>
-      </form>
-    </div>
-    <div id="alertForUser"></div>
-    <div class="pp-continue-container">
-      <a
-        href="../main/main.template.html"
-        class="pp-continue-button">
-        Continue
-      </a>
+    <div class="pp-categories-container">
+      <section class="pp-expense">
+        <h3 class="pp-expense__heading">Expense</h3>
+        <ul class="pp-expense-list" id="expenseList"></ul>
+        <form class="pp-expense-form">
+          <label class="sr-only" for="expense-category">Expense category</label>
+          <input
+            type="text"
+            id="expense-category"
+            class="pp-expense-form__input"
+            placeholder="Enter expense category"
+            required
+            maxlength="20">
+          <p class="pp-expense-form__button">
+            <button type="button" id="add-expenseButton" class="btn btn-danger">
+              <span class="glyphicon glyphicon-plus"> </span>
+            </button>
+          </p>
+        </form>
+      </section>
+      <section class="pp-income">
+        <h3 class="pp-income__heading">Income</h3>
+        <ul class="pp-income-list" id="incomeList"></ul>
+        <form class="pp-income-form">
+          <label class="sr-only" for="income-category">Income category</label>
+          <input
+            type="text"
+            id="income-category"
+            class="pp-income-form__input"
+            placeholder="Enter income category"
+            required
+            maxlength="20">
+          <p class="pp-income-form__button">
+            <button type="button" id="add-incomeButton" class="btn btn-success">
+              <span class="glyphicon glyphicon-plus"> </span>
+            </button>
+          </p>
+        </form>
+      </section>
+      <div class="pp-alert" id="alertForUser"></div>
+      <div class="pp-continue-container">
+        <a
+          href="../main/main.template.html"
+          class="pp-continue-button">
+          Continue
+        </a>
+      </div>
     </div>
     <script src="../../helper_modules/ManageLocalStorage.js"></script>
     <script src="./categories.js"></script>
