@@ -3,6 +3,13 @@
 .pp-history {
   color: #111;
   .pp-transaction-history {
+    width: 450px;
+    margin: 0 auto;
+    .pp-transaction-history__heading {
+      font-size: 16px;
+      margin: 15px auto;
+      text-align: center;
+    }
     .pp-transaction-table {
       margin: 0 auto;
       width: auto;
@@ -37,9 +44,11 @@
           }
           .pp-transaction-table-body__td--amountMinus {
             color: $pink-accent;
+            width: 100px;
           }
           .pp-transaction-table-body__td--amountPlus {
             color: $teal-accent;
+            width: 100px;
           }
         }
       }

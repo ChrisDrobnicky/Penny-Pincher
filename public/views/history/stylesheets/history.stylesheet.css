@@ -1,46 +1,55 @@
 .pp-history {
   color: #111; }
-  .pp-history .pp-transaction-history .pp-transaction-table {
-    margin: 0 auto;
-    width: auto; }
-    .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-head {
-      background-color: #292787;
-      color: #fff; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-head .pp-transaction-table-head__th {
-        height: 80px;
-        font-size: 15px; }
-        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-head .pp-transaction-table-head__th .pp-transaction-sorter {
-          margin-left: 20px; }
-    .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body {
-      color: #111; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr:nth-child(even) {
-        background-color: #efefef; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td {
-        width: 150px;
-        display: inline-block;
-        margin-left: 10px;
-        font-size: 18px; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--date {
-        color: #9A9AAC; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--amountMinus {
-        color: #ED1946; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--amountPlus {
-        color: #10EDC5; }
-  .pp-history .pp-transaction-history .pp-buttonContainer {
-    margin-top: 20px;
-    text-align: center; }
-    .pp-history .pp-transaction-history .pp-buttonContainer .pp-transaction-history__button {
-      padding: 6px 16px;
-      border: 1px solid #446d88;
-      background-color: #292787;
-      border-radius: 25px;
-      box-shadow: 0 1px 5px gray;
-      color: white;
-      text-shadow: 0 -1px 1px #335166;
-      font-size: 20px;
-      line-height: 1.5;
-      text-decoration: none; }
-      .pp-history .pp-transaction-history .pp-buttonContainer .pp-transaction-history__button:hover {
-        background-color: #4c49cb; }
+  .pp-history .pp-transaction-history {
+    width: 450px;
+    margin: 0 auto; }
+    .pp-history .pp-transaction-history .pp-transaction-history__heading {
+      font-size: 16px;
+      margin: 15px auto;
+      text-align: center; }
+    .pp-history .pp-transaction-history .pp-transaction-table {
+      margin: 0 auto;
+      width: auto; }
+      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-head {
+        background-color: #292787;
+        color: #fff; }
+        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-head .pp-transaction-table-head__th {
+          height: 80px;
+          font-size: 15px; }
+          .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-head .pp-transaction-table-head__th .pp-transaction-sorter {
+            margin-left: 20px; }
+      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body {
+        color: #111; }
+        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr:nth-child(even) {
+          background-color: #efefef; }
+        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td {
+          width: 150px;
+          display: inline-block;
+          margin-left: 10px;
+          font-size: 18px; }
+        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--date {
+          color: #9A9AAC; }
+        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--amountMinus {
+          color: #ED1946;
+          width: 100px; }
+        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--amountPlus {
+          color: #10EDC5;
+          width: 100px; }
+    .pp-history .pp-transaction-history .pp-buttonContainer {
+      margin-top: 20px;
+      text-align: center; }
+      .pp-history .pp-transaction-history .pp-buttonContainer .pp-transaction-history__button {
+        padding: 6px 16px;
+        border: 1px solid #446d88;
+        background-color: #292787;
+        border-radius: 25px;
+        box-shadow: 0 1px 5px gray;
+        color: white;
+        text-shadow: 0 -1px 1px #335166;
+        font-size: 20px;
+        line-height: 1.5;
+        text-decoration: none; }
+        .pp-history .pp-transaction-history .pp-buttonContainer .pp-transaction-history__button:hover {
+          background-color: #4c49cb; }
 
 /*# sourceMappingURL=history.stylesheet.css.map */
