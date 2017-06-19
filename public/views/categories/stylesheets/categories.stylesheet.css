@@ -93,6 +93,8 @@
         .pp-categories .pp-categories-container .pp-income .pp-income-form .pp-income-form__button {
           float: left;
           margin-left: 5px; }
+    .pp-categories .pp-categories-container .pp-alert {
+      clear: both; }
     .pp-categories .pp-categories-container .pp-continue-container {
       clear: both;
       margin: 0 auto;
