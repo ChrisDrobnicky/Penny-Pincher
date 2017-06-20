@@ -46,7 +46,7 @@
       }
       .pp-expense-form {
         overflow: hidden;
-        width: 220px;
+        width: 300px;
         margin: 0 auto;
         .pp-expense-form__input {
           color: #222;
@@ -100,8 +100,9 @@
       }
       .pp-income-form {
         overflow: hidden;
-        width: 220px;
+        width: 300px;
         margin: 0 auto;
+        text-align: center;
         .pp-income-form__input {
           color: #222;
           float: left;

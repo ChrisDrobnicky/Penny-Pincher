@@ -37,7 +37,7 @@
             font-size: 15px; }
       .pp-categories .pp-categories-container .pp-expense .pp-expense-form {
         overflow: hidden;
-        width: 220px;
+        width: 300px;
         margin: 0 auto; }
         .pp-categories .pp-categories-container .pp-expense .pp-expense-form .pp-expense-form__input {
           color: #222;
@@ -79,7 +79,7 @@
             font-size: 15px; }
       .pp-categories .pp-categories-container .pp-income .pp-income-form {
         overflow: hidden;
-        width: 220px;
+        width: 300px;
         margin: 0 auto; }
         .pp-categories .pp-categories-container .pp-income .pp-income-form .pp-income-form__input {
           color: #222;
