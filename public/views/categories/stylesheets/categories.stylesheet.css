@@ -20,8 +20,6 @@
           padding: 5px; }
           .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item:nth-child(even) {
             background-color: #F6F5F8; }
-          .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item:hover > .pp-expense-list__button {
-            display: inline-block; }
           .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item:hover > .pp-expense-list__name {
             margin-left: 40px; }
           .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item .pp-expense-list__name {
@@ -30,7 +28,6 @@
           .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item .pp-expense-list__button {
             margin: 0;
             float: right;
-            display: none;
             width: 45px;
             height: 45px;
             background: #ED1946;
@@ -65,8 +62,6 @@
           padding: 5px; }
           .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item:nth-child(even) {
             background-color: #F6F5F8; }
-          .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item:hover > .pp-income-list__button {
-            display: inline-block; }
           .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item:hover > .pp-income-list__name {
             margin-left: 40px; }
           .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item .pp-income-list__name {
@@ -75,7 +70,6 @@
           .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item .pp-income-list__button {
             margin: 0;
             float: right;
-            display: none;
             width: 45px;
             height: 45px;
             background: #ED1946;

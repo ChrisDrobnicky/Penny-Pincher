@@ -24,9 +24,6 @@
           &:nth-child(even) {
             background-color: #F6F5F8;
           }
-          &:hover > .pp-expense-list__button {
-            display: inline-block;
-          }
           &:hover > .pp-expense-list__name {
             margin-left: 40px;
           }
@@ -37,7 +34,6 @@
           .pp-expense-list__button {
             margin: 0;
             float: right;
-            display: none;
             width: 45px;
             height: 45px;
             background: $pink-accent;
@@ -82,9 +78,6 @@
           &:nth-child(even) {
             background-color: #F6F5F8;
           }
-          &:hover > .pp-income-list__button {
-            display: inline-block;
-          }
           &:hover > .pp-income-list__name {
             margin-left: 40px;
           }
@@ -95,7 +88,6 @@
           .pp-income-list__button {
             margin: 0;
             float: right;
-            display: none;
             width: 45px;
             height: 45px;
             background: $pink-accent;
