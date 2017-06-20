@@ -36,14 +36,13 @@ body {
       text-align: center;
       .pp-configuration__heading {
         color: $subheading;
-        font-size: 22px;
+        font-size: 12px;
         letter-spacing: 1px;
       }
       .pp-configuration__subheading {
-        color: #fff;
-        font-size: 18px;
-        margin-top: 20px;
-        font-weight: 300;
+        color: $subheading;
+        font-size: 12px;
+        letter-spacing: 1px;
       }
     }
     .pp-total-details {

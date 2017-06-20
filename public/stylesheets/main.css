@@ -31,13 +31,12 @@ body {
       text-align: center; }
       body .pp-total-information .pp-configuration .pp-configuration__heading {
         color: #AAA9FF;
-        font-size: 22px;
+        font-size: 12px;
         letter-spacing: 1px; }
       body .pp-total-information .pp-configuration .pp-configuration__subheading {
-        color: #fff;
-        font-size: 18px;
-        margin-top: 20px;
-        font-weight: 300; }
+        color: #AAA9FF;
+        font-size: 12px;
+        letter-spacing: 1px; }
     body .pp-total-information .pp-total-details {
       height: 120px;
       position: absolute;
