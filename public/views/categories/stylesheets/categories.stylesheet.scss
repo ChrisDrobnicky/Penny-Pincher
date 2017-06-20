@@ -45,15 +45,14 @@
         }
       }
       .pp-expense-form {
-        overflow: hidden;
         width: 300px;
         margin: 0 auto;
+        text-align: center;
         .pp-expense-form__input {
           color: #222;
-          float: left;
         }
         .pp-expense-form__button {
-          float: left;
+          display: inline;
           margin-left: 5px;
         }
       }
@@ -99,16 +98,14 @@
         }
       }
       .pp-income-form {
-        overflow: hidden;
         width: 300px;
         margin: 0 auto;
         text-align: center;
         .pp-income-form__input {
           color: #222;
-          float: left;
         }
         .pp-income-form__button {
-          float: left;
+          display: inline;
           margin-left: 5px;
         }
       }
