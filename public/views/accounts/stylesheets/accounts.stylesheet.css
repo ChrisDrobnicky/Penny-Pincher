@@ -45,10 +45,12 @@
 .pp-form-container {
   margin: 30px auto;
   width: 470px;
-  height: 50px;
-  position: relative; }
+  height: 50px; }
   .pp-form-container .pp-configure-form {
-    overflow: hidden; }
+    display: block;
+    position: relative;
+    overflow: hidden;
+    margin-left: 40px; }
     .pp-form-container .pp-configure-form .pp-configure-form__name {
       float: left;
       margin-left: 10px; }
@@ -56,10 +58,11 @@
       float: left;
       margin-left: 10px; }
     .pp-form-container .pp-configure-form .pp-configure-form__input {
-      color: #222; }
+      color: #222;
+      font-size: 13px; }
     .pp-form-container .pp-configure-form .pp-configure-form__button {
       position: absolute;
-      right: 15px; }
+      right: 35px; }
   .pp-form-container .pp-form-container__alert {
     margin: 0 auto 10px auto;
     font-size: 15px; }
@@ -98,23 +101,22 @@
 
   .pp-form-container {
     margin: 5px auto;
-    width: 360px;
+    width: 320px;
     height: 150px; }
     .pp-form-container .pp-configure-form {
       display: block;
       margin-left: 40px; }
       .pp-form-container .pp-configure-form .pp-configure-form__name {
-        float: none;
-        margin: 10px auto; }
+        float: none; }
       .pp-form-container .pp-configure-form .pp-configure-form__balance {
-        float: none;
-        margin: 10px auto; }
+        float: none; }
       .pp-form-container .pp-configure-form .pp-configure-form__input {
-        color: #222; }
+        color: #222;
+        font-size: 12px; }
       .pp-form-container .pp-configure-form .pp-configure-form__button {
         position: absolute;
-        right: 105px;
-        bottom: 75px; }
+        right: 85px;
+        bottom: 20px; }
     .pp-form-container .pp-form-container__alert {
       margin: 0 auto 10px auto;
       font-size: 15px; } }
