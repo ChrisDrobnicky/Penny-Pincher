@@ -117,8 +117,8 @@
         right: 85px;
         bottom: 20px; }
     .pp-form-container .pp-form-container__alert {
-      margin: 0 auto 10px auto;
-      font-size: 15px; } }
+      margin: 0 auto 20px auto;
+      font-size: 10px; } }
 @media only screen and (min-width: 1600px) {
   .pp-accounts-container {
     width: 600px; }
