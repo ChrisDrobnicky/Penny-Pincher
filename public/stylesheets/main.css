@@ -64,5 +64,8 @@ body {
       font-size: 15px; }
     body .pp-total-details .pp-total-details__balance {
       font-size: 36px; } }
+  @media only screen and (max-width: 510px) {
+    body .pp-continue-container {
+      margin-top: 45px; } }
 
 /*# sourceMappingURL=main.css.map */

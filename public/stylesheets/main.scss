@@ -92,7 +92,15 @@ body {
         }
       }
     }
+
+  @media only screen and (max-width: $S) {
+    .pp-continue-container {
+      margin-top: 45px;
+    }
+  }
 }
+
+
 
 
 
