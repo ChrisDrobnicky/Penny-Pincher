@@ -20,9 +20,6 @@ body {
       body .pp-total-information .pp-header .pp-header__heading {
         font-size: 18px;
         font-weight: 700; }
-        @media (min-width: 1600px) {
-          body .pp-total-information .pp-header .pp-header__heading {
-            font-size: 21px; } }
     body .pp-total-information .pp-configuration {
       height: 120px;
       position: absolute;
@@ -36,9 +33,6 @@ body {
         color: #AAA9FF;
         font-size: 12px;
         letter-spacing: 1px; }
-        @media (min-width: 1600px) {
-          body .pp-total-information .pp-configuration .pp-configuration__heading, body .pp-total-information .pp-configuration .pp-configuration__subheading {
-            font-size: 15px; } }
     body .pp-total-information .pp-total-details {
       height: 120px;
       position: absolute;
@@ -53,19 +47,22 @@ body {
         color: #AAA9FF;
         font-size: 12px;
         letter-spacing: 1px; }
-        @media (min-width: 1600px) {
-          body .pp-total-information .pp-total-details .pp-total-details__heading {
-            font-size: 15px; } }
       body .pp-total-information .pp-total-details .pp-total-details__balance {
         color: #fff;
         font-size: 45px;
         margin-top: 20px;
         font-weight: 300; }
-        @media (max-width: 360px) {
-          body .pp-total-information .pp-total-details .pp-total-details__balance {
-            font-size: 36px; } }
   body .pp-continue-container {
     padding-top: 20px;
     text-align: center; }
+  @media only screen and (min-width: 1600px) {
+    body .pp-total-information .pp-header .pp-header__heading {
+      font-size: 21px; }
+    body .pp-total-information .pp-configuration .pp-configuration__heading, body .pp-total-information .pp-configuration .pp-configuration__subheading {
+      font-size: 15px; }
+    body .pp-total-details .pp-total-details__heading {
+      font-size: 15px; }
+    body .pp-total-details .pp-total-details__balance {
+      font-size: 36px; } }
 
 /*# sourceMappingURL=main.css.map */
