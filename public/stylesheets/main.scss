@@ -23,6 +23,9 @@ body {
       .pp-header__heading {
         font-size: 18px;
         font-weight: 700;
+        @media (min-width: $XL) {
+          font-size: 21px;
+        }
       }
     }
     .pp-configuration {
@@ -34,15 +37,13 @@ body {
       right: 0;
       left: 0;
       text-align: center;
-      .pp-configuration__heading {
+      .pp-configuration__heading, .pp-configuration__subheading {
         color: $subheading;
         font-size: 12px;
         letter-spacing: 1px;
-      }
-      .pp-configuration__subheading {
-        color: $subheading;
-        font-size: 12px;
-        letter-spacing: 1px;
+        @media (min-width: $XL) {
+          font-size: 15px;
+        }
       }
     }
     .pp-total-details {
@@ -59,12 +60,18 @@ body {
         color: $subheading;
         font-size: 12px;
         letter-spacing: 1px;
+        @media (min-width: $XL) {
+          font-size: 15px;
+        }
       }
       .pp-total-details__balance {
         color: #fff;
         font-size: 45px;
         margin-top: 20px;
         font-weight: 300;
+        @media (max-width: $XS) {
+          font-size: 36px;
+        }
       }
     }
   }
