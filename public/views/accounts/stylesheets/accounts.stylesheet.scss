@@ -156,3 +156,45 @@
     }
   }
 }
+
+@media only screen and (min-width: $XL) {
+  .pp-accounts-container {
+    width: 600px;
+    .pp-accounts-container__heading {
+      font-size: 20px;
+    }
+    .pp-account-list {
+      width: 530px;
+      font-size: 16px;
+      .pp-account-list__item {
+      }
+      .pp-account-list__name {
+        width: 300px;
+      }
+      .pp-account-list__balance {
+        width: 120px;
+      }
+      .pp-account-list__button {
+        font-size: 18px;
+      }
+    }
+  }
+
+  .pp-form-container {
+    .pp-configure-form {
+      margin: 0 auto;
+      .pp-configure-form__name {
+      }
+      .pp-configure-form__balance {
+      }
+      .pp-configure-form__input {
+        font-size: 16px;
+      }
+      .pp-configure-form__button {
+        right:7px;
+      }
+    }
+    .pp-form-container__alert {
+    }
+  }
+}

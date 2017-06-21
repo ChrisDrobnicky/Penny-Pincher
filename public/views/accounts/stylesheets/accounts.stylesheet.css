@@ -119,5 +119,26 @@
     .pp-form-container .pp-form-container__alert {
       margin: 0 auto 10px auto;
       font-size: 15px; } }
+@media only screen and (min-width: 1600px) {
+  .pp-accounts-container {
+    width: 600px; }
+    .pp-accounts-container .pp-accounts-container__heading {
+      font-size: 20px; }
+    .pp-accounts-container .pp-account-list {
+      width: 530px;
+      font-size: 16px; }
+      .pp-accounts-container .pp-account-list .pp-account-list__name {
+        width: 300px; }
+      .pp-accounts-container .pp-account-list .pp-account-list__balance {
+        width: 120px; }
+      .pp-accounts-container .pp-account-list .pp-account-list__button {
+        font-size: 18px; }
+
+  .pp-form-container .pp-configure-form {
+    margin: 0 auto; }
+    .pp-form-container .pp-configure-form .pp-configure-form__input {
+      font-size: 16px; }
+    .pp-form-container .pp-configure-form .pp-configure-form__button {
+      right: 7px; } }
 
 /*# sourceMappingURL=accounts.stylesheet.css.map */
