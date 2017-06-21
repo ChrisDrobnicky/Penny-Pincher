@@ -1,5 +1,5 @@
 .pp-accounts-container {
-  width: 460px;
+  width: 470px;
   margin: 0 auto; }
   .pp-accounts-container .pp-accounts-container__heading {
     font-size: 16px;
@@ -7,8 +7,11 @@
     text-align: center; }
   .pp-accounts-container .pp-account-list {
     list-style-type: none;
+    display: block;
+    margin: 0 auto;
     padding: 5px;
-    width: 460px; }
+    width: 470px;
+    font-size: 14px; }
     .pp-accounts-container .pp-account-list .pp-account-list__item {
       border: 1px solid #F6F5F8;
       height: 55px;
@@ -18,20 +21,21 @@
       .pp-accounts-container .pp-account-list .pp-account-list__item:hover > .pp-account-list__button {
         display: inline-block; }
       .pp-accounts-container .pp-account-list .pp-account-list__item:hover > .pp-account-list__name {
-        margin-left: 40px; }
+        margin-left: 20px; }
     .pp-accounts-container .pp-account-list .pp-account-list__name {
-      margin-right: 50px;
+      margin-right: 10px;
       padding-left: 5px;
       display: inline-block;
-      width: 150px; }
+      width: 270px;
+      line-height: 45px; }
     .pp-accounts-container .pp-account-list .pp-account-list__balance {
       display: inline-block;
-      width: 100px; }
+      width: 90px;
+      margin-right: 10px; }
     .pp-accounts-container .pp-account-list .pp-account-list__button {
       display: none;
       width: 45px;
       height: 45px;
-      margin-left: 50px;
       background: #ED1946;
       padding: 6px;
       border: none;
@@ -42,7 +46,7 @@
 
 .pp-form-container {
   margin: 30px auto;
-  width: 450px;
+  width: 470px;
   height: 50px;
   position: relative; }
   .pp-form-container .pp-configure-form {
@@ -59,7 +63,12 @@
       position: absolute;
       right: 5px; }
   .pp-form-container .pp-form-container__alert {
-    margin-bottom: 10px;
+    margin: 0 auto 10px auto;
     font-size: 15px; }
+
+@media only screen and (max-width: 500px) {
+  .pp-accounts-container {
+    width: 452px;
+    margin: 0 auto; } }
 
 /*# sourceMappingURL=accounts.stylesheet.css.map */
