@@ -22,9 +22,6 @@
       &:nth-child(even){
         background-color: #F6F5F8;
       }
-      &:hover > .pp-account-list__button {
-        display: inline-block;
-      }
       &:hover > .pp-account-list__name {
         margin-left:20px;
       }
@@ -42,7 +39,7 @@
       margin-right: 10px;
     }
     .pp-account-list__button {
-      display: none;
+      display: inline-block;
       width: 45px;
       height: 45px;
       background: $pink-accent;
@@ -89,7 +86,73 @@
 
 @media only screen and (max-width: $S) {
   .pp-accounts-container {
-    width: 452px;
-    margin: 0 auto;
+    width: 360px;
+    .pp-accounts-container__heading {
+    }
+    .pp-account-list {
+      padding: 1px;
+      width: 300px;
+      font-size: 13px;
+      .pp-account-list__item {
+        padding: 2px;
+        position: relative;
+        &:hover > .pp-account-list__name {
+          margin-left:10px;
+        }
+        &:hover > .pp-account-list__balance {
+          margin-left:10px;
+        }
+      }
+      .pp-account-list__name {
+        margin-right: 0;
+        padding-left: 1px;
+        display: block;
+        width: 250px;
+        line-height: 16px;
+      }
+      .pp-account-list__balance {
+        display: inline-block;
+        width: 90px;
+        margin-right: 0;
+      }
+      .pp-account-list__button {
+        position: absolute;
+        right: 2px;
+        bottom: 9px;
+        width: 36px;
+        height: 36px;
+        font-size: 13px;
+      }
+    }
+  }
+
+  .pp-form-container {
+    margin: 30px auto;
+    width: 470px;
+    height: 50px;
+    position: relative;
+    .pp-configure-form {
+      overflow: hidden;
+      .pp-configure-form__name {
+        float: left;
+        margin-left: 10px;
+      }
+      .pp-configure-form__balance {
+        float: left;
+        margin-left: 10px;
+      }
+      .pp-configure-form__input {
+        color: #222;
+      }
+      .pp-configure-form__button {
+        position: absolute;
+        right: 5px;
+      }
+    }
+    .pp-form-container__alert {
+      margin: 0 auto 10px auto;
+      font-size: 15px;
+
+    }
   }
 }
