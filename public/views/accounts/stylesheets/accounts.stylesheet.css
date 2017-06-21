@@ -59,7 +59,7 @@
       color: #222; }
     .pp-form-container .pp-configure-form .pp-configure-form__button {
       position: absolute;
-      right: 5px; }
+      right: 15px; }
   .pp-form-container .pp-form-container__alert {
     margin: 0 auto 10px auto;
     font-size: 15px; }
@@ -97,23 +97,24 @@
         font-size: 13px; }
 
   .pp-form-container {
-    margin: 30px auto;
-    width: 470px;
-    height: 50px;
-    position: relative; }
+    margin: 5px auto;
+    width: 360px;
+    height: 150px; }
     .pp-form-container .pp-configure-form {
-      overflow: hidden; }
+      display: block;
+      margin-left: 40px; }
       .pp-form-container .pp-configure-form .pp-configure-form__name {
-        float: left;
-        margin-left: 10px; }
+        float: none;
+        margin: 10px auto; }
       .pp-form-container .pp-configure-form .pp-configure-form__balance {
-        float: left;
-        margin-left: 10px; }
+        float: none;
+        margin: 10px auto; }
       .pp-form-container .pp-configure-form .pp-configure-form__input {
         color: #222; }
       .pp-form-container .pp-configure-form .pp-configure-form__button {
         position: absolute;
-        right: 5px; }
+        right: 105px;
+        bottom: 75px; }
     .pp-form-container .pp-form-container__alert {
       margin: 0 auto 10px auto;
       font-size: 15px; } }
