@@ -33,7 +33,7 @@ function checkInput(accountName, accountBalance){
     $outputDiv.html('<strong>Error in your form:</strong> Please enter the gaps');
     return false;
   } else if (isNaN(accountBalance)){
-    $outputDiv.addClass('alert alert-danger');
+    $outputDiv.addClass('alert alert-danger pp-form-container__alert');
     $outputDiv.html ('<strong>Error in your form:</strong> Your balance must be a number - e.g. 0.00');
     return false;
   } else {

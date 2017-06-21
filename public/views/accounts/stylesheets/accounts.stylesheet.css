@@ -58,5 +58,8 @@
     .pp-form-container .pp-configure-form .pp-configure-form__button {
       position: absolute;
       right: 0; }
+  .pp-form-container .pp-form-container__alert {
+    margin-bottom: 10px;
+    font-size: 15px; }
 
 /*# sourceMappingURL=accounts.stylesheet.css.map */
