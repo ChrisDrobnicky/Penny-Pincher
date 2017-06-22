@@ -86,6 +86,7 @@
   }
 }
 
+
 @media only screen and (max-width: $M) {
   .pp-accounts-container {
     width: 360px;
@@ -124,6 +125,77 @@
         width: 35px;
         height: 35px;
         font-size: 13px;
+      }
+    }
+  }
+
+  .pp-form-container {
+    margin: 5px auto;
+    width: 320px;
+    .pp-configure-form {
+      display: block;
+      margin-left: 40px;
+      .pp-configure-form__name {
+        float: none;
+      }
+      .pp-configure-form__balance {
+        float: none;
+      }
+      .pp-configure-form__input {
+        color: #222;
+        font-size: 12px;
+      }
+      .pp-configure-form__button {
+        position: absolute;
+        right: 85px;
+        bottom: 20px;
+      }
+    }
+    .pp-form-container__alert {
+      margin: 0 auto 20px auto;
+      font-size: 10px;
+    }
+  }
+}
+
+@media only screen and (max-width: $S) {
+  .pp-accounts-container {
+    width: auto;
+    .pp-accounts-container__heading {
+    }
+    .pp-account-list {
+      padding: 0;
+      width: 250px;
+      font-size: 11px;
+      .pp-account-list__item {
+        height: 45px;
+        padding: 0;
+        &:hover > .pp-account-list__name {
+          margin-left:0;
+        }
+        &:hover > .pp-account-list__balance {
+          margin-left:0;
+        }
+      }
+      .pp-account-list__name {
+        margin-right: 0;
+        padding-left: 1px;
+        display: block;
+        width: 240px;
+        line-height: 14px;
+      }
+      .pp-account-list__balance {
+        display: inline-block;
+        width: 90px;
+        margin-right: 0;
+      }
+      .pp-account-list__button {
+        position: absolute;
+        right: 3px;
+        bottom: 7px;
+        width: 30px;
+        height: 30px;
+        font-size: 12px;
       }
     }
   }
