@@ -11,6 +11,7 @@
         color: #ED1946;
         text-align: center; }
       .pp-categories .pp-categories-container .pp-expense .pp-expense-list {
+        font-size: 14px;
         list-style-type: none;
         padding-left: 0; }
         .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item {
@@ -52,6 +53,7 @@
         color: #10EDC5;
         text-align: center; }
       .pp-categories .pp-categories-container .pp-income .pp-income-list {
+        font-size: 14px;
         list-style-type: none;
         padding-left: 0; }
         .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item {
@@ -92,5 +94,15 @@
       margin: 0 auto;
       display: block;
       width: 100px; }
+
+@media only screen and (min-width: 1280px) {
+  .pp-categories .pp-categories-container .pp-expense .pp-expense-list {
+    font-size: 16px; }
+    .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item .pp-expense-list__button {
+      font-size: 18px; }
+  .pp-categories .pp-categories-container .pp-income .pp-income-list {
+    font-size: 16px; }
+    .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item .pp-income-list__button {
+      font-size: 18px; } }
 
 /*# sourceMappingURL=categories.stylesheet.css.map */
