@@ -69,12 +69,6 @@ body {
     text-align: center;
   }
 
-  @media only screen and (max-width: $M) {
-    .pp-continue-container {
-      margin-top: 95px;
-    }
-  }
-
   @media only screen and (min-width: $L) {
     .pp-total-information {
       .pp-header {
@@ -85,19 +79,30 @@ body {
       .pp-configuration {
         .pp-configuration__heading, .pp-configuration__subheading {
           font-size: 15px;
-          }
-        }
-      }
-      .pp-total-details {
-        .pp-total-details__heading {
-          font-size: 15px;
-        }
-        .pp-total-details__balance {
-          font-size: 36px;
         }
       }
     }
+    .pp-total-details {
+      .pp-total-details__heading {
+        font-size: 15px;
+      }
+      .pp-total-details__balance {
+        font-size: 36px;
+      }
+    }
+  }
 
+  @media only screen and (max-width: $M) {
+    .pp-continue-container {
+      margin-top: 95px;
+    }
+  }
+
+  @media only screen and (max-width: $S) {
+    .pp-continue-container {
+      margin-top: 25px;
+    }
+  }
 
 }
 
