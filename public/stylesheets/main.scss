@@ -69,6 +69,11 @@ body {
     text-align: center;
   }
 
+  @media only screen and (max-width: $S) {
+    .pp-continue-container {
+      margin-top: 95px;
+    }
+  }
 
   @media only screen and (min-width: $XL) {
     .pp-total-information {
@@ -93,11 +98,7 @@ body {
       }
     }
 
-  @media only screen and (max-width: $S) {
-    .pp-continue-container {
-      margin-top: 95px;
-    }
-  }
+
 }
 
 

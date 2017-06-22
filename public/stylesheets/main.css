@@ -55,6 +55,9 @@ body {
   body .pp-continue-container {
     margin: 55px 0 20px 0;
     text-align: center; }
+  @media only screen and (max-width: 510px) {
+    body .pp-continue-container {
+      margin-top: 95px; } }
   @media only screen and (min-width: 1600px) {
     body .pp-total-information .pp-header .pp-header__heading {
       font-size: 21px; }
@@ -64,8 +67,5 @@ body {
       font-size: 15px; }
     body .pp-total-details .pp-total-details__balance {
       font-size: 36px; } }
-  @media only screen and (max-width: 510px) {
-    body .pp-continue-container {
-      margin-top: px; } }
 
 /*# sourceMappingURL=main.css.map */
