@@ -86,7 +86,7 @@
   }
 }
 
-@media only screen and (max-width: $S) {
+@media only screen and (max-width: $M) {
   .pp-accounts-container {
     width: 360px;
     .pp-accounts-container__heading {
@@ -157,7 +157,7 @@
   }
 }
 
-@media only screen and (min-width: $XL) {
+@media only screen and (min-width: $L) {
   .pp-accounts-container {
     width: 600px;
     .pp-accounts-container__heading {

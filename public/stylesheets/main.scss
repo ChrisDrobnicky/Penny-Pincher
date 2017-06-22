@@ -69,13 +69,13 @@ body {
     text-align: center;
   }
 
-  @media only screen and (max-width: $S) {
+  @media only screen and (max-width: $M) {
     .pp-continue-container {
       margin-top: 95px;
     }
   }
 
-  @media only screen and (min-width: $XL) {
+  @media only screen and (min-width: $L) {
     .pp-total-information {
       .pp-header {
         .pp-header__heading {
