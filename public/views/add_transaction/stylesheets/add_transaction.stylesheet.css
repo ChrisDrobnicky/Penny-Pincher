@@ -8,6 +8,8 @@
     .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__form--income {
       color: #ED1946; }
     .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type {
+      width: 450px;
+      margin: 20px auto;
       text-align: center; }
       .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type .pp-transaction__heading {
         font-size: 24px; }
@@ -52,5 +54,42 @@
         z-index: 2; }
     .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction-add {
       text-align: center; }
+
+@media only screen and (max-width: 520px) {
+  .pp-add-transaction .pp-transaction {
+    width: 320px; }
+    .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type {
+      width: 320px; }
+      .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type .pp-transaction__heading {
+        font-size: 20px; }
+      .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type .pp-transaction__expense {
+        font-size: 16px; }
+      .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type .pp-transaction__income {
+        font-size: 16px; }
+    .pp-add-transaction .pp-transaction .pp-transaction__alert {
+      font-size: 14px; } }
+@media only screen and (max-width: 380px) {
+  .pp-add-transaction .pp-transaction {
+    width: 252px; }
+    .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type {
+      width: 252px; }
+      .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type .pp-transaction__heading {
+        font-size: 18px; }
+      .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type .pp-transaction__expense {
+        font-size: 13px; }
+      .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type .pp-transaction__income {
+        font-size: 13px; }
+    .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__title .pp-transaction__label {
+      font-size: 12px; }
+    .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__date .pp-transaction__label {
+      font-size: 12px; }
+    .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__category .pp-transaction__label {
+      font-size: 12px; }
+    .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__account .pp-transaction__label {
+      font-size: 12px; }
+    .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__amount {
+      font-size: 12px; }
+    .pp-add-transaction .pp-transaction .pp-transaction__alert {
+      font-size: 12px; } }
 
 /*# sourceMappingURL=add_transaction.stylesheet.css.map */
