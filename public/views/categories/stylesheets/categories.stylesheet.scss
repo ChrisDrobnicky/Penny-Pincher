@@ -3,10 +3,10 @@
 .pp-categories {
   color: #222;
   .pp-categories-container {
-    width: 1000px;
+    width: 900px;
     margin: 0 auto;
     .pp-expense {
-      width: 450px;
+      width: 400px;
       margin: 0 auto;
       float: left;
       .pp-expense__heading {
@@ -18,7 +18,7 @@
         list-style-type: none;
         padding-left: 0;
         .pp-expense-list__item {
-          width: 450px;
+          width: 400px;
           height: 55px;
           border: 1px solid #F6F5F8;
           padding: 5px;
@@ -60,7 +60,7 @@
     }
 
     .pp-income {
-      width: 450px;
+      width: 400px;
       margin: 0 auto;
       float: right;
       .pp-income__heading {
@@ -72,7 +72,7 @@
         list-style-type: none;
         padding-left: 0;
         .pp-income-list__item {
-          width: 450px;
+          width: 400px;
           height: 55px;
           border: 1px solid #F6F5F8;
           padding: 5px;
@@ -130,12 +130,15 @@
 @media only screen and (min-width: $L) {
   .pp-categories {
     .pp-categories-container {
+      width: 1000px;
       .pp-expense {
+        width: 450px;
         .pp-expense__heading {
         }
         .pp-expense-list {
           font-size: 16px;
           .pp-expense-list__item {
+            width: 450px;
             .pp-expense-list__name {
             }
             .pp-expense-list__button {
@@ -152,11 +155,13 @@
       }
 
       .pp-income {
+        width: 450px;
         .pp-income__heading {
         }
         .pp-income-list {
           font-size: 16px;
           .pp-income-list__item {
+            width: 450px;
             .pp-income-list__name {
             }
             .pp-income-list__button {
