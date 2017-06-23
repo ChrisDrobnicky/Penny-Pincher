@@ -4,12 +4,12 @@
     width: 450px;
     margin: 0 auto; }
     .pp-history .pp-transaction-history .pp-transaction-history__heading {
-      font-size: 16px;
+      font-size: 22px;
       margin: 15px auto;
       text-align: center; }
     .pp-history .pp-transaction-history .pp-transaction-table {
       margin: 0 auto;
-      width: auto; }
+      width: 450px; }
       .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-head {
         background-color: #292787;
         color: #fff; }
@@ -22,11 +22,21 @@
         color: #111; }
         .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr:nth-child(even) {
           background-color: #efefef; }
-        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td {
-          width: 150px;
+        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--category {
+          width: 130px;
           display: inline-block;
           margin-left: 10px;
-          font-size: 18px; }
+          font-size: 14px; }
+        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--titledate {
+          width: 180px;
+          display: inline-block;
+          margin-left: 10px;
+          font-size: 14px; }
+        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--amount {
+          width: 100px;
+          display: inline-block;
+          margin-left: 10px;
+          font-size: 14px; }
         .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--date {
           color: #9A9AAC; }
         .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--amountMinus {

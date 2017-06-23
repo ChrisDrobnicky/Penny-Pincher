@@ -12,14 +12,14 @@ function addTransactionsToDOM(category, title, date, amount, account) {
   var amountCell = newRow.insertCell(2);
 
   categoryCell.innerHTML = category;
-  categoryCell.classList.add('pp-transaction-table-body__td');
+  categoryCell.classList.add('pp-transaction-table-body__td--category');
 
   titleAndDateCell.innerHTML = title + '</br>' + '<span class="pp-transaction-table-body__td--date">'
     + date + '</span>';
-  titleAndDateCell.classList.add('pp-transaction-table-body__td');
+  titleAndDateCell.classList.add('pp-transaction-table-body__td--titledate');
 
   amountCell.innerHTML = amount;
-  amountCell.classList.add('pp-transaction-table-body__td');
+  amountCell.classList.add('pp-transaction-table-body__td--amount');
   if (amount < 0) {
     amountCell.classList.add('pp-transaction-table-body__td--amountMinus');
   } else {
