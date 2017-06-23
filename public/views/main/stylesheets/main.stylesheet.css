@@ -43,4 +43,14 @@
     bottom: 5px;
     right: 5px; }
 
+@media only screen and (min-width: 1366px) {
+  .pp-main .pp-accounts-container {
+    width: 500px; }
+    .pp-main .pp-accounts-container .pp-accounts-container__heading {
+      font-size: 24px; }
+    .pp-main .pp-accounts-container .pp-account .pp-account__listItem {
+      font-size: 16px; }
+      .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__name {
+        width: 250px; } }
+
 /*# sourceMappingURL=main.stylesheet.css.map */

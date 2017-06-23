@@ -62,5 +62,38 @@
   }
 }
 
+@media only screen and (min-width: $XL) {
+  .pp-main {
+    .pp-accounts-container {
+      width: 500px;
+      .pp-accounts-container__heading {
+        font-size: 24px;
+      }
+      .pp-account {
+        .pp-account__listItem {
+          font-size: 16px;
+          .pp-account__name {
+            width: 250px;
+          }
+          .pp-account__balance {
+          }
+          .pp-account__balance--minus{
+          }
+          .pp-account__balance--plus{
+          }
+          .pp-account__button {
+          }
+        }
+      }
+    }
 
+    .pp-transaction-container {
+      .pp-transaction-container__button--add {
+      }
+    }
+
+    .pp-resetButton {
+    }
+  }
+}
 
