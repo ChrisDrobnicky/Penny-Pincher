@@ -36,12 +36,12 @@
   .pp-main .pp-transaction-container {
     margin: 10px auto;
     padding-top: 10px;
-    position: relative;
     text-align: center; }
-  .pp-main .pp-resetButton {
-    position: fixed;
-    bottom: 5px;
-    right: 5px; }
+    .pp-main .pp-transaction-container .pp-resetButton {
+      display: block;
+      position: fixed;
+      bottom: 5px;
+      right: 5px; }
 
 @media only screen and (min-width: 1366px) {
   .pp-main .pp-accounts-container {
@@ -52,5 +52,19 @@
       font-size: 16px; }
       .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__name {
         width: 250px; } }
+@media only screen and (max-width: 520px) {
+  .pp-main .pp-transaction-container .pp-transaction-container__button--add {
+    float: left;
+    margin: 5px 0 10px 15px; }
+    .pp-main .pp-transaction-container .pp-transaction-container__button--add .pp-btn-add {
+      padding: 3px 8px;
+      font-size: 12px; }
+  .pp-main .pp-transaction-container .pp-resetButton {
+    position: static;
+    float: right;
+    margin: 5px 15px 10px 0; }
+    .pp-main .pp-transaction-container .pp-resetButton .pp-btn-reset {
+      padding: 3px 8px;
+      font-size: 12px; } }
 
 /*# sourceMappingURL=main.stylesheet.css.map */

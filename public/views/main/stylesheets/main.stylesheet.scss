@@ -49,17 +49,22 @@
   .pp-transaction-container {
     margin: 10px auto;
     padding-top: 10px;
-    position: relative;
     text-align: center;
     .pp-transaction-container__button--add {
+      .pp-btn-add {
+      }
+    }
+    .pp-resetButton {
+      display: block;
+      position: fixed;
+      bottom: 5px;
+      right: 5px;
+      .pp-btn-reset {
+      }
     }
   }
 
-  .pp-resetButton {
-    position: fixed;
-    bottom: 5px;
-    right: 5px;
-  }
+
 }
 
 @media only screen and (min-width: $XL) {
@@ -90,9 +95,51 @@
     .pp-transaction-container {
       .pp-transaction-container__button--add {
       }
+      .pp-resetButton {
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $M) {
+  .pp-main {
+    .pp-accounts-container {
+      .pp-accounts-container__heading {
+      }
+      .pp-account {
+        .pp-account__listItem {
+          .pp-account__name {
+          }
+          .pp-account__balance {
+          }
+          .pp-account__balance--minus{
+          }
+          .pp-account__balance--plus{
+          }
+          .pp-account__button {
+          }
+        }
+      }
     }
 
-    .pp-resetButton {
+    .pp-transaction-container {
+      .pp-transaction-container__button--add {
+        float: left;
+        margin: 5px 0 10px 15px;
+        .pp-btn-add {
+          padding: 3px 8px;
+          font-size: 12px;
+        }
+      }
+      .pp-resetButton {
+        position: static;
+        float: right;
+        margin: 5px 15px 10px 0;
+        .pp-btn-reset {
+          padding: 3px 8px;
+          font-size: 12px;
+        }
+      }
     }
   }
 }
