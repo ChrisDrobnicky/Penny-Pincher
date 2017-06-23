@@ -167,14 +167,14 @@
         width: 360px; } }
 @media only screen and (max-width: 380px) {
   .pp-categories .pp-categories-container {
-    width: 280px; }
+    width: 275px; }
     .pp-categories .pp-categories-container .pp-expense {
-      width: 280px; }
+      width: 275px; }
       .pp-categories .pp-categories-container .pp-expense .pp-expense-list {
         font-size: 12px; }
         .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item {
           height: 45px;
-          width: 280px; }
+          width: 275px; }
           .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item:hover > .pp-expense-list__name {
             margin-left: 2px; }
           .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item .pp-expense-list__name {
@@ -182,8 +182,10 @@
           .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item .pp-expense-list__button {
             width: 35px;
             height: 35px; }
-      .pp-categories .pp-categories-container .pp-expense .pp-expense-form .pp-expense-form__input {
-        font-size: 12px; }
+      .pp-categories .pp-categories-container .pp-expense .pp-expense-form {
+        width: auto; }
+        .pp-categories .pp-categories-container .pp-expense .pp-expense-form .pp-expense-form__input {
+          font-size: 12px; }
       .pp-categories .pp-categories-container .pp-expense .pp-expense__alert {
         width: 275px;
         font-size: 12px; }
@@ -193,7 +195,7 @@
         font-size: 12px; }
         .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item {
           height: 45px;
-          width: 280px; }
+          width: 275px; }
           .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item:hover > .pp-income-list__name {
             margin-left: 2px; }
           .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item .pp-income-list__name {
@@ -201,8 +203,10 @@
           .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item .pp-income-list__button {
             width: 35px;
             height: 35px; }
-      .pp-categories .pp-categories-container .pp-income .pp-income-form .pp-income-form__input {
-        font-size: 12px; }
+      .pp-categories .pp-categories-container .pp-income .pp-income-form {
+        width: auto; }
+        .pp-categories .pp-categories-container .pp-income .pp-income-form .pp-income-form__input {
+          font-size: 12px; }
       .pp-categories .pp-categories-container .pp-income .pp-income__alert {
         width: 275px;
         font-size: 12px; } }

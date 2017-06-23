@@ -308,16 +308,16 @@
 @media only screen and (max-width: $S) {
   .pp-categories {
     .pp-categories-container {
-      width: 280px;
+      width: 275px;
       .pp-expense {
-        width: 280px;
+        width: 275px;
         .pp-expense__heading {
         }
         .pp-expense-list {
           font-size: 12px;
           .pp-expense-list__item {
             height: 45px;
-            width: 280px;
+            width: 275px;
             &:hover > .pp-expense-list__name {
               margin-left: 2px;
             }
@@ -331,6 +331,7 @@
           }
         }
         .pp-expense-form {
+          width: auto;
           .pp-expense-form__input {
             font-size: 12px;
           }
@@ -351,7 +352,7 @@
           font-size: 12px;
           .pp-income-list__item {
             height: 45px;
-            width: 280px;
+            width: 275px;
             &:hover > .pp-income-list__name {
               margin-left: 2px;
             }
@@ -365,6 +366,7 @@
           }
         }
         .pp-income-form {
+          width: auto;
           .pp-income-form__input {
             font-size: 12px;
           }
