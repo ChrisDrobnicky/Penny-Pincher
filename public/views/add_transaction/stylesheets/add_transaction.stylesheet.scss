@@ -12,61 +12,100 @@
       .pp-transaction__form--income {
         color: $pink-accent;
       }
-    }
-    .pp-transaction__type {
-      text-align: center;
-      .pp-transaction__heading {
-        font-size: 24px;
-      }
-      .pp-transaction__expense {
-        padding: 6px 16px;
-        border: 1px solid #446d88;
-        background-color: $blue-grey;
-        border-radius: 25px;
-        box-shadow: 0 1px 5px gray;
-        color: #111;
-        text-shadow: 0 -1px 1px #335166;
-        font-size: 20px;
-        line-height: 1.5;
-        text-decoration: none;
-        z-index: 1;
-        position: relative;
-        &:focus {
-          outline: none;
+      .pp-transaction__type {
+        text-align: center;
+        .pp-transaction__heading {
+          font-size: 24px;
         }
-      }
-      .pp-transaction__expense--active {
-        background-color: $teal-accent;
-        color: #fff;
-        z-index: 2;
+        .pp-transaction__expense {
+          padding: 6px 16px;
+          border: 1px solid #446d88;
+          background-color: $blue-grey;
+          border-radius: 25px;
+          box-shadow: 0 1px 5px gray;
+          color: #111;
+          text-shadow: 0 -1px 1px #335166;
+          font-size: 20px;
+          line-height: 1.5;
+          text-decoration: none;
+          z-index: 1;
+          position: relative;
+          &:focus {
+            outline: none;
+          }
+        }
+        .pp-transaction__expense--active {
+          background-color: $teal-accent;
+          color: #fff;
+          z-index: 2;
+        }
+
+        .pp-transaction__income {
+          padding: 6px 16px;
+          border: 1px solid #446d88;
+          background-color: $blue-grey;
+          border-radius: 25px;
+          box-shadow: 0 1px 5px gray;
+          color: #111;
+          text-shadow: 0 -1px 1px #335166;
+          font-size: 20px;
+          line-height: 1.5;
+          text-decoration: none;
+          z-index: 1;
+          margin-left: -15px;
+          position: relative;
+          &:focus {
+            outline: none;
+          }
+        }
+        .pp-transaction__income--active {
+          background-color: $pink-accent;
+          color: #fff;
+          z-index: 2;
+        }
       }
 
-      .pp-transaction__income {
-        padding: 6px 16px;
-        border: 1px solid #446d88;
-        background-color: $blue-grey;
-        border-radius: 25px;
-        box-shadow: 0 1px 5px gray;
-        color: #111;
-        text-shadow: 0 -1px 1px #335166;
-        font-size: 20px;
-        line-height: 1.5;
-        text-decoration: none;
-        z-index: 1;
-        margin-left: -15px;
-        position: relative;
-        &:focus {
-          outline: none;
+      .pp-transaction__title {
+        .pp-transaction__label {
+        }
+        .pp-transaction__input {
         }
       }
-      .pp-transaction__income--active {
-        background-color: $pink-accent;
-        color: #fff;
-        z-index: 2;
+
+      .pp-transaction__date {
+        .pp-transaction__label {
+        }
+        .pp-transaction__input {
+        }
+      }
+
+      .pp-transaction__category {
+        .pp-transaction__label {
+        }
+        .pp-transaction__select {
+        }
+      }
+
+      .pp-transaction__account {
+        .pp-transaction__label {
+        }
+        .pp-transaction__select {
+        }
+      }
+
+      .pp-transaction__amount {
+        .pp-transaction__label {
+        }
+        .pp-transaction__input {
+        }
+      }
+
+      .pp-transaction-add {
+        text-align: center;
       }
     }
-    .pp-transaction-add {
-      text-align: center;
+
+    .pp-transaction__alert {
     }
   }
 }

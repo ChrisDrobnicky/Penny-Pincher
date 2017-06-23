@@ -7,11 +7,11 @@
       color: #10EDC5; }
     .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__form--income {
       color: #ED1946; }
-    .pp-add-transaction .pp-transaction .pp-transaction__type {
+    .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type {
       text-align: center; }
-      .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__heading {
+      .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type .pp-transaction__heading {
         font-size: 24px; }
-      .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__expense {
+      .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type .pp-transaction__expense {
         padding: 6px 16px;
         border: 1px solid #446d88;
         background-color: #9A9AAC;
@@ -24,13 +24,13 @@
         text-decoration: none;
         z-index: 1;
         position: relative; }
-        .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__expense:focus {
+        .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type .pp-transaction__expense:focus {
           outline: none; }
-      .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__expense--active {
+      .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type .pp-transaction__expense--active {
         background-color: #10EDC5;
         color: #fff;
         z-index: 2; }
-      .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__income {
+      .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type .pp-transaction__income {
         padding: 6px 16px;
         border: 1px solid #446d88;
         background-color: #9A9AAC;
@@ -44,13 +44,13 @@
         z-index: 1;
         margin-left: -15px;
         position: relative; }
-        .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__income:focus {
+        .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type .pp-transaction__income:focus {
           outline: none; }
-      .pp-add-transaction .pp-transaction .pp-transaction__type .pp-transaction__income--active {
+      .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type .pp-transaction__income--active {
         background-color: #ED1946;
         color: #fff;
         z-index: 2; }
-    .pp-add-transaction .pp-transaction .pp-transaction-add {
+    .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction-add {
       text-align: center; }
 
 /*# sourceMappingURL=add_transaction.stylesheet.css.map */
