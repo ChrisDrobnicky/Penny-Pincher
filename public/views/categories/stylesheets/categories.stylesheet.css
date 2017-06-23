@@ -89,11 +89,6 @@
           margin-left: 5px; }
     .pp-categories .pp-categories-container .pp-alert {
       clear: both; }
-    .pp-categories .pp-categories-container .pp-continue-container {
-      clear: both;
-      margin: 0 auto;
-      display: block;
-      width: 100px; }
 
 @media only screen and (min-width: 1366px) {
   .pp-categories .pp-categories-container {
@@ -114,5 +109,12 @@
           width: 450px; }
           .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item .pp-income-list__button {
             font-size: 18px; } }
+@media only screen and (max-width: 960px) {
+  .pp-categories .pp-categories-container {
+    width: 500px; }
+    .pp-categories .pp-categories-container .pp-expense {
+      float: none; }
+    .pp-categories .pp-categories-container .pp-income {
+      float: none; } }
 
 /*# sourceMappingURL=categories.stylesheet.css.map */

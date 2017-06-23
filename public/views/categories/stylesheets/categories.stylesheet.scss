@@ -113,16 +113,8 @@
       }
     }
 
-
     .pp-alert{
       clear: both;
-    }
-
-    .pp-continue-container {
-      clear: both;
-      margin: 0 auto;
-      display: block;
-      width: 100px;
     }
   }
 }
@@ -178,10 +170,55 @@
       }
       .pp-alert{
       }
-
-      .pp-continue-container {
-      }
     }
   }
 }
 
+@media only screen and (max-width: $L) {
+  .pp-categories {
+    .pp-categories-container {
+      width: 500px;
+      .pp-expense {
+        float: none;
+        .pp-expense__heading {
+        }
+        .pp-expense-list {
+          .pp-expense-list__item {
+            .pp-expense-list__name {
+            }
+            .pp-expense-list__button {
+            }
+          }
+        }
+        .pp-expense-form {
+          .pp-expense-form__input {
+          }
+          .pp-expense-form__button {
+          }
+        }
+      }
+
+      .pp-income {
+        float: none;
+        .pp-income__heading {
+        }
+        .pp-income-list {
+          .pp-income-list__item {
+            .pp-income-list__name {
+            }
+            .pp-income-list__button {
+            }
+          }
+        }
+        .pp-income-form {
+          .pp-income-form__input {
+          }
+          .pp-income-form__button {
+          }
+        }
+      }
+      .pp-alert{
+      }
+    }
+  }
+}
