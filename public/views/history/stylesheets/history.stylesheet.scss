@@ -135,3 +135,101 @@
     }
   }
 }
+
+@media only screen and (max-width: $M) {
+  .pp-history {
+    .pp-transaction-history {
+      width: 360px;
+      .pp-transaction-history__heading {
+        font-size: 18px;
+      }
+      .pp-transaction-table {
+        width: 360px;
+        .pp-transaction-table-head {
+          .pp-transaction-table-head__tr {
+          }
+          .pp-transaction-table-head__th {
+            font-size: 12px;
+            .pp-transaction-sorter {
+            }
+          }
+        }
+        .pp-transaction-table-body {
+          .pp-transaction-table-body__tr {
+            .pp-transaction-table-body__td--category {
+              width: 120px;
+              font-size: 12px;
+            }
+            .pp-transaction-table-body__td--titledate {
+              width: 150px;
+              font-size: 12px;
+            }
+            .pp-transaction-table-body__td--amount {
+              width: 60px;
+              font-size: 12px;
+            }
+            .pp-transaction-table-body__td--date {
+            }
+            .pp-transaction-table-body__td--amountMinus {
+            }
+            .pp-transaction-table-body__td--amountPlus {
+            }
+          }
+        }
+      }
+      .pp-buttonContainer {
+        .pp-transaction-history__button {
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $S) {
+  .pp-history {
+    .pp-transaction-history {
+      width: auto;
+      .pp-transaction-history__heading {
+      }
+      .pp-transaction-table {
+        width: auto;
+        .pp-transaction-table-head {
+          .pp-transaction-table-head__tr {
+          }
+          .pp-transaction-table-head__th {
+            .pp-transaction-sorter {
+              margin-left: 7px;
+            }
+          }
+        }
+        .pp-transaction-table-body {
+          .pp-transaction-table-body__tr {
+            .pp-transaction-table-body__td--category {
+              width: 30%;
+              margin-left: 5px;
+            }
+            .pp-transaction-table-body__td--titledate {
+              width: 30%;
+              margin-left: 5px;
+            }
+            .pp-transaction-table-body__td--amount {
+              width: 30%;
+              margin-left: 5px;
+            }
+            .pp-transaction-table-body__td--date {
+            }
+            .pp-transaction-table-body__td--amountMinus {
+            }
+            .pp-transaction-table-body__td--amountPlus {
+            }
+          }
+        }
+      }
+      .pp-buttonContainer {
+        .pp-transaction-history__button {
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
