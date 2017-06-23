@@ -57,7 +57,7 @@ body {
       }
       .pp-total-details__balance {
         color: #fff;
-        font-size: 45px;
+        font-size: 40px;
         margin-top: 20px;
         font-weight: 300;
       }
@@ -82,24 +82,60 @@ body {
           font-size: 15px;
         }
       }
-    }
-    .pp-total-details {
-      .pp-total-details__heading {
-        font-size: 15px;
-      }
-      .pp-total-details__balance {
-        font-size: 36px;
+      .pp-total-details {
+        .pp-total-details__heading {
+          font-size: 15px;
+        }
+        .pp-total-details__balance {
+          font-size: 45px;
+        }
       }
     }
   }
 
   @media only screen and (max-width: $M) {
+    .pp-total-information {
+      .pp-header {
+        .pp-header__heading {
+        }
+      }
+      .pp-configuration {
+        .pp-configuration__heading, .pp-configuration__subheading {
+        }
+      }
+      .pp-total-details {
+        .pp-total-details__heading {
+        }
+        .pp-total-details__balance {
+          font-size: 36px;
+        }
+      }
+    }
+
     .pp-continue-container {
       margin-top: 95px;
     }
   }
 
   @media only screen and (max-width: $S) {
+    .pp-total-information {
+      .pp-header {
+        .pp-header__heading {
+        }
+      }
+      .pp-configuration {
+        .pp-configuration__heading, .pp-configuration__subheading {
+        }
+      }
+      .pp-total-details {
+        .pp-total-details__heading {
+        }
+        .pp-total-details__balance {
+          font-size: 30px;
+        }
+      }
+    }
+
     .pp-continue-container {
       margin-top: 25px;
     }

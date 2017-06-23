@@ -49,7 +49,7 @@ body {
         letter-spacing: 1px; }
       body .pp-total-information .pp-total-details .pp-total-details__balance {
         color: #fff;
-        font-size: 45px;
+        font-size: 40px;
         margin-top: 20px;
         font-weight: 300; }
   body .pp-continue-container {
@@ -61,14 +61,18 @@ body {
       font-size: 21px; }
     body .pp-total-information .pp-configuration .pp-configuration__heading, body .pp-total-information .pp-configuration .pp-configuration__subheading {
       font-size: 15px; }
-    body .pp-total-details .pp-total-details__heading {
+    body .pp-total-information .pp-total-details .pp-total-details__heading {
       font-size: 15px; }
-    body .pp-total-details .pp-total-details__balance {
-      font-size: 36px; } }
+    body .pp-total-information .pp-total-details .pp-total-details__balance {
+      font-size: 45px; } }
   @media only screen and (max-width: 520px) {
+    body .pp-total-information .pp-total-details .pp-total-details__balance {
+      font-size: 36px; }
     body .pp-continue-container {
       margin-top: 95px; } }
   @media only screen and (max-width: 380px) {
+    body .pp-total-information .pp-total-details .pp-total-details__balance {
+      font-size: 30px; }
     body .pp-continue-container {
       margin-top: 25px; } }
 
