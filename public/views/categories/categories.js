@@ -40,18 +40,32 @@ function addIncomeToDOM(income, id) {
   $incomeList.append($incomeItem);
 }
 
-function checkCategoryInput(inputToCheck) {
-  var $alertForUser = $('#alertForUser');
+function checkExpenseInput(inputToCheck) {
+  var $expenseAlert = $('#expenseAlert');
   if (inputToCheck.length === 0) {
-    $alertForUser.addClass('alert alert-danger');
-    $alertForUser.html('<strong>Error:</strong> Please enter category');
+    $expenseAlert.addClass('alert alert-danger');
+    $expenseAlert.html('<strong>Error:</strong> Please enter category');
     return false;
   } else {
-    $alertForUser.removeClass('alert alert-danger');
-    $alertForUser.text('');
+    $expenseAlert.removeClass('alert alert-danger');
+    $expenseAlert.text('');
     return true;
   }
 }
+
+function checkIncomeInput(inputToCheck) {
+  var $incomeAlert = $('#incomeAlert');
+  if (inputToCheck.length === 0) {
+    $incomeAlert.addClass('alert alert-danger');
+    $incomeAlert.html('<strong>Error:</strong> Please enter category');
+    return false;
+  } else {
+    $incomeAlert.removeClass('alert alert-danger');
+    $incomeAlert.text('');
+    return true;
+  }
+}
+
 
 function clearFormInputs(elementID) {
   var $inputToClear = $('#' + elementID);
@@ -61,7 +75,7 @@ function clearFormInputs(elementID) {
 function saveExpenseCategory() {
   var $expenseCategory = $('#expense-category');
   var currentCategoryID = manageLocalStorage.getCategoryID();
-  if (checkCategoryInput($expenseCategory.val()) === true) {
+  if (checkExpenseInput($expenseCategory.val()) === true) {
     addExpenseToDOM($expenseCategory.val(), currentCategoryID);
     manageLocalStorage.saveCategory($expenseCategory.val(), true);
     clearFormInputs($expenseCategory.attr('id'));
@@ -71,7 +85,7 @@ function saveExpenseCategory() {
 function saveIncomeCategory() {
   var $incomeCategory = $('#income-category');
   var currentCategoryID = manageLocalStorage.getCategoryID();
-  if (checkCategoryInput($incomeCategory.val()) === true) {
+  if (checkIncomeInput($incomeCategory.val()) === true) {
     addIncomeToDOM($incomeCategory.val(), currentCategoryID);
     manageLocalStorage.saveCategory($incomeCategory.val(), false);
     clearFormInputs($incomeCategory.attr('id'));

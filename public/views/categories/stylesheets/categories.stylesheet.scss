@@ -57,6 +57,10 @@
           margin-left: 5px;
         }
       }
+      .pp-expense__alert{
+        margin-top: 10px;
+        width: 400px;
+      }
     }
 
     .pp-income {
@@ -111,11 +115,12 @@
           margin-left: 5px;
         }
       }
+      .pp-income__alert{
+        margin-top: 10px;
+        width: 400px;
+      }
     }
 
-    .pp-alert{
-      clear: both;
-    }
   }
 }
 
@@ -144,6 +149,9 @@
           .pp-expense-form__button {
           }
         }
+        .pp-expense__alert{
+          width: 450px;
+        }
       }
 
       .pp-income {
@@ -167,8 +175,9 @@
           .pp-income-form__button {
           }
         }
-      }
-      .pp-alert{
+        .pp-income__alert{
+          width: 450px;
+        }
       }
     }
   }
@@ -196,6 +205,8 @@
           .pp-expense-form__button {
           }
         }
+        .pp-expense__alert{
+        }
       }
 
       .pp-income {
@@ -216,8 +227,8 @@
           .pp-income-form__button {
           }
         }
-      }
-      .pp-alert{
+        .pp-income__alert{
+        }
       }
     }
   }
