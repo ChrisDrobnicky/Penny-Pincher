@@ -10,6 +10,7 @@
       margin: 0 auto;
       float: left;
       .pp-expense__heading {
+        font-size: 22px;
         color: $pink-accent;
         text-align: center;
       }
@@ -68,6 +69,7 @@
       margin: 0 auto;
       float: right;
       .pp-income__heading {
+        font-size: 22px;
         color: $teal-accent;
         text-align: center;
       }
@@ -131,6 +133,7 @@
       .pp-expense {
         width: 450px;
         .pp-expense__heading {
+          font-size: 24px;
         }
         .pp-expense-list {
           font-size: 16px;
@@ -157,6 +160,7 @@
       .pp-income {
         width: 450px;
         .pp-income__heading {
+          font-size: 24px;
         }
         .pp-income-list {
           font-size: 16px;
@@ -190,6 +194,7 @@
       .pp-expense {
         float: none;
         .pp-expense__heading {
+          font-size: 20px;
         }
         .pp-expense-list {
           .pp-expense-list__item {
@@ -212,6 +217,7 @@
       .pp-income {
         float: none;
         .pp-income__heading {
+          font-size: 20px;
         }
         .pp-income-list {
           .pp-income-list__item {
@@ -228,6 +234,146 @@
           }
         }
         .pp-income__alert{
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $M) {
+  .pp-categories {
+    .pp-categories-container {
+      width: 360px;
+      .pp-expense {
+        width: 360px;
+        .pp-expense__heading {
+          font-size: 18px;
+        }
+        .pp-expense-list {
+          font-size: 12px;
+          .pp-expense-list__item {
+            width: 360px;
+            .pp-expense-list__name {
+            }
+            .pp-expense-list__button {
+              font-size: 14px;
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+        .pp-expense-form {
+          .pp-expense-form__input {
+          }
+          .pp-expense-form__button {
+          }
+        }
+        .pp-expense__alert{
+          width: 360px;
+        }
+      }
+
+      .pp-income {
+        width: 360px;
+        .pp-income__heading {
+          font-size: 18px;
+        }
+        .pp-income-list {
+          font-size: 12px;
+          .pp-income-list__item {
+            width: 360px;
+            .pp-income-list__name {
+            }
+            .pp-income-list__button {
+              font-size: 14px;
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+        .pp-income-form {
+          .pp-income-form__input {
+          }
+          .pp-income-form__button {
+          }
+        }
+        .pp-income__alert{
+          width: 360px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: $S) {
+  .pp-categories {
+    .pp-categories-container {
+      width: 280px;
+      .pp-expense {
+        width: 280px;
+        .pp-expense__heading {
+        }
+        .pp-expense-list {
+          font-size: 12px;
+          .pp-expense-list__item {
+            height: 45px;
+            width: 280px;
+            &:hover > .pp-expense-list__name {
+              margin-left: 2px;
+            }
+            .pp-expense-list__name {
+              margin-left: 2px;
+            }
+            .pp-expense-list__button {
+              width: 35px;
+              height: 35px;
+            }
+          }
+        }
+        .pp-expense-form {
+          .pp-expense-form__input {
+            font-size: 12px;
+          }
+          .pp-expense-form__button {
+          }
+        }
+        .pp-expense__alert{
+          width: 275px;
+          font-size: 12px;
+        }
+      }
+
+      .pp-income {
+        width: 275px;
+        .pp-income__heading {
+        }
+        .pp-income-list {
+          font-size: 12px;
+          .pp-income-list__item {
+            height: 45px;
+            width: 280px;
+            &:hover > .pp-income-list__name {
+              margin-left: 2px;
+            }
+            .pp-income-list__name {
+              margin-left: 2px;
+            }
+            .pp-income-list__button {
+              width: 35px;
+              height: 35px;
+            }
+          }
+        }
+        .pp-income-form {
+          .pp-income-form__input {
+            font-size: 12px;
+          }
+          .pp-income-form__button {
+          }
+        }
+        .pp-income__alert{
+          width: 275px;
+          font-size: 12px;
         }
       }
     }

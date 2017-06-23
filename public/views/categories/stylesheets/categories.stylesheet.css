@@ -8,6 +8,7 @@
       margin: 0 auto;
       float: left; }
       .pp-categories .pp-categories-container .pp-expense .pp-expense__heading {
+        font-size: 22px;
         color: #ED1946;
         text-align: center; }
       .pp-categories .pp-categories-container .pp-expense .pp-expense-list {
@@ -53,6 +54,7 @@
       margin: 0 auto;
       float: right; }
       .pp-categories .pp-categories-container .pp-income .pp-income__heading {
+        font-size: 22px;
         color: #10EDC5;
         text-align: center; }
       .pp-categories .pp-categories-container .pp-income .pp-income-list {
@@ -99,6 +101,8 @@
     width: 1000px; }
     .pp-categories .pp-categories-container .pp-expense {
       width: 450px; }
+      .pp-categories .pp-categories-container .pp-expense .pp-expense__heading {
+        font-size: 24px; }
       .pp-categories .pp-categories-container .pp-expense .pp-expense-list {
         font-size: 16px; }
         .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item {
@@ -109,6 +113,8 @@
         width: 450px; }
     .pp-categories .pp-categories-container .pp-income {
       width: 450px; }
+      .pp-categories .pp-categories-container .pp-income .pp-income__heading {
+        font-size: 24px; }
       .pp-categories .pp-categories-container .pp-income .pp-income-list {
         font-size: 16px; }
         .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item {
@@ -122,7 +128,83 @@
     width: 500px; }
     .pp-categories .pp-categories-container .pp-expense {
       float: none; }
+      .pp-categories .pp-categories-container .pp-expense .pp-expense__heading {
+        font-size: 20px; }
     .pp-categories .pp-categories-container .pp-income {
-      float: none; } }
+      float: none; }
+      .pp-categories .pp-categories-container .pp-income .pp-income__heading {
+        font-size: 20px; } }
+@media only screen and (max-width: 520px) {
+  .pp-categories .pp-categories-container {
+    width: 360px; }
+    .pp-categories .pp-categories-container .pp-expense {
+      width: 360px; }
+      .pp-categories .pp-categories-container .pp-expense .pp-expense__heading {
+        font-size: 18px; }
+      .pp-categories .pp-categories-container .pp-expense .pp-expense-list {
+        font-size: 12px; }
+        .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item {
+          width: 360px; }
+          .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item .pp-expense-list__button {
+            font-size: 14px;
+            width: 40px;
+            height: 40px; }
+      .pp-categories .pp-categories-container .pp-expense .pp-expense__alert {
+        width: 360px; }
+    .pp-categories .pp-categories-container .pp-income {
+      width: 360px; }
+      .pp-categories .pp-categories-container .pp-income .pp-income__heading {
+        font-size: 18px; }
+      .pp-categories .pp-categories-container .pp-income .pp-income-list {
+        font-size: 12px; }
+        .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item {
+          width: 360px; }
+          .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item .pp-income-list__button {
+            font-size: 14px;
+            width: 40px;
+            height: 40px; }
+      .pp-categories .pp-categories-container .pp-income .pp-income__alert {
+        width: 360px; } }
+@media only screen and (max-width: 380px) {
+  .pp-categories .pp-categories-container {
+    width: 280px; }
+    .pp-categories .pp-categories-container .pp-expense {
+      width: 280px; }
+      .pp-categories .pp-categories-container .pp-expense .pp-expense-list {
+        font-size: 12px; }
+        .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item {
+          height: 45px;
+          width: 280px; }
+          .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item:hover > .pp-expense-list__name {
+            margin-left: 2px; }
+          .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item .pp-expense-list__name {
+            margin-left: 2px; }
+          .pp-categories .pp-categories-container .pp-expense .pp-expense-list .pp-expense-list__item .pp-expense-list__button {
+            width: 35px;
+            height: 35px; }
+      .pp-categories .pp-categories-container .pp-expense .pp-expense-form .pp-expense-form__input {
+        font-size: 12px; }
+      .pp-categories .pp-categories-container .pp-expense .pp-expense__alert {
+        width: 275px;
+        font-size: 12px; }
+    .pp-categories .pp-categories-container .pp-income {
+      width: 275px; }
+      .pp-categories .pp-categories-container .pp-income .pp-income-list {
+        font-size: 12px; }
+        .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item {
+          height: 45px;
+          width: 280px; }
+          .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item:hover > .pp-income-list__name {
+            margin-left: 2px; }
+          .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item .pp-income-list__name {
+            margin-left: 2px; }
+          .pp-categories .pp-categories-container .pp-income .pp-income-list .pp-income-list__item .pp-income-list__button {
+            width: 35px;
+            height: 35px; }
+      .pp-categories .pp-categories-container .pp-income .pp-income-form .pp-income-form__input {
+        font-size: 12px; }
+      .pp-categories .pp-categories-container .pp-income .pp-income__alert {
+        width: 275px;
+        font-size: 12px; } }
 
 /*# sourceMappingURL=categories.stylesheet.css.map */
