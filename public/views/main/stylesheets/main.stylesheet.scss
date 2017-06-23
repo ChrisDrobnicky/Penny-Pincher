@@ -104,13 +104,12 @@
 @media only screen and (max-width: $M) {
   .pp-main {
    .pp-accounts-container {
-     width: auto;
+     width: 360px;
      .pp-accounts-container__heading {
        font-size: 18px;
      }
      .pp-account {
        .pp-account__listItem {
-         width: auto;
          .pp-account__name {
            margin: 0;
            display: block;
@@ -160,6 +159,7 @@
 @media only screen and (max-width: $S) {
   .pp-main {
     .pp-accounts-container {
+      width: auto;
       .pp-accounts-container__heading {
       }
       .pp-account {
