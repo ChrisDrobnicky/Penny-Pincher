@@ -103,21 +103,81 @@
 
 @media only screen and (max-width: $M) {
   .pp-main {
+   .pp-accounts-container {
+     width: auto;
+     .pp-accounts-container__heading {
+       font-size: 18px;
+     }
+     .pp-account {
+       .pp-account__listItem {
+         width: auto;
+         .pp-account__name {
+           margin: 0;
+           display: block;
+           font-size: 14px;
+           height: 15px;
+           padding-left: 10px;
+         }
+         .pp-account__balance {
+           display: block;
+           font-size: 14px;
+           height: 15px;
+           margin-left: 0;
+           padding-left: 10px;
+         }
+         .pp-account__balance--minus{
+         }
+         .pp-account__balance--plus{
+         }
+         .pp-account__button {
+         }
+       }
+     }
+   }
+
+   .pp-transaction-container {
+     .pp-transaction-container__button--add {
+       float: left;
+       margin: 5px 0 10px 15px;
+       .pp-btn-add {
+         padding: 3px 8px;
+         font-size: 12px;
+       }
+     }
+     .pp-resetButton {
+       position: static;
+       float: right;
+       margin: 5px 15px 10px 0;
+       .pp-btn-reset {
+         padding: 3px 8px;
+         font-size: 12px;
+       }
+     }
+   }
+ }
+}
+
+@media only screen and (max-width: $S) {
+  .pp-main {
     .pp-accounts-container {
       .pp-accounts-container__heading {
-        font-size: 18px;
       }
       .pp-account {
         .pp-account__listItem {
+          text-align: center;
+          height: 80px;
           .pp-account__name {
+            width: auto;
           }
           .pp-account__balance {
+            width: auto;
           }
           .pp-account__balance--minus{
           }
           .pp-account__balance--plus{
           }
           .pp-account__button {
+            position: static;
           }
         }
       }
@@ -125,20 +185,11 @@
 
     .pp-transaction-container {
       .pp-transaction-container__button--add {
-        float: left;
-        margin: 5px 0 10px 15px;
         .pp-btn-add {
-          padding: 3px 8px;
-          font-size: 12px;
         }
       }
       .pp-resetButton {
-        position: static;
-        float: right;
-        margin: 5px 15px 10px 0;
         .pp-btn-reset {
-          padding: 3px 8px;
-          font-size: 12px;
         }
       }
     }

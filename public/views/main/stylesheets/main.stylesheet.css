@@ -53,8 +53,24 @@
       .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__name {
         width: 250px; } }
 @media only screen and (max-width: 520px) {
-  .pp-main .pp-accounts-container .pp-accounts-container__heading {
-    font-size: 18px; }
+  .pp-main .pp-accounts-container {
+    width: auto; }
+    .pp-main .pp-accounts-container .pp-accounts-container__heading {
+      font-size: 18px; }
+    .pp-main .pp-accounts-container .pp-account .pp-account__listItem {
+      width: auto; }
+      .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__name {
+        margin: 0;
+        display: block;
+        font-size: 14px;
+        height: 15px;
+        padding-left: 10px; }
+      .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__balance {
+        display: block;
+        font-size: 14px;
+        height: 15px;
+        margin-left: 0;
+        padding-left: 10px; }
   .pp-main .pp-transaction-container .pp-transaction-container__button--add {
     float: left;
     margin: 5px 0 10px 15px; }
@@ -68,5 +84,15 @@
     .pp-main .pp-transaction-container .pp-resetButton .pp-btn-reset {
       padding: 3px 8px;
       font-size: 12px; } }
+@media only screen and (max-width: 380px) {
+  .pp-main .pp-accounts-container .pp-account .pp-account__listItem {
+    text-align: center;
+    height: 80px; }
+    .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__name {
+      width: auto; }
+    .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__balance {
+      width: auto; }
+    .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__button {
+      position: static; } }
 
 /*# sourceMappingURL=main.stylesheet.css.map */
