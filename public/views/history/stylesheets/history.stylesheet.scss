@@ -87,3 +87,51 @@
     }
   }
 }
+
+@media only screen and (min-width: $XL) {
+  .pp-history {
+    .pp-transaction-history {
+      width: 600px;
+      .pp-transaction-history__heading {
+        font-size: 24px;
+      }
+      .pp-transaction-table {
+        width: 600px;
+        .pp-transaction-table-head {
+          .pp-transaction-table-head__tr {
+          }
+          .pp-transaction-table-head__th {
+            .pp-transaction-sorter {
+            }
+          }
+        }
+        .pp-transaction-table-body {
+          .pp-transaction-table-body__tr {
+            .pp-transaction-table-body__td--category {
+              width: 160px;
+              font-size: 16px;
+            }
+            .pp-transaction-table-body__td--titledate {
+              width: 220px;
+              font-size: 16px;
+            }
+            .pp-transaction-table-body__td--amount {
+              width: 130px;
+              font-size: 16px;
+            }
+            .pp-transaction-table-body__td--date {
+            }
+            .pp-transaction-table-body__td--amountMinus {
+            }
+            .pp-transaction-table-body__td--amountPlus {
+            }
+          }
+        }
+      }
+      .pp-buttonContainer {
+        .pp-transaction-history__button {
+        }
+      }
+    }
+  }
+}

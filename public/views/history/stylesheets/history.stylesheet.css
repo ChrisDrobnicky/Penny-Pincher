@@ -62,4 +62,21 @@
         .pp-history .pp-transaction-history .pp-buttonContainer .pp-transaction-history__button:hover {
           background-color: #4c49cb; }
 
+@media only screen and (min-width: 1366px) {
+  .pp-history .pp-transaction-history {
+    width: 600px; }
+    .pp-history .pp-transaction-history .pp-transaction-history__heading {
+      font-size: 24px; }
+    .pp-history .pp-transaction-history .pp-transaction-table {
+      width: 600px; }
+      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--category {
+        width: 160px;
+        font-size: 16px; }
+      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--titledate {
+        width: 220px;
+        font-size: 16px; }
+      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--amount {
+        width: 130px;
+        font-size: 16px; } }
+
 /*# sourceMappingURL=history.stylesheet.css.map */
