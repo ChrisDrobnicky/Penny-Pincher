@@ -53,6 +53,8 @@
       .pp-main .pp-accounts-container .pp-account .pp-account__listItem .pp-account__name {
         width: 250px; } }
 @media only screen and (max-width: 520px) {
+  .pp-main .pp-accounts-container .pp-accounts-container__heading {
+    font-size: 18px; }
   .pp-main .pp-transaction-container .pp-transaction-container__button--add {
     float: left;
     margin: 5px 0 10px 15px; }
