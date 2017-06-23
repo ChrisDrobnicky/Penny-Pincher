@@ -55,7 +55,7 @@ body {
   body .pp-continue-container {
     margin: 55px 0 20px 0;
     text-align: center; }
-  @media only screen and (min-width: 1280px) {
+  @media only screen and (min-width: 1366px) {
     body .pp-total-information .pp-header .pp-header__heading {
       font-size: 21px; }
     body .pp-total-information .pp-configuration .pp-configuration__heading, body .pp-total-information .pp-configuration .pp-configuration__subheading {
