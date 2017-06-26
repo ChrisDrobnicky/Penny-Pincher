@@ -114,6 +114,11 @@ body {
 
     .pp-continue-container {
       margin-top: 95px;
+      .pp-continue-container__button {
+        .pp-continue-container__button {
+          font-size: 13px;
+        }
+      }
     }
   }
 
@@ -139,6 +144,9 @@ body {
 
     .pp-continue-container {
       margin-top: 25px;
+      .pp-continue-container__button {
+        font-size: 11px;
+      }
     }
   }
 

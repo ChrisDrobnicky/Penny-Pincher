@@ -69,13 +69,17 @@ body {
     body .pp-total-information .pp-total-details .pp-total-details__balance {
       font-size: 36px; }
     body .pp-continue-container {
-      margin-top: 95px; } }
+      margin-top: 95px; }
+      body .pp-continue-container .pp-continue-container__button .pp-continue-container__button {
+        font-size: 13px; } }
   @media only screen and (max-width: 380px) {
     body .pp-total-information .pp-total-details .pp-total-details__heading {
       font-size: 12px; }
     body .pp-total-information .pp-total-details .pp-total-details__balance {
       font-size: 28px; }
     body .pp-continue-container {
-      margin-top: 25px; } }
+      margin-top: 25px; }
+      body .pp-continue-container .pp-continue-container__button {
+        font-size: 11px; } }
 
 /*# sourceMappingURL=main.css.map */
