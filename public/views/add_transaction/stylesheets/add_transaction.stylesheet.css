@@ -66,6 +66,10 @@
         font-size: 16px; }
       .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__type .pp-transaction__income {
         font-size: 16px; }
+    .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction-add .pp-transaction-add__button--add {
+      font-size: 13px; }
+    .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction-add .pp-transaction-add__button--cancel {
+      font-size: 13px; }
     .pp-add-transaction .pp-transaction .pp-transaction__alert {
       font-size: 14px; } }
 @media only screen and (max-width: 380px) {
@@ -89,6 +93,10 @@
       font-size: 12px; }
     .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction__amount {
       font-size: 12px; }
+    .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction-add .pp-transaction-add__button--add {
+      font-size: 11px; }
+    .pp-add-transaction .pp-transaction .pp-transaction__form .pp-transaction-add .pp-transaction-add__button--cancel {
+      font-size: 11px; }
     .pp-add-transaction .pp-transaction .pp-transaction__alert {
       font-size: 12px; } }
 
