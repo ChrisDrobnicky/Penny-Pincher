@@ -219,8 +219,6 @@
 @media only screen and (max-width: $S) {
   .pp-accounts-container {
     width: auto;
-    .pp-accounts-container__heading {
-    }
     .pp-account-list {
       padding: 0;
       width: 245px;
@@ -255,12 +253,6 @@
     width: 245px;
     .pp-configure-form {
       width: auto;
-      .pp-configure-form__name {
-      }
-      .pp-configure-form__balance {
-      }
-      .pp-configure-form__input {
-      }
       .pp-configure-form__button {
         width: 30px;
         height: 30px;
