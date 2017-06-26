@@ -50,21 +50,13 @@
     margin: 10px auto;
     padding-top: 10px;
     text-align: center;
-    .pp-transaction-container__button--add {
-      .pp-btn-add {
-      }
-    }
     .pp-resetButton {
       display: block;
       position: fixed;
       bottom: 5px;
       right: 5px;
-      .pp-btn-reset {
-      }
     }
   }
-
-
 }
 
 @media only screen and (min-width: $XL) {
@@ -80,22 +72,7 @@
           .pp-account__name {
             width: 250px;
           }
-          .pp-account__balance {
-          }
-          .pp-account__balance--minus{
-          }
-          .pp-account__balance--plus{
-          }
-          .pp-account__button {
-          }
         }
-      }
-    }
-
-    .pp-transaction-container {
-      .pp-transaction-container__button--add {
-      }
-      .pp-resetButton {
       }
     }
   }
@@ -104,32 +81,11 @@
 
 @media only screen and (max-width: $L) {
   .pp-main {
-    .pp-accounts-container {
-      .pp-accounts-container__heading {
-      }
-      .pp-account {
-        .pp-account__listItem {
-          .pp-account__name {
-          }
-          .pp-account__balance {
-          }
-          .pp-account__balance--minus{
-          }
-          .pp-account__balance--plus{
-          }
-          .pp-account__button {
-          }
-        }
-      }
-    }
-
     .pp-transaction-container {
       width: 450px;
       .pp-transaction-container__button--add {
         float: left;
         margin: 5px 0 10px 15px;
-        .pp-btn-add {
-        }
       }
       .pp-resetButton {
         position: static;
@@ -165,12 +121,6 @@
            margin-left: 0;
            padding-left: 10px;
          }
-         .pp-account__balance--minus{
-         }
-         .pp-account__balance--plus{
-         }
-         .pp-account__button {
-         }
        }
      }
    }
@@ -197,8 +147,6 @@
   .pp-main {
     .pp-accounts-container {
       width: auto;
-      .pp-accounts-container__heading {
-      }
       .pp-account {
         .pp-account__listItem {
           text-align: center;
@@ -209,10 +157,6 @@
           .pp-account__balance {
             width: auto;
           }
-          .pp-account__balance--minus{
-          }
-          .pp-account__balance--plus{
-          }
           .pp-account__button {
             position: static;
           }
@@ -222,14 +166,6 @@
 
     .pp-transaction-container {
       width: auto;
-      .pp-transaction-container__button--add {
-        .pp-btn-add {
-        }
-      }
-      .pp-resetButton {
-        .pp-btn-reset {
-        }
-      }
     }
   }
 }
