@@ -67,53 +67,9 @@
         }
       }
 
-      .pp-transaction__title {
-        .pp-transaction__label {
-        }
-        .pp-transaction__input {
-        }
-      }
-
-      .pp-transaction__date {
-        .pp-transaction__label {
-        }
-        .pp-transaction__input {
-        }
-      }
-
-      .pp-transaction__category {
-        .pp-transaction__label {
-        }
-        .pp-transaction__select {
-        }
-      }
-
-      .pp-transaction__account {
-        .pp-transaction__label {
-        }
-        .pp-transaction__select {
-        }
-      }
-
-      .pp-transaction__amount {
-        .pp-transaction__label {
-        }
-        .pp-transaction__input {
-        }
-      }
-
       .pp-transaction-add {
         text-align: center;
-        .pp-transaction-add__button--add {
-
-        }
-        .pp-transaction-add__button--cancel {
-
-        }
       }
-    }
-
-    .pp-transaction__alert {
     }
   }
 }
@@ -124,10 +80,6 @@
     .pp-transaction {
       width: 320px;
       .pp-transaction__form {
-        .pp-transaction__form--expense {
-        }
-        .pp-transaction__form--income {
-        }
         .pp-transaction__type {
           width: 320px;
           .pp-transaction__heading {
@@ -136,51 +88,10 @@
           .pp-transaction__expense {
             font-size: 16px;
           }
-          .pp-transaction__expense--active {
-          }
-
           .pp-transaction__income {
             font-size: 16px;
           }
-          .pp-transaction__income--active {
-          }
         }
-
-        .pp-transaction__title {
-          .pp-transaction__label {
-          }
-          .pp-transaction__input {
-          }
-        }
-
-        .pp-transaction__date {
-          .pp-transaction__label {
-          }
-          .pp-transaction__input {
-          }
-        }
-
-        .pp-transaction__category {
-          .pp-transaction__label {
-          }
-          .pp-transaction__select {
-          }
-        }
-
-        .pp-transaction__account {
-          .pp-transaction__label {
-          }
-          .pp-transaction__select {
-          }
-        }
-
-        .pp-transaction__amount {
-          .pp-transaction__label {
-          }
-          .pp-transaction__input {
-          }
-        }
-
         .pp-transaction-add {
           .pp-transaction-add__button--add {
             font-size: 13px;
@@ -190,7 +101,6 @@
           }
         }
       }
-
       .pp-transaction__alert {
         font-size: 14px;
       }
@@ -203,10 +113,6 @@
     .pp-transaction {
       width: 252px;
       .pp-transaction__form {
-        .pp-transaction__form--expense {
-        }
-        .pp-transaction__form--income {
-        }
         .pp-transaction__type {
           width: 252px;
           .pp-transaction__heading {
@@ -215,48 +121,30 @@
           .pp-transaction__expense {
             font-size: 13px;
           }
-          .pp-transaction__expense--active {
-          }
-
           .pp-transaction__income {
             font-size: 13px;
           }
-          .pp-transaction__income--active {
-          }
         }
-
         .pp-transaction__title {
           .pp-transaction__label {
             font-size: 12px;
           }
-          .pp-transaction__input {
-          }
         }
-
         .pp-transaction__date {
           .pp-transaction__label {
             font-size: 12px;
           }
-          .pp-transaction__input {
-          }
         }
-
         .pp-transaction__category {
           .pp-transaction__label {
             font-size: 12px;
           }
-          .pp-transaction__select {
-          }
         }
-
         .pp-transaction__account {
           .pp-transaction__label {
             font-size: 12px;
           }
-          .pp-transaction__select {
-          }
         }
-
         .pp-transaction__amount {
           .pp-transaction__label {
           }
@@ -264,7 +152,6 @@
           .pp-transaction__input {
           }
         }
-
         .pp-transaction-add {
           .pp-transaction-add__button--add {
             font-size: 11px;
@@ -274,7 +161,6 @@
           }
         }
       }
-
       .pp-transaction__alert {
         font-size: 12px;
       }
