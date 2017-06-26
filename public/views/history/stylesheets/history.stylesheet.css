@@ -153,6 +153,9 @@
         width: 20%;
         font-size: 12px; }
     .pp-history .pp-transactions .pp-transactions__button .pp-btn-custom {
-      font-size: 14px; } }
+      font-size: 14px;
+      width: 50px;
+      height: 26px;
+      padding: 4px 9px; } }
 
 /*# sourceMappingURL=history.stylesheet.css.map */
