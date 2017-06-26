@@ -55,12 +55,11 @@
 }
 
 .pp-form-container {
+  position: relative;
   margin: 30px auto;
   width: 470px;
-  height: 50px;
   .pp-configure-form {
     display: block;
-    position: relative;
     overflow: hidden;
     margin-left: 40px;
     .pp-configure-form__name {
@@ -76,6 +75,9 @@
       font-size: 13px;
     }
     .pp-configure-form__button {
+      width: 45px;
+      height: 45px;
+      font-size: 15px;
       position: absolute;
       right: 35px;
     }
@@ -120,7 +122,8 @@
         font-size: 16px;
       }
       .pp-configure-form__button {
-        right:7px;
+        right: 4px;
+        bottom: 2px;
       }
     }
     .pp-form-container__alert {
@@ -172,7 +175,7 @@
 
   .pp-form-container {
     margin: 5px auto;
-    width: 320px;
+    width: 300px;
     .pp-configure-form {
       display: block;
       margin-left: 40px;
@@ -187,9 +190,12 @@
         font-size: 12px;
       }
       .pp-configure-form__button {
+        width: 35px;
+        height: 35px;
         position: absolute;
-        right: 85px;
-        bottom: 20px;
+        font-size: 13px;
+        right: 5px;
+        top: 24px;
       }
     }
     .pp-form-container__alert {
@@ -235,7 +241,7 @@
 
   .pp-form-container {
     height: auto;
-    width: auto;
+    width: 245px;
     .pp-configure-form {
       width: auto;
       .pp-configure-form__name {
@@ -245,8 +251,9 @@
       .pp-configure-form__input {
       }
       .pp-configure-form__button {
-        left: 152px;
-        bottom: 20px;
+        width: 30px;
+        height: 30px;
+        padding-left: 8px;
       }
     }
     .pp-form-container__alert {

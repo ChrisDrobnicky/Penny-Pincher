@@ -43,12 +43,11 @@
         color: #fff; }
 
 .pp-form-container {
+  position: relative;
   margin: 30px auto;
-  width: 470px;
-  height: 50px; }
+  width: 470px; }
   .pp-form-container .pp-configure-form {
     display: block;
-    position: relative;
     overflow: hidden;
     margin-left: 40px; }
     .pp-form-container .pp-configure-form .pp-configure-form__name {
@@ -61,6 +60,9 @@
       color: #222;
       font-size: 13px; }
     .pp-form-container .pp-configure-form .pp-configure-form__button {
+      width: 45px;
+      height: 45px;
+      font-size: 15px;
       position: absolute;
       right: 35px; }
   .pp-form-container .pp-form-container__alert {
@@ -87,7 +89,8 @@
     .pp-form-container .pp-configure-form .pp-configure-form__input {
       font-size: 16px; }
     .pp-form-container .pp-configure-form .pp-configure-form__button {
-      right: 7px; } }
+      right: 4px;
+      bottom: 2px; } }
 @media only screen and (max-width: 520px) {
   .pp-accounts-container {
     width: 360px; }
@@ -122,7 +125,7 @@
 
   .pp-form-container {
     margin: 5px auto;
-    width: 320px; }
+    width: 300px; }
     .pp-form-container .pp-configure-form {
       display: block;
       margin-left: 40px; }
@@ -134,9 +137,12 @@
         color: #222;
         font-size: 12px; }
       .pp-form-container .pp-configure-form .pp-configure-form__button {
+        width: 35px;
+        height: 35px;
         position: absolute;
-        right: 85px;
-        bottom: 20px; }
+        font-size: 13px;
+        right: 5px;
+        top: 24px; }
     .pp-form-container .pp-form-container__alert {
       margin: 0 auto 0 auto;
       font-size: 10px; } }
@@ -165,12 +171,13 @@
 
   .pp-form-container {
     height: auto;
-    width: auto; }
+    width: 245px; }
     .pp-form-container .pp-configure-form {
       width: auto; }
       .pp-form-container .pp-configure-form .pp-configure-form__button {
-        left: 152px;
-        bottom: 20px; }
+        width: 30px;
+        height: 30px;
+        padding-left: 8px; }
     .pp-form-container .pp-form-container__alert {
       width: 240px;
       margin: 0 auto 0 auto; } }
