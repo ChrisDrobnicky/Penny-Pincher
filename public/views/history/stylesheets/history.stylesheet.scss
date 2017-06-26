@@ -2,63 +2,70 @@
 
 .pp-history {
   color: #111;
-  .pp-transaction-history {
+  .pp-transactions {
     width: 450px;
     margin: 0 auto;
-    .pp-transaction-history__heading {
+    .pp-transactions__heading {
       font-size: 22px;
       margin: 15px auto;
       text-align: center;
     }
-    .pp-transaction-table {
+    .pp-sorter {
+      margin-bottom: 20px;
+      font-size: 18px;
+      .pp-sorter__heading {
+        text-align: center;
+      }
+      .pp-sorter__category {
+        width: 130px;
+      }
+      .pp-sorter__title {
+        margin-left: 10px;
+        width: 90px;
+      }
+      .pp-sorter__date {
+        width: 90px;
+      }
+      .pp-sorter__amount {
+        margin-left: 10px;
+        width: 100px;
+      }
+    }
+    .pp-table {
       margin: 0 auto;
       width: 450px;
-      .pp-transaction-table-head {
-        background-color: $depth-blue;
-        color: #fff;
-        .pp-transaction-table-head__tr {
-
-        }
-        .pp-transaction-table-head__th {
-          height: 80px;
-          font-size: 15px;
-          .pp-transaction-sorter {
-            margin-left: 20px;
-          }
-        }
-      }
-      .pp-transaction-table-body {
+      .pp-table__tb {
         color: #111;
-        .pp-transaction-table-body__tr {
-          &:nth-child(even){
+        .pp-table__tr {
+          &:nth-child(odd){
             background-color: #efefef;
           }
-          .pp-transaction-table-body__td--category {
+          .pp-table__td--category {
             width: 130px;
             display: inline-block;
             margin-left: 10px;
             font-size: 14px;
           }
-          .pp-transaction-table-body__td--titledate {
+          .pp-table__td--titledate {
             width: 180px;
             display: inline-block;
             margin-left: 10px;
             font-size: 14px;
           }
-          .pp-transaction-table-body__td--amount {
+          .pp-table__td--amount {
             width: 100px;
             display: inline-block;
             margin-left: 10px;
             font-size: 14px;
           }
-          .pp-transaction-table-body__td--date {
+          .pp-table__td--date {
             color: $blue-grey;
           }
-          .pp-transaction-table-body__td--amountMinus {
+          .pp-table__td--amountMinus {
             color: $pink-accent;
             width: 100px;
           }
-          .pp-transaction-table-body__td--amountPlus {
+          .pp-table__td--amountPlus {
             color: $teal-accent;
             width: 100px;
           }
@@ -66,23 +73,11 @@
       }
     }
 
-    .pp-buttonContainer {
+    .pp-transactions__button {
       margin-top: 20px;
       text-align: center;
-      .pp-transaction-history__button {
-        padding: 6px 16px;
-        border: 1px solid #446d88;
-        background-color: $depth-blue;
-        border-radius: 25px;
-        box-shadow: 0 1px 5px gray;
-        color: white;
-        text-shadow: 0 -1px 1px #335166;
-        font-size: 20px;
-        line-height: 1.5;
-        text-decoration: none;
-        &:hover {
-          background-color: lighten($depth-blue, 20%);
-        }
+      .pp-btn-custom {
+        font-size: 15px;
       }
     }
   }
@@ -90,46 +85,59 @@
 
 @media only screen and (min-width: $XL) {
   .pp-history {
-    .pp-transaction-history {
+    .pp-transactions {
       width: 600px;
-      .pp-transaction-history__heading {
+      margin: 0 auto;
+      .pp-transactions__heading {
         font-size: 24px;
       }
-      .pp-transaction-table {
-        width: 600px;
-        .pp-transaction-table-head {
-          .pp-transaction-table-head__tr {
-          }
-          .pp-transaction-table-head__th {
-            .pp-transaction-sorter {
-            }
-          }
+      .pp-sorter {
+        .pp-sorter__heading {
+
         }
-        .pp-transaction-table-body {
-          .pp-transaction-table-body__tr {
-            .pp-transaction-table-body__td--category {
-              width: 160px;
+        .pp-sorter__category {
+          width: 180px;
+        }
+        .pp-sorter__title {
+          width: 120px;
+        }
+        .pp-sorter__date {
+          width: 120px;
+        }
+        .pp-sorter__amount {
+          width: 130px;
+        }
+      }
+      .pp-table {
+        width: 600px;
+        .pp-table__tb {
+          .pp-table__tr {
+            .pp-table__td--category {
+              width: 180px;
               font-size: 16px;
             }
-            .pp-transaction-table-body__td--titledate {
-              width: 220px;
+            .pp-table__td--titledate {
+              width: 240px;
               font-size: 16px;
             }
-            .pp-transaction-table-body__td--amount {
+            .pp-table__td--amount {
               width: 130px;
               font-size: 16px;
             }
-            .pp-transaction-table-body__td--date {
+            .pp-table__td--date {
             }
-            .pp-transaction-table-body__td--amountMinus {
+            .pp-table__td--amountMinus {
+
             }
-            .pp-transaction-table-body__td--amountPlus {
+            .pp-table__td--amountPlus {
             }
           }
         }
       }
-      .pp-buttonContainer {
-        .pp-transaction-history__button {
+
+      .pp-transactions__button {
+        .pp-btn-custom {
+          font-size: 18px;
         }
       }
     }
@@ -138,47 +146,62 @@
 
 @media only screen and (max-width: $M) {
   .pp-history {
-    .pp-transaction-history {
+    .pp-transactions {
       width: 360px;
-      .pp-transaction-history__heading {
+      .pp-transactions__heading {
         font-size: 18px;
       }
-      .pp-transaction-table {
-        width: 360px;
-        .pp-transaction-table-head {
-          .pp-transaction-table-head__tr {
-          }
-          .pp-transaction-table-head__th {
-            font-size: 12px;
-            .pp-transaction-sorter {
-            }
-          }
+      .pp-sorter {
+        font-size: 14px;
+        .pp-sorter__heading {
         }
-        .pp-transaction-table-body {
-          .pp-transaction-table-body__tr {
-            .pp-transaction-table-body__td--category {
+        .pp-sorter__category {
+          width: 120px;
+          font-size: 12px;
+        }
+        .pp-sorter__title {
+          width: 70px;
+          font-size: 12px;
+        }
+        .pp-sorter__date {
+          width: 70px;
+          font-size: 12px;
+        }
+        .pp-sorter__amount {
+          width: 65px;
+          font-size: 12px;
+        }
+      }
+      .pp-table {
+        width: 360px;
+        .pp-table__tb {
+          .pp-table__tr {
+            .pp-table__td--category {
               width: 120px;
               font-size: 12px;
             }
-            .pp-transaction-table-body__td--titledate {
+            .pp-table__td--titledate {
               width: 150px;
               font-size: 12px;
             }
-            .pp-transaction-table-body__td--amount {
+            .pp-table__td--amount {
               width: 60px;
               font-size: 12px;
             }
-            .pp-transaction-table-body__td--date {
+            .pp-table__td--date {
             }
-            .pp-transaction-table-body__td--amountMinus {
+            .pp-table__td--amountMinus {
+
             }
-            .pp-transaction-table-body__td--amountPlus {
+            .pp-table__td--amountPlus {
             }
           }
         }
       }
-      .pp-buttonContainer {
-        .pp-transaction-history__button {
+
+      .pp-transactions__button {
+        .pp-btn-custom {
+          font-size: 14px;
         }
       }
     }
@@ -187,46 +210,67 @@
 
 @media only screen and (max-width: $S) {
   .pp-history {
-    .pp-transaction-history {
+    .pp-transactions {
       width: auto;
-      .pp-transaction-history__heading {
+      .pp-transactions__heading {
       }
-      .pp-transaction-table {
+      .pp-sorter {
+        font-size: 12px;
+        margin-left: 20px;
         width: auto;
-        .pp-transaction-table-head {
-          .pp-transaction-table-head__tr {
-          }
-          .pp-transaction-table-head__th {
-            .pp-transaction-sorter {
-              margin-left: 7px;
-            }
-          }
+        .pp-sorter__heading {
         }
-        .pp-transaction-table-body {
-          .pp-transaction-table-body__tr {
-            .pp-transaction-table-body__td--category {
-              width: 30%;
+        .pp-sorter__category {
+          width: 25%;
+          font-size: 12px;
+        }
+        .pp-sorter__title {
+          margin-left: 0px;
+          width: 18%;
+          font-size: 12px;
+        }
+        .pp-sorter__date {
+          width: 18%;
+          font-size: 12px;
+        }
+        .pp-sorter__amount {
+          margin-left: 0px;
+          width: 25%;
+          font-size: 12px;
+        }
+      }
+      .pp-table {
+        width: 260px;
+        .pp-table__tb {
+          .pp-table__tr {
+            .pp-table__td--category {
               margin-left: 5px;
-            }
-            .pp-transaction-table-body__td--titledate {
               width: 30%;
+              font-size: 12px;
+            }
+            .pp-table__td--titledate {
               margin-left: 5px;
+              width: 40%;
+              font-size: 12px;
             }
-            .pp-transaction-table-body__td--amount {
-              width: 30%;
+            .pp-table__td--amount {
               margin-left: 5px;
+              width: 20%;
+              font-size: 12px;
             }
-            .pp-transaction-table-body__td--date {
+            .pp-table__td--date {
             }
-            .pp-transaction-table-body__td--amountMinus {
+            .pp-table__td--amountMinus {
+
             }
-            .pp-transaction-table-body__td--amountPlus {
+            .pp-table__td--amountPlus {
             }
           }
         }
       }
-      .pp-buttonContainer {
-        .pp-transaction-history__button {
+
+      .pp-transactions__button {
+        .pp-btn-custom {
           font-size: 14px;
         }
       }

@@ -4,26 +4,25 @@ function addTransactionsToDOM(category, title, date, amount, account) {
   var accountName = document.querySelector('#accountName');
   accountName.textContent = account.toUpperCase() + ' - ACCOUNT BALANCE';
   var newRow = historyTableBody.insertRow();
-  newRow.classList.add('pp-transaction-table-body__tr');
+  newRow.classList.add('pp-table__tr');
 
   var categoryCell = newRow.insertCell(0);
   var titleAndDateCell = newRow.insertCell(1);
-  //var dateCell = newRow.insertCell(2);
   var amountCell = newRow.insertCell(2);
 
   categoryCell.innerHTML = category;
-  categoryCell.classList.add('pp-transaction-table-body__td--category');
+  categoryCell.classList.add('pp-table__td--category');
 
-  titleAndDateCell.innerHTML = title + '</br>' + '<span class="pp-transaction-table-body__td--date">'
+  titleAndDateCell.innerHTML = title + '</br>' + '<span class="pp-table__td--date">'
     + date + '</span>';
-  titleAndDateCell.classList.add('pp-transaction-table-body__td--titledate');
+  titleAndDateCell.classList.add('pp-table__td--titledate');
 
   amountCell.innerHTML = amount;
-  amountCell.classList.add('pp-transaction-table-body__td--amount');
+  amountCell.classList.add('pp-table__td--amount');
   if (amount < 0) {
-    amountCell.classList.add('pp-transaction-table-body__td--amountMinus');
+    amountCell.classList.add('pp-table__td--amountMinus');
   } else {
-    amountCell.classList.add('pp-transaction-table-body__td--amountPlus')
+    amountCell.classList.add('pp-table__td--amountPlus')
   }
 
   historyTableBody.appendChild(newRow);

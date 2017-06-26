@@ -1,118 +1,158 @@
 .pp-history {
   color: #111; }
-  .pp-history .pp-transaction-history {
+  .pp-history .pp-transactions {
     width: 450px;
     margin: 0 auto; }
-    .pp-history .pp-transaction-history .pp-transaction-history__heading {
+    .pp-history .pp-transactions .pp-transactions__heading {
       font-size: 22px;
       margin: 15px auto;
       text-align: center; }
-    .pp-history .pp-transaction-history .pp-transaction-table {
+    .pp-history .pp-transactions .pp-sorter {
+      margin-bottom: 20px;
+      font-size: 18px; }
+      .pp-history .pp-transactions .pp-sorter .pp-sorter__heading {
+        text-align: center; }
+      .pp-history .pp-transactions .pp-sorter .pp-sorter__category {
+        width: 130px; }
+      .pp-history .pp-transactions .pp-sorter .pp-sorter__title {
+        margin-left: 10px;
+        width: 90px; }
+      .pp-history .pp-transactions .pp-sorter .pp-sorter__date {
+        width: 90px; }
+      .pp-history .pp-transactions .pp-sorter .pp-sorter__amount {
+        margin-left: 10px;
+        width: 100px; }
+    .pp-history .pp-transactions .pp-table {
       margin: 0 auto;
       width: 450px; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-head {
-        background-color: #292787;
-        color: #fff; }
-        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-head .pp-transaction-table-head__th {
-          height: 80px;
-          font-size: 15px; }
-          .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-head .pp-transaction-table-head__th .pp-transaction-sorter {
-            margin-left: 20px; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body {
+      .pp-history .pp-transactions .pp-table .pp-table__tb {
         color: #111; }
-        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr:nth-child(even) {
+        .pp-history .pp-transactions .pp-table .pp-table__tb .pp-table__tr:nth-child(odd) {
           background-color: #efefef; }
-        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--category {
+        .pp-history .pp-transactions .pp-table .pp-table__tb .pp-table__tr .pp-table__td--category {
           width: 130px;
           display: inline-block;
           margin-left: 10px;
           font-size: 14px; }
-        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--titledate {
+        .pp-history .pp-transactions .pp-table .pp-table__tb .pp-table__tr .pp-table__td--titledate {
           width: 180px;
           display: inline-block;
           margin-left: 10px;
           font-size: 14px; }
-        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--amount {
+        .pp-history .pp-transactions .pp-table .pp-table__tb .pp-table__tr .pp-table__td--amount {
           width: 100px;
           display: inline-block;
           margin-left: 10px;
           font-size: 14px; }
-        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--date {
+        .pp-history .pp-transactions .pp-table .pp-table__tb .pp-table__tr .pp-table__td--date {
           color: #9A9AAC; }
-        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--amountMinus {
+        .pp-history .pp-transactions .pp-table .pp-table__tb .pp-table__tr .pp-table__td--amountMinus {
           color: #ED1946;
           width: 100px; }
-        .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--amountPlus {
+        .pp-history .pp-transactions .pp-table .pp-table__tb .pp-table__tr .pp-table__td--amountPlus {
           color: #10EDC5;
           width: 100px; }
-    .pp-history .pp-transaction-history .pp-buttonContainer {
+    .pp-history .pp-transactions .pp-transactions__button {
       margin-top: 20px;
       text-align: center; }
-      .pp-history .pp-transaction-history .pp-buttonContainer .pp-transaction-history__button {
-        padding: 6px 16px;
-        border: 1px solid #446d88;
-        background-color: #292787;
-        border-radius: 25px;
-        box-shadow: 0 1px 5px gray;
-        color: white;
-        text-shadow: 0 -1px 1px #335166;
-        font-size: 20px;
-        line-height: 1.5;
-        text-decoration: none; }
-        .pp-history .pp-transaction-history .pp-buttonContainer .pp-transaction-history__button:hover {
-          background-color: #4c49cb; }
+      .pp-history .pp-transactions .pp-transactions__button .pp-btn-custom {
+        font-size: 15px; }
 
 @media only screen and (min-width: 1366px) {
-  .pp-history .pp-transaction-history {
-    width: 600px; }
-    .pp-history .pp-transaction-history .pp-transaction-history__heading {
+  .pp-history .pp-transactions {
+    width: 600px;
+    margin: 0 auto; }
+    .pp-history .pp-transactions .pp-transactions__heading {
       font-size: 24px; }
-    .pp-history .pp-transaction-history .pp-transaction-table {
+    .pp-history .pp-transactions .pp-sorter .pp-sorter__category {
+      width: 180px; }
+    .pp-history .pp-transactions .pp-sorter .pp-sorter__title {
+      width: 120px; }
+    .pp-history .pp-transactions .pp-sorter .pp-sorter__date {
+      width: 120px; }
+    .pp-history .pp-transactions .pp-sorter .pp-sorter__amount {
+      width: 130px; }
+    .pp-history .pp-transactions .pp-table {
       width: 600px; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--category {
-        width: 160px;
+      .pp-history .pp-transactions .pp-table .pp-table__tb .pp-table__tr .pp-table__td--category {
+        width: 180px;
         font-size: 16px; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--titledate {
-        width: 220px;
+      .pp-history .pp-transactions .pp-table .pp-table__tb .pp-table__tr .pp-table__td--titledate {
+        width: 240px;
         font-size: 16px; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--amount {
+      .pp-history .pp-transactions .pp-table .pp-table__tb .pp-table__tr .pp-table__td--amount {
         width: 130px;
-        font-size: 16px; } }
+        font-size: 16px; }
+    .pp-history .pp-transactions .pp-transactions__button .pp-btn-custom {
+      font-size: 18px; } }
 @media only screen and (max-width: 520px) {
-  .pp-history .pp-transaction-history {
+  .pp-history .pp-transactions {
     width: 360px; }
-    .pp-history .pp-transaction-history .pp-transaction-history__heading {
+    .pp-history .pp-transactions .pp-transactions__heading {
       font-size: 18px; }
-    .pp-history .pp-transaction-history .pp-transaction-table {
-      width: 360px; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-head .pp-transaction-table-head__th {
-        font-size: 12px; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--category {
+    .pp-history .pp-transactions .pp-sorter {
+      font-size: 14px; }
+      .pp-history .pp-transactions .pp-sorter .pp-sorter__category {
         width: 120px;
         font-size: 12px; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--titledate {
+      .pp-history .pp-transactions .pp-sorter .pp-sorter__title {
+        width: 70px;
+        font-size: 12px; }
+      .pp-history .pp-transactions .pp-sorter .pp-sorter__date {
+        width: 70px;
+        font-size: 12px; }
+      .pp-history .pp-transactions .pp-sorter .pp-sorter__amount {
+        width: 65px;
+        font-size: 12px; }
+    .pp-history .pp-transactions .pp-table {
+      width: 360px; }
+      .pp-history .pp-transactions .pp-table .pp-table__tb .pp-table__tr .pp-table__td--category {
+        width: 120px;
+        font-size: 12px; }
+      .pp-history .pp-transactions .pp-table .pp-table__tb .pp-table__tr .pp-table__td--titledate {
         width: 150px;
         font-size: 12px; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--amount {
+      .pp-history .pp-transactions .pp-table .pp-table__tb .pp-table__tr .pp-table__td--amount {
         width: 60px;
-        font-size: 12px; } }
+        font-size: 12px; }
+    .pp-history .pp-transactions .pp-transactions__button .pp-btn-custom {
+      font-size: 14px; } }
 @media only screen and (max-width: 380px) {
-  .pp-history .pp-transaction-history {
+  .pp-history .pp-transactions {
     width: auto; }
-    .pp-history .pp-transaction-history .pp-transaction-table {
+    .pp-history .pp-transactions .pp-sorter {
+      font-size: 12px;
+      margin-left: 20px;
       width: auto; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-head .pp-transaction-table-head__th .pp-transaction-sorter {
-        margin-left: 7px; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--category {
+      .pp-history .pp-transactions .pp-sorter .pp-sorter__category {
+        width: 25%;
+        font-size: 12px; }
+      .pp-history .pp-transactions .pp-sorter .pp-sorter__title {
+        margin-left: 0px;
+        width: 18%;
+        font-size: 12px; }
+      .pp-history .pp-transactions .pp-sorter .pp-sorter__date {
+        width: 18%;
+        font-size: 12px; }
+      .pp-history .pp-transactions .pp-sorter .pp-sorter__amount {
+        margin-left: 0px;
+        width: 25%;
+        font-size: 12px; }
+    .pp-history .pp-transactions .pp-table {
+      width: 260px; }
+      .pp-history .pp-transactions .pp-table .pp-table__tb .pp-table__tr .pp-table__td--category {
+        margin-left: 5px;
         width: 30%;
-        margin-left: 5px; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--titledate {
-        width: 30%;
-        margin-left: 5px; }
-      .pp-history .pp-transaction-history .pp-transaction-table .pp-transaction-table-body .pp-transaction-table-body__tr .pp-transaction-table-body__td--amount {
-        width: 30%;
-        margin-left: 5px; }
-    .pp-history .pp-transaction-history .pp-buttonContainer .pp-transaction-history__button {
+        font-size: 12px; }
+      .pp-history .pp-transactions .pp-table .pp-table__tb .pp-table__tr .pp-table__td--titledate {
+        margin-left: 5px;
+        width: 40%;
+        font-size: 12px; }
+      .pp-history .pp-transactions .pp-table .pp-table__tb .pp-table__tr .pp-table__td--amount {
+        margin-left: 5px;
+        width: 20%;
+        font-size: 12px; }
+    .pp-history .pp-transactions .pp-transactions__button .pp-btn-custom {
       font-size: 14px; } }
 
 /*# sourceMappingURL=history.stylesheet.css.map */

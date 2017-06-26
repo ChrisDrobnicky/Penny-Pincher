@@ -26,27 +26,23 @@
         </p>
       </div>
     </section>
-      <section class="pp-transaction-history">
-        <h1 class="pp-transaction-history__heading">Account history:</h1>
-        <table class="pp-transaction-table">
-          <thead class="pp-transaction-table-head">
-            <tr class="pp-transaction-table-head__tr">
-              <th class="pp-transaction-table-head__th" colspan="3">
-                <span class="pp-transaction-sorter">Sort by <span class="glyphicon glyphicon-arrow-right"></span></span>
-                <span class="pp-transaction-sorter glyphicon glyphicon-list" id="categorySorter">category</span>
-                <span class="pp-transaction-sorter glyphicon glyphicon glyphicon-sort-by-alphabet" id="titleSorter">title</span>
-                <span class="pp-transaction-sorter glyphicon glyphicon-time" id="dateSorter">date</span>
-                <span class="pp-transaction-sorter glyphicon glyphicon-usd" id="amountSorter">amount</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody class="pp-transaction-table-body" id="historyTableBody">
-          </tbody>
-        </table>
-        <div class="pp-buttonContainer">
-          <a type="button" class="pp-transaction-history__button" href="../main/main.template.html">Back</a>
-        </div>
-      </section>
+    <section class="pp-transactions">
+      <h1 class="pp-transactions__heading">Account history</h1>
+      <div class="pp-sorter">
+        <p class="pp-sorter__heading"> Sort by:</p>
+        <button class="pp-sorter__category btn btn-info" id="categorySorter">category </button>
+        <button class="pp-sorter__title btn btn-info" id="titleSorter">title</button>
+        <button class="pp-sorter__date btn btn-info" id="dateSorter">date</button>
+        <button class="pp-sorter__amount btn btn-info" id="amountSorter">amount</button>
+      </div>
+      <table class="pp-table">
+        <tbody class="pp-table__tb" id="historyTableBody">
+        </tbody>
+      </table>
+      <div class="pp-transactions__button">
+        <a type="button" class="pp-btn-custom btn btn-warning" href="../main/main.template.html">Back</a>
+      </div>
+    </section>
     <script src="../../helper_modules/ManageLocalStorage.js"></script>
     <script src="./history.js"></script>
   </body>
