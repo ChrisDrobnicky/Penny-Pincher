@@ -146,12 +146,6 @@
             }
           }
         }
-        .pp-expense-form {
-          .pp-expense-form__input {
-          }
-          .pp-expense-form__button {
-          }
-        }
         .pp-expense__alert{
           width: 450px;
         }
@@ -173,12 +167,6 @@
             }
           }
         }
-        .pp-income-form {
-          .pp-income-form__input {
-          }
-          .pp-income-form__button {
-          }
-        }
         .pp-income__alert{
           width: 450px;
         }
@@ -196,44 +184,12 @@
         .pp-expense__heading {
           font-size: 20px;
         }
-        .pp-expense-list {
-          .pp-expense-list__item {
-            .pp-expense-list__name {
-            }
-            .pp-expense-list__button {
-            }
-          }
-        }
-        .pp-expense-form {
-          .pp-expense-form__input {
-          }
-          .pp-expense-form__button {
-          }
-        }
-        .pp-expense__alert{
-        }
       }
 
       .pp-income {
         float: none;
         .pp-income__heading {
           font-size: 20px;
-        }
-        .pp-income-list {
-          .pp-income-list__item {
-            .pp-income-list__name {
-            }
-            .pp-income-list__button {
-            }
-          }
-        }
-        .pp-income-form {
-          .pp-income-form__input {
-          }
-          .pp-income-form__button {
-          }
-        }
-        .pp-income__alert{
         }
       }
     }
@@ -262,12 +218,6 @@
             }
           }
         }
-        .pp-expense-form {
-          .pp-expense-form__input {
-          }
-          .pp-expense-form__button {
-          }
-        }
         .pp-expense__alert{
           width: 360px;
         }
@@ -289,12 +239,6 @@
               width: 40px;
               height: 40px;
             }
-          }
-        }
-        .pp-income-form {
-          .pp-income-form__input {
-          }
-          .pp-income-form__button {
           }
         }
         .pp-income__alert{
@@ -335,8 +279,6 @@
           .pp-expense-form__input {
             font-size: 12px;
           }
-          .pp-expense-form__button {
-          }
         }
         .pp-expense__alert{
           width: 275px;
@@ -369,8 +311,6 @@
           width: auto;
           .pp-income-form__input {
             font-size: 12px;
-          }
-          .pp-income-form__button {
           }
         }
         .pp-income__alert{
