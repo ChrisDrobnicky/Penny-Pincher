@@ -92,9 +92,6 @@
         font-size: 24px;
       }
       .pp-sorter {
-        .pp-sorter__heading {
-
-        }
         .pp-sorter__category {
           width: 180px;
         }
@@ -124,17 +121,9 @@
               width: 130px;
               font-size: 16px;
             }
-            .pp-table__td--date {
-            }
-            .pp-table__td--amountMinus {
-
-            }
-            .pp-table__td--amountPlus {
-            }
           }
         }
       }
-
       .pp-transactions__button {
         .pp-btn-custom {
           font-size: 18px;
@@ -153,8 +142,6 @@
       }
       .pp-sorter {
         font-size: 14px;
-        .pp-sorter__heading {
-        }
         .pp-sorter__category {
           width: 120px;
           font-size: 12px;
@@ -188,13 +175,6 @@
               width: 60px;
               font-size: 12px;
             }
-            .pp-table__td--date {
-            }
-            .pp-table__td--amountMinus {
-
-            }
-            .pp-table__td--amountPlus {
-            }
           }
         }
       }
@@ -212,14 +192,10 @@
   .pp-history {
     .pp-transactions {
       width: auto;
-      .pp-transactions__heading {
-      }
       .pp-sorter {
         font-size: 12px;
         margin-left: 20px;
         width: auto;
-        .pp-sorter__heading {
-        }
         .pp-sorter__category {
           width: 25%;
           font-size: 12px;
@@ -257,13 +233,6 @@
               margin-left: 5px;
               width: 20%;
               font-size: 12px;
-            }
-            .pp-table__td--date {
-            }
-            .pp-table__td--amountMinus {
-
-            }
-            .pp-table__td--amountPlus {
             }
           }
         }
