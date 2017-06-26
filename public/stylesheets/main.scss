@@ -95,14 +95,6 @@ body {
 
   @media only screen and (max-width: $M) {
     .pp-total-information {
-      .pp-header {
-        .pp-header__heading {
-        }
-      }
-      .pp-configuration {
-        .pp-configuration__heading, .pp-configuration__subheading {
-        }
-      }
       .pp-total-details {
         .pp-total-details__heading {
         }
@@ -124,14 +116,6 @@ body {
 
   @media only screen and (max-width: $S) {
     .pp-total-information {
-      .pp-header {
-        .pp-header__heading {
-        }
-      }
-      .pp-configuration {
-        .pp-configuration__heading, .pp-configuration__subheading {
-        }
-      }
       .pp-total-details {
         .pp-total-details__heading {
           font-size: 12px;
