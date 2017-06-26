@@ -27,15 +27,20 @@ function removeAccountFromDom(listItem){
 
 
 function checkInput(accountName, accountBalance){
+  var amountAfterDecimalPoint = ('' + accountBalance).split('.')[1];
   var $outputDiv = $('#outputDiv');
   if (accountName.length === 0 || accountBalance.length === 0) {
     $outputDiv.addClass('alert alert-danger');
     $outputDiv.html('<strong>Error in your form:</strong> Please enter the gaps');
     return false;
-  } else if (isNaN(accountBalance)){
-    $outputDiv.addClass('alert alert-danger pp-form-container__alert');
-    $outputDiv.html ('<strong>Error in your form:</strong> Your balance must be a number - e.g. 0.00');
+  } else if (isNaN(accountBalance)) {
+    $outputDiv.addClass('alert alert-danger');
+    $outputDiv.html('<strong>Error in your form:</strong> Your balance must be a number - e.g. 0.00');
     return false;
+  } else if (amountAfterDecimalPoint && amountAfterDecimalPoint.length > 2)  {
+    $outputDiv.addClass('alert alert-danger');
+    $outputDiv.html('<strong>Error in your form:</strong> Please enter maximum two numbers after decimal point in balance');
+
   } else {
     $outputDiv.removeClass('alert alert-danger');
     $outputDiv.text('');
