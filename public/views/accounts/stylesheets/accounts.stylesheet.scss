@@ -80,13 +80,19 @@
       font-size: 15px;
       position: absolute;
       right: 35px;
+      bottom: 4px;
     }
   }
-  .pp-form-container__alert {
-    margin: 0 auto 10px auto;
-    font-size: 15px;
-  }
 }
+
+.pp-alert {
+  margin: 0 auto 10px auto;
+  font-size: 14px;
+  width: 460px;
+}
+
+
+
 
 @media only screen and (min-width: $XL) {
   .pp-accounts-container {
@@ -126,8 +132,11 @@
         bottom: 2px;
       }
     }
-    .pp-form-container__alert {
-    }
+  }
+
+  .pp-alert {
+    width: 520px;
+    font-size: 15px;
   }
 }
 
@@ -198,10 +207,12 @@
         top: 24px;
       }
     }
-    .pp-form-container__alert {
-      margin: 0 auto 0 auto;
-      font-size: 10px;
-    }
+  }
+
+  .pp-alert {
+    margin: 0 auto 10px auto;
+    font-size: 12px;
+    width: 260px;
   }
 }
 
@@ -256,10 +267,12 @@
         padding-left: 8px;
       }
     }
-    .pp-form-container__alert {
-      width: 240px;
-      margin: 0 auto 0 auto;
-    }
+  }
+
+  .pp-alert {
+    width: 240px;
+    margin: 0 auto 0 auto;
+    font-size: 11px;
   }
 }
 

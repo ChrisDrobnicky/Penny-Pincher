@@ -27,48 +27,48 @@
         </h2>
       </div>
     </section>
-      <div class="pp-accounts-container">
-        <h1 class="pp-accounts-container__heading">Accounts:</h1>
-        <ul class="pp-account-list" id="accountList">
-        </ul>
-      </div>
-      <div class="pp-form-container">
-        <form class="pp-configure-form">
-          <p class="pp-configure-form__name">
-            <label class="sr-only" for="account-name">Account name</label>
-            <input
-              type="text"
-              id="account-name"
-              class="pp-configure-form__input"
-              placeholder="Your Account's name"
-              required
-              maxlength="20">
-          </p>
-          <p class="pp-configure-form__balance">
-            <label class="sr-only" for="account-balance">Account balance </label>
-            <input
-              type="text"
-              id="account-balance"
-              class="pp-configure-form__input"
-              placeholder="Initial balance (e.g. 0.00)"
-              required
-              maxlength="12">
-          </p>
-          <button type="button" class="pp-configure-form__button btn btn-success" id="add-button">
-            <span class="glyphicon glyphicon-plus"> </span>
-          </button>
-        </form>
-        <div id="outputDiv"></div>
-      </div>
-      <div class="pp-continue-container">
-        <a
-          type="button"
-          href="../categories/categories.template.html"
-          class="btn btn-success"
-          id="continueButton">
-          Continue
-        </a>
-      </div>
+    <div class="pp-accounts-container">
+      <h1 class="pp-accounts-container__heading">Accounts:</h1>
+      <ul class="pp-account-list" id="accountList">
+      </ul>
+    </div>
+    <div class="pp-form-container">
+      <form class="pp-configure-form">
+        <p class="pp-configure-form__name">
+          <label class="sr-only" for="account-name">Account name</label>
+          <input
+            type="text"
+            id="account-name"
+            class="pp-configure-form__input"
+            placeholder="Your Account's name"
+            required
+            maxlength="20">
+        </p>
+        <p class="pp-configure-form__balance">
+          <label class="sr-only" for="account-balance">Account balance </label>
+          <input
+            type="text"
+            id="account-balance"
+            class="pp-configure-form__input"
+            placeholder="Initial balance (e.g. 0.00)"
+            required
+            maxlength="12">
+        </p>
+        <button type="button" class="pp-configure-form__button btn btn-success" id="add-button">
+          <span class="glyphicon glyphicon-plus"> </span>
+        </button>
+      </form>
+    </div>
+    <div class="pp-alert" id="outputDiv"></div>
+    <div class="pp-continue-container">
+      <a
+        type="button"
+        href="../categories/categories.template.html"
+        class="btn btn-success"
+        id="continueButton">
+        Continue
+      </a>
+    </div>
     <script src="../../helper_modules/ManageLocalStorage.js"></script>
     <script src="./accounts.js"></script>
   </body>
